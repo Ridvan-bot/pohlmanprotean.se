@@ -8,6 +8,7 @@ First, build and run the development server:
 npm run build
 npm run dev
 
+```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -37,5 +38,5 @@ Ensure the appropriate permissions are set for the user who will deploy the proj
 ```bash
 bash cgDeploy.sh <projectname>
 
-
+```
 Replace <projectname> with the actual name of your Google Cloud project.
