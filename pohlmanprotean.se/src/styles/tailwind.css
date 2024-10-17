@@ -17,3 +17,4 @@ body {
 .button-container {
     @apply flex flex-row space-x-4 w-full max-w-xs; /* Adjust max width as needed */
 }
+

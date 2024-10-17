@@ -17,22 +17,22 @@ const AboutPage: React.FC = () => {
           We are dedicated to providing top-notch IT solutions, programming expertise, and automation services.
         </p>
 
-        {/* New section with more information about the company */}
-        <div className="bg-[#222] p-8 rounded-lg shadow-md max-w-4xl w-full mb-12">
-          <h2 className="text-3xl font-semibold mb-4 text-center text-yellow-500">Our Mission</h2>
-          <p className="text-lg text-gray-400 mb-4">
-            At <span className="text-yellow-500">Pohlman Protean</span>, our mission is to drive innovation by delivering advanced IT solutions 
-            that empower businesses to achieve efficiency, scalability, and success. We specialize in providing 
-            cutting-edge programming, automation, and DevOps services to help clients navigate the complexities 
-            of modern technology.
-          </p>
+{/* New section with more information about the company */}
+<div className="bg-[#222] p-8 rounded-lg shadow-md max-w-4xl w-full mb-12">
+  <h2 className="text-4xl font-semibold mb-4 text-center text-yellow-500">Our Mission</h2>
+  <p className="text-lg text-gray-400 mb-4 leading-relaxed">
+    At <span className="text-yellow-500 font-bold">Pohlman Protean</span>, our mission is to drive innovation by delivering advanced IT solutions 
+    that empower businesses to achieve efficiency, scalability, and success. We specialize in providing 
+    cutting-edge programming, automation, and DevOps services to help clients navigate the complexities 
+    of modern technology.
+  </p>
+
 
           <h2 className="text-3xl font-semibold mb-4 text-center text-yellow-500">Core Services</h2>
           <ul className="list-disc list-inside text-lg text-gray-400 mb-8">
             <li>Custom Software Development</li>
             <li>Automation and DevOps Consulting</li>
             <li>API Integration and Development</li>
-            <li>IT Strategy and Digital Transformation</li>
           </ul>
 
           <h2 className="text-3xl font-semibold mb-4 text-center text-yellow-500">Our Values</h2>
