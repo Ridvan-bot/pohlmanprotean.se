@@ -1,14 +1,13 @@
-
+// pages/index.tsx
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from 'react-router-dom';
-import './styles/global.css';
-import App from './App';
-import './index.css';
+import Header from './components/Header';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+const Home: React.FC = () => (
+  <div>
+    <Header />
+    <h2>Welcome to Pohlman Protean</h2>
+    <p>Your partner in IT, programming, and automation!</p>
+  </div>
 );
 
+export default Home;

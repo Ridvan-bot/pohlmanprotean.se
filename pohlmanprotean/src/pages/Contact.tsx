@@ -1,23 +1,13 @@
-
+// pages/contact.tsx
 import React from 'react';
-import { useForm } from 'react-hook-form';
+import Header from '../components/Header';
 
-const Contact: React.FC = () => {
-  const { register, handleSubmit } = useForm();
-
-  const onSubmit = (data: any) => {
-    alert(JSON.stringify(data));
-  };
-
-  return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register('name')} placeholder="Robin Pohlman" />
-      <input {...register('email')} placeholder="robin.pohlman@pohlmanprotean.com" />
-      <textarea {...register('message')} placeholder="CEO"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  );
-};
+const Contact: React.FC = () => (
+  <div>
+    <Header />
+    <h2>Contact Us</h2>
+    <p>Contact information for Pohlman Protean.</p>
+  </div>
+);
 
 export default Contact;
-

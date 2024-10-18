@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* You can add your custom styles here if needed */
+
+body {
+    @apply bg-gray-900 text-white; /* Set a dark gray background and white text */
+}
+
+/* Custom button styles */
+.custom-button {
+    @apply bg-gradient-to-r from-yellow-400 to-yellow-600 text-[#111] font-semibold py-2 px-4 h-12 rounded-md shadow-lg hover:from-yellow-500 hover:to-yellow-700 transition-colors duration-300 flex items-center justify-center w-full whitespace-nowrap; /* Added whitespace-nowrap */
+}
+
+/* Optional: Ensure buttons fit their container in a flex layout */
+.button-container {
+    @apply flex flex-row space-x-4 w-full max-w-xs; /* Adjust max width as needed */
+}
+
