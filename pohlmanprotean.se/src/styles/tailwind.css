@@ -18,3 +18,41 @@ body {
     @apply flex flex-row space-x-4 w-full max-w-xs; /* Adjust max width as needed */
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+  .card {
+    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    width: 90%; /* Adjust width as needed (e.g., 90%, 800px, etc.) */
+    max-width: 800px; /* Set a max-width to prevent it from getting too wide */
+    height: auto;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  .card-info {
+    --color: #181818;
+    background: var(--color);
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    width: 100%;
+    height: auto; /* Accommodate dynamic height */
+    overflow: visible;
+    border-radius: 0.7rem;
+    padding: 16px; /* Add padding for card frame */
+  }
+  
+  .gray-box {
+    background-color: #222; /* Gray background */
+    border-radius: 0.7rem; /* Rounded corners */
+    color: white; /* Text color */
+  }
+
