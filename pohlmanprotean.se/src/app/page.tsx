@@ -182,7 +182,7 @@ const HomePage: React.FC = () => {
           <textarea className="w-full p-3 bg-[#333] text-white rounded-md" id="message" rows={4} placeholder="Enter your message"></textarea>
         </div>
         <button className="w-full bg-yellow-500 text-black p-3 rounded-md font-bold hover:bg-yellow-600 transition">
-          Send Message....!!
+          Send Message.!
         </button>
       </form>
     </div>
