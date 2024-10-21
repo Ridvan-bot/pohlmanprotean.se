@@ -20,6 +20,7 @@ const HomePage: React.FC = () => {
           <span className="text-yellow-500"> automation</span>.
         </p>
       </div>
+
       {/* About us section */}
       <div id="about" className="flex-grow flex flex-col items-center justify-center py-10 px-4">
       <div className="flex-grow flex flex-col items-center justify-center py-10 px-4">
