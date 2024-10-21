@@ -22,7 +22,7 @@ jobs:
 
       - name: Build and Push Docker image
         run: |
-          gcloud builds submit --tag gcr.io/pohlmanprotean-website/pohlmanprotean-website-image .
+          gcloud builds submit --tag gcr.io/pohlmanprotean-website/pohlmanprotean.se/pohlmanprotean-website-image .
 
       - name: Deploy to Cloud Run
         run: |
