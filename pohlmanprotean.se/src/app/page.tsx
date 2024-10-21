@@ -140,33 +140,59 @@ const HomePage: React.FC = () => {
         </div>
       </div>
 
-{/* Contact Us Section */}
-<div className="flex justify-between mt-8 p-9 w-full mx-auto h-96 bg-[#111] px-0"> {/* Updated to stretch full width */}
-  {/* Box 1 */}
-  <div className="bg-gray-800 p-4 shadow-lg w-1/2 flex items-center justify-center">
-    <div className="py-4 text-center">
-      <h2 className="text-2xl font-bold mb-2">
-        <span className="text-white">Ready to</span>{" "}
-        <span className="text-yellow-500 hover:text-yellow-400 transition">Get Started?</span>
-      </h2>
-      <p className="text-white mb-4">Contact us today to discuss how we can help you achieve your goals.</p>
-      <a href="/contact" className="bg-white text-black font-bold py-2 px-6 rounded-lg shadow hover:bg-gray-100 hover:shadow-lg">
-        Contact Us
-      </a>
+  <div id ="contact" className="flex-grow flex flex-col items-center justify-center py-10 px-4">
+  {/* Contact Us Card */}
+  <div className="card max-w-md w-full mb-4 relative mt-4">
+    <div className="card-info text-center">
+      <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+        Contact <span className="text-yellow-500">Us</span>
+      </h1>
+      <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-2xl">
+        If you have any questions or inquiries, feel free to reach out to us!
+      </p>
+
+      {/* Gray Box */}
+      <div className="gray-box p-4 rounded-lg mb-6">
+        <h2 className="text-3xl font-semibold mb-4 text-white">Additional Information</h2>
+        <p className="text-lg text-gray-300">This box can contain any additional information you'd like to share.</p>
+
+
+      <h2 className="text-3xl font-semibold mb-4 text-yellow-500">Contact Information</h2>
+      <p className="mb-4 text-lg">
+        <strong>Email:</strong> <a href="mailto:robin.pohlman@pohlmanprotean.com" className="text-yellow-500">robin.pohlman@pohlmanprotean.com</a>
+      </p>
+      <p className="mb-4 text-lg">
+        <strong>Phone:</strong> <a href="tel:+46709465784" className="text-yellow-500">+46 709-46 57 84</a>
+      </p>
+
+      {/* Message Form */}
+      <form className="mt-8">
+        <h3 className="text-2xl font-semibold text-center mb-6">Send Us a Message</h3>
+        <div className="mb-4">
+          <label className="block text-lg mb-2" htmlFor="name">Your Name</label>
+          <input className="w-full p-3 bg-[#333] text-white rounded-md" type="text" id="name" placeholder="Enter your name" />
+        </div>
+        <div className="mb-4">
+          <label className="block text-lg mb-2" htmlFor="email">Your Email</label>
+          <input className="w-full p-3 bg-[#333] text-white rounded-md" type="email" id="email" placeholder="Enter your email" />
+        </div>
+        <div className="mb-6">
+          <label className="block text-lg mb-2" htmlFor="message">Your Message</label>
+          <textarea className="w-full p-3 bg-[#333] text-white rounded-md" id="message" rows={4} placeholder="Enter your message"></textarea>
+        </div>
+        <button className="w-full bg-yellow-500 text-black p-3 rounded-md font-bold hover:bg-yellow-600 transition">
+          Send Message
+        </button>
+      </form>
     </div>
   </div>
-
-  {/* Box 2 - Image Only */}
-  <div className="rounded-none shadow-lg w-1/2 flex items-center justify-center">
-    <Image
-      src="/images/shakehands.svg"
-      alt="Descriptive Alt Text"
-      width={300}
-      height={200}
-      className="object-cover w-full h-full"
-    />
-  </div>
 </div>
+</div>
+
+
+
+
+
 
       <Footer /> {/* Include the Footer */}
     </div>
