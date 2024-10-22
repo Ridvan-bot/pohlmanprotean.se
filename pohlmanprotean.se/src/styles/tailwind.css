@@ -24,30 +24,32 @@ html {
   
   .card {
     --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
-    width: 90%; /* Adjust width as needed (e.g., 90%, 800px, etc.) */
+    width: 90%; /* Adjust width as needed */
     max-width: 800px; /* Set a max-width to prevent it from getting too wide */
     height: auto;
     padding: 5px;
     border-radius: 1rem;
-    overflow: visible;
+    overflow: hidden; /* Prevent content from overflowing the card */
     background: #f7ba2b;
     background: var(--background);
     position: relative;
     z-index: 1;
   }
   
-  
   .card-info {
     --color: #181818;
     background: var(--color);
+    display: flex;
     flex-direction: column; /* Stack items vertically */
     justify-content: center; /* Center vertically */
     align-items: center; /* Center horizontally */
     width: 100%;
-    height: auto; /* Accommodate dynamic height */
-    overflow: visible;
+    height: auto;
+    overflow: hidden; /* Prevent overflow inside card-info */
     border-radius: 0.7rem;
-    padding: 16px; /* Add padding for card frame */
+    padding: 16px;
+    word-wrap: break-word; /* Ensure text wraps within the card */
+    box-sizing: border-box; /* Include padding in width calculation */
   }
   
   .gray-box {
@@ -55,4 +57,4 @@ html {
     border-radius: 0.7rem; /* Rounded corners */
     color: white; /* Text color */
   }
-
+  
