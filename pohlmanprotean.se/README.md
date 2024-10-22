@@ -32,19 +32,3 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on in Citrix Cloud
-
-To deploy this project in Citrix Cloud, you can use the cgDeploy.sh script located in the root directory of this project. Follow these steps:
-
-Ensure that you have a project set up in Google Cloud.
-
-Go to the Google Cloud Console and create a new project.
-Ensure the appropriate permissions are set for the user who will deploy the project (including permission to delete resources).
-
-
-```bash
-bash cgDeploy.sh <projectname>
-
-```
-Replace <projectname> with the actual name of your Google Cloud project.
