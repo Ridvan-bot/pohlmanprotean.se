@@ -23,21 +23,32 @@ html {
   }
   
   .card {
-    --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
-    width: 90%; /* Adjust width as needed */
-    max-width: 800px; /* Set a max-width to prevent it from getting too wide */
+    width: 90%;
+    max-width: 800px;
     height: auto;
     padding: 5px;
     border-radius: 1rem;
-    overflow: hidden; /* Prevent content from overflowing the card */
-    background: #f7ba2b;
-    background: var(--background);
+    overflow: hidden;
     position: relative;
     z-index: 1;
-  }
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px; /* Set the desired height for the top border */
+    background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    z-index: 2;
+}
+
   
   .card-info {
-    --color: #181818;
+    --color: #18181869;
     background: var(--color);
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -57,4 +68,68 @@ html {
     border-radius: 0.7rem; /* Rounded corners */
     color: white; /* Text color */
   }
-  
+
+
+  /* From Uiverse.io by codebykay101 */ 
+  .container {
+    flex: 1 1 200px;               /* Flex-grow, flex-shrink, flex-basis */
+    max-width: 250px;              /* Set a max width for each item */
+}
+
+
+.container .glass {
+  position: relative;
+  width: 180px;
+  height: 200px;
+  background: linear-gradient(#fff2, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+.container .glass::before {
+  content: attr(data-text);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin: 10px;
+}
+.container .glass svg {
+  font-size: 2.5em;
+  fill: #fff;
+}
+.container .icon {
+  max-width: 60%; /* Adjust this value as needed */
+  max-height: 60%; /* Adjust this value as needed */
+  object-fit: contain; /* Maintain aspect ratio and fit within the container */
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .text {
+  margin-top: 10px; /* Space between image and text */
+  color: #fff; /* Text color */
+  text-align: center; /* Center the text */
+}
+
+.container-boxes {
+  display: flex;                  /* Use Flexbox layout */
+  justify-content: space-around;  /* Space items evenly */
+  flex-wrap: wrap;               /* Allow items to wrap onto the next line */
+  gap: 10px;                     /* Optional: space between items */
+}
+
+
