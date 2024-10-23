@@ -110,7 +110,6 @@ const HomePage: React.FC = () => {
             <li>Custom Software Development</li>
             <li>Automation and DevOps Consulting</li>
             <li>API Integration and Development</li>
-
           </ul>
   </div>
 </div>
