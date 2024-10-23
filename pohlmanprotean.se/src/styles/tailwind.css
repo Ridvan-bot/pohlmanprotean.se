@@ -74,6 +74,9 @@ html {
   .container {
     flex: 1 1 200px;               /* Flex-grow, flex-shrink, flex-basis */
     max-width: 250px;              /* Set a max width for each item */
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -10px -10px 15px rgb(60, 60, 60);
+
 }
 
 
