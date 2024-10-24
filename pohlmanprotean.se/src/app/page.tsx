@@ -106,13 +106,14 @@ const HomePage: React.FC = () => {
     </p>
 
     <h2 className="text-3xl font-semibold mb-4 text-center text-yellow-500">Core Services</h2>
-          <ul className="list-disc list-inside text-lg text-gray-400 mb-8">
-            <li>Custom Software Development</li>
-            <li>Automation and DevOps Consulting</li>
-            <li>API Integration and Development</li>
-          </ul>
+    <ul className="list-disc list-inside text-lg text-gray-400 mb-8">
+      <li>Custom Software Development</li>
+      <li>Automation and DevOps Consulting</li>
+      <li>API Integration and Development</li>
+    </ul>
   </div>
 </div>
+
 
 
 <div id="contact" className="flex-grow flex flex-col items-center py-10 px-4">
