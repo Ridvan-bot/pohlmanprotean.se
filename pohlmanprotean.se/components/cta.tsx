@@ -1,12 +1,25 @@
 import Image from "next/image";
 import BlurredShape from "@/public/images/blurred-shape.svg";
+import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 import Spotlight from "./spotlight";
 
 export default function Cta() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       <div
-        className="absolute bottom-0 left-1/2 -z-10 -mb-24 ml-20 -translate-x-1/2"
+        className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
+        aria-hidden="true"
+      >
+        <Image
+          className="max-w-none"
+          src={BlurredShapeGray}
+          width={760}
+          height={668}
+          alt="Blurred shape"
+        />
+      </div>
+      <div
+        className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-80 -translate-x-[120%] opacity-50"
         aria-hidden="true"
       >
         <Image
@@ -17,13 +30,19 @@ export default function Cta() {
           alt="Blurred shape"
         />
       </div>
-
-      <div id="contact" className="w-full px-4 sm:px-0">
-        <div className="bg-gradient-to-r from-transparent via-gray-800/50 py-12 md:py-20">
+      <div id="contact" className="w-full px-4 sm:px-0 border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
           <div className="mx-auto max-w-3xl text-center">
+          <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
+              <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
+              Contact
+              </span>
+            </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Contact us for more info
             </h2>
+            <p className="text-lg text-indigo-200/65 mb-10">
+            Please complete the form below and submit your details. Our team will reach out to you promptly.
+            </p>
             {/* Spotlight items */}
             <div className="group mx-auto flex justify-center items-center max-w-sm flex-wrap gap-6 lg:max-w-none lg:flex-nowrap">
               {/* Card 1 */}
@@ -97,7 +116,6 @@ export default function Cta() {
                   </div>  
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
