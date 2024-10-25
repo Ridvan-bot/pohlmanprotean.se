@@ -7,7 +7,7 @@ export default function Features() {
   return (
     <section className="relative">
       <div
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
+        className="pointer-events-none absolute right-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
         aria-hidden="true"
       >
         <Image
@@ -19,7 +19,7 @@ export default function Features() {
         />
       </div>
       <div
-        className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-80 -translate-x-[120%] opacity-50"
+        className="pointer-events-none absolute bottom-10 right-1/2 -z-10 -mb-80 -translate-x-[120%] opacity-50"
         aria-hidden="true"
       >
         <Image
