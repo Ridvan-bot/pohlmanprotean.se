@@ -25,62 +25,62 @@ const testimonials = [
   },
   {
     clientImg: javascript,
-    name: "Andrew K.",
-    company: "Samsung",
+    name: "JavaScript",
+    company: "",
     content:
     "JavaScript is a high-level, dynamic programming language primarily used to create interactive and dynamic content on websites. It runs in web browsers and enables developers to build features like animations, form validations, real-time updates, and user interface elements.",
     categories: [1, 2,],
   },
   {
     clientImg: typescript,
-    name: "Lucy D.",
-    company: "Rio",
+    name: "TypeScript",
+    company: "",
     content:
     "TypeScript is a superset of JavaScript that adds static typing, allowing developers to define types for variables, function parameters, and return values. ",
     categories: [1, 2, 5],
   },
   {
     clientImg: docker,
-    name: "Pavel M.",
-    company: "Canon",
+    name: "Docker",
+    company: "",
     content: "Docker is a platform that enables developers to automate the deployment of applications inside lightweight, portable containers. Containers package the application code, dependencies, and runtime environment, ensuring the application runs consistently across different systems.",
     categories: [1, 3],
   },
   {
     clientImg: github,
-    name: "Miriam E.",
-    company: "Cadbury",
+    name: "GitHub",
+    company: "",
     content: "GitHub is a web-based platform for version control and collaboration, primarily used by developers to host and manage code. It leverages Git, a version control system, to track changes in projects, enabling multiple contributors to work on the same codebase simultaneously.",
     categories: [1, 3, 4],
   },
   {
     clientImg: googlecloud,
-    name: "Eloise V.",
-    company: "Maffell",
+    name: "Google Cloud Run",
+    company: "",
     content:
     "Google Cloud Run is a fully managed platform that allows developers to run containerized applications in the cloud without worrying about infrastructure management.",
     categories: [1, 3, 4],
   },
   {
     clientImg: ansible,
-    name: "Pierre-Gilles L.",
-    company: "Binance",
+    name: "Ansible",
+    company: "",
     content:
    "Ansible is an open-source automation tool used for configuration management, application deployment, and task automation. It allows developers and system administrators to automate repetitive tasks across multiple systems by writing simple, human-readable YAML files called playbooks.", 
    categories: [1, 3, 4],
   },
   {
     clientImg: nodejs,
-    name: "Danielle K.",
-    company: "Forbes Inc.",
+    name: "Node.js",
+    company: "",
     content:
     "Node.js is an open-source, server-side runtime environment that allows developers to run JavaScript outside the browser. Built on the V8 JavaScript engine, it enables the development of scalable, high-performance applications, particularly for handling asynchronous, I/O-intensive tasks like web servers and APIs. ",
     categories: [1, 3],
   },
   {
     clientImg: prisma,
-    name: "Mary P.",
-    company: "Ray Ban",
+    name: "Prisma",
+    company: "",
     content:
     "Prisma is an open-source ORM (Object-Relational Mapping) tool that simplifies database access and management for developers. It provides a type-safe interface for interacting with databases, ensuring that queries are checked at compile time, which helps catch errors early.",
     categories: [1, 3],
@@ -115,7 +115,7 @@ export default function Testimonials() {
                 onClick={() => setCategory(1)}
               >
                 <svg
-                  className={`fill-current ${category === 1 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${category === 1 ? "text-blue-500" : "text-gray-600"}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -131,7 +131,7 @@ export default function Testimonials() {
                 onClick={() => setCategory(2)}
               >
                 <svg
-                  className={`fill-current ${category === 2 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${category === 2 ? "text-blue-500" : "text-gray-600"}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -147,7 +147,7 @@ export default function Testimonials() {
                 onClick={() => setCategory(3)}
               >
                 <svg
-                  className={`fill-current ${category === 3 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${category === 3 ? "text-blue-500" : "text-gray-600"}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -163,7 +163,7 @@ export default function Testimonials() {
                 onClick={() => setCategory(4)}
               >
                 <svg
-                  className={`fill-current ${category === 4 ? "text-indigo-500" : "text-gray-600"}`}
+                  className={`fill-current ${category === 4 ? "text-blue-500" : "text-gray-600"}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="16"
                   height={16}
@@ -224,7 +224,7 @@ export function Testimonial({
             <span>{testimonial.name}</span>
             <span className="text-gray-700"> </span>
             <a
-              className="text-indigo-200/65 transition-colors hover:text-indigo-500"
+              className="text-indigo-200/65 transition-colors hover:text-blue-500"
               href="#0"
             >
               {testimonial.company}

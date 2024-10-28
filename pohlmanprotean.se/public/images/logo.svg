@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
-   sodipodi:docname="PP_Logo.svg"
+   sodipodi:docname="logo.svg"
    inkscape:export-filename="PP_logo.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -28,8 +28,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="3.1879911"
-     inkscape:cx="45.953704"
-     inkscape:cy="75.12568"
+     inkscape:cx="45.32635"
+     inkscape:cy="71.675231"
      inkscape:window-width="2880"
      inkscape:window-height="1288"
      inkscape:window-x="464"
@@ -41,13 +41,37 @@
      id="defs1">
     <linearGradient
        inkscape:collect="always"
+       id="linearGradient13841">
+      <stop
+         style="stop-color:#2563eb;stop-opacity:1;"
+         offset="0"
+         id="stop13837" />
+      <stop
+         style="stop-color:#2563eb;stop-opacity:1;"
+         offset="1"
+         id="stop13839" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient13765">
+      <stop
+         style="stop-color:#2563eb;stop-opacity:1;"
+         offset="0"
+         id="stop13761" />
+      <stop
+         style="stop-color:#3b82f6;stop-opacity:0;"
+         offset="1"
+         id="stop13763" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
        id="linearGradient39531">
       <stop
-         style="stop-color:#6366d6;stop-opacity:1;"
+         style="stop-color:#2563eb;stop-opacity:1;"
          offset="1"
          id="stop39527" />
       <stop
-         style="stop-color:#ffd700;stop-opacity:0;"
+         style="stop-color:#3b82f6;stop-opacity:0;"
          offset="1"
          id="stop39529" />
     </linearGradient>
@@ -55,11 +79,11 @@
        inkscape:collect="always"
        id="linearGradient39523">
       <stop
-         style="stop-color:#6366d6;stop-opacity:1;"
+         style="stop-color:#2563eb;stop-opacity:1;"
          offset="1"
          id="stop39519" />
       <stop
-         style="stop-color:#ffd700;stop-opacity:0;"
+         style="stop-color:#3b82f6;stop-opacity:0;"
          offset="1"
          id="stop39521" />
     </linearGradient>
@@ -67,11 +91,11 @@
        inkscape:collect="always"
        id="linearGradient39515">
       <stop
-         style="stop-color:#6366d6;stop-opacity:1;"
+         style="stop-color:#2563d6;stop-opacity:1;"
          offset="1"
          id="stop39511" />
       <stop
-         style="stop-color:#818cf8;stop-opacity:0;"
+         style="stop-color:#3b82f6;stop-opacity:0;"
          offset="1"
          id="stop39513" />
     </linearGradient>
@@ -79,11 +103,11 @@
        inkscape:collect="always"
        id="linearGradient39468">
       <stop
-         style="stop-color:#6366d6;stop-opacity:1;"
+         style="stop-color:#2563eb;stop-opacity:1;"
          offset="1"
          id="stop39464" />
       <stop
-         style="stop-color:#818cf8;stop-opacity:1;"
+         style="stop-color:#3b82f6;stop-opacity:1;"
          offset="1"
          id="stop39466" />
     </linearGradient>
@@ -91,37 +115,13 @@
        inkscape:collect="always"
        id="linearGradient39460">
       <stop
-         style="stop-color:#6366d6;stop-opacity:1;"
+         style="stop-color:#2563eb;stop-opacity:1;"
          offset="1"
          id="stop39456" />
       <stop
-         style="stop-color:#818cf8;stop-opacity:0;"
+         style="stop-color:#3b82f6;stop-opacity:0;"
          offset="1"
          id="stop39458" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient39452">
-      <stop
-         style="stop-color:#6366d6;stop-opacity:1;"
-         offset="1"
-         id="stop39448" />
-      <stop
-         style="stop-color:#818cf8;stop-opacity:0;"
-         offset="1"
-         id="stop39450" />
-    </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       id="linearGradient37436">
-      <stop
-         style="stop-color:#6366d6;stop-opacity:1;"
-         offset="1"
-         id="stop37432" />
-      <stop
-         style="stop-color:#818cf8;stop-opacity:0;"
-         offset="1"
-         id="stop37434" />
     </linearGradient>
     <rect
        x="16.413441"
@@ -248,24 +248,6 @@
        id="rect336-5" />
     <linearGradient
        inkscape:collect="always"
-       xlink:href="#linearGradient37436"
-       id="linearGradient37438"
-       x1="20.558333"
-       y1="20"
-       x2="21.558333"
-       y2="20"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient39452"
-       id="linearGradient39454"
-       x1="18.441664"
-       y1="20"
-       x2="19.441664"
-       y2="20"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       inkscape:collect="always"
        xlink:href="#linearGradient39460"
        id="linearGradient39462"
        x1="204.83755"
@@ -309,6 +291,24 @@
        x2="19.441664"
        y2="20"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13765"
+       id="linearGradient13767"
+       x1="18.441664"
+       y1="20"
+       x2="19.441664"
+       y2="20"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient13841"
+       id="linearGradient13843"
+       x1="20.558333"
+       y1="20"
+       x2="21.558333"
+       y2="20"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <g
      inkscape:label="Layer 1"
@@ -335,7 +335,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.6447px;font-family:'Copperplate Gothic Bold';-inkscape-font-specification:'Copperplate Gothic Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect6);display:inline;fill:url(#linearGradient39462);fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><tspan
          x="202.15625"
          y="355.56487"
-         id="tspan42503">P</tspan></text>
+         id="tspan13909">P</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.26519788,0,0,0.21530218,70.26167,-87.214428)"
@@ -343,7 +343,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.1489px;font-family:'Copperplate Gothic Bold';-inkscape-font-specification:'Copperplate Gothic Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect5);display:inline;fill:url(#linearGradient39470);fill-opacity:1;stroke:none;stroke-width:0.418495;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><tspan
          x="199.76562"
          y="515.68384"
-         id="tspan42505">P
+         id="tspan13911">P
 </tspan></text>
     <circle
        style="fill:#633232;fill-opacity:0;stroke:url(#linearGradient39517);stroke-width:1.027;stroke-dasharray:none;stroke-opacity:1"
@@ -357,14 +357,14 @@
        id="text1912"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.3333px;font-family:'Copperplate Gothic Bold';-inkscape-font-specification:'Copperplate Gothic Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect1914);display:inline;fill:#ffd700;fill-opacity:1;stroke:#ffd700;stroke-width:3.88157;stroke-opacity:0.996552" />
     <rect
-       style="fill:url(#linearGradient39454);fill-opacity:1;stroke:url(#linearGradient39533);stroke-width:0.661082;stroke-opacity:0.996552"
+       style="fill:url(#linearGradient13767);fill-opacity:1;stroke:url(#linearGradient39533);stroke-width:0.661082;stroke-opacity:0.996552"
        id="rect2285"
        width="0.33891806"
        height="21.338919"
        x="18.772205"
        y="9.3305407" />
     <rect
-       style="fill:url(#linearGradient37438);fill-opacity:1;stroke:url(#linearGradient39525);stroke-width:0.661082;stroke-opacity:0.996552"
+       style="fill:url(#linearGradient13843);fill-opacity:1;stroke:url(#linearGradient39525);stroke-width:0.661082;stroke-opacity:0.996552"
        id="rect2285-1"
        width="0.33891806"
        height="21.338919"

@@ -33,12 +33,12 @@ export default function Features() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
           {/* Section header */}
-          <div className="mx-auto max-w-3xl pb-4 text-center md:pb-12">
-            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
-              <span className="inline-flex bg-gradient-to-r from-indigo-500 to-indigo-200 bg-clip-text text-transparent">
-              Our Services
-              </span>
-            </div>
+          <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
+  <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-200/50">
+    <span className="inline-flex bg-gradient-to-r from-blue-500 to-blue-200 bg-clip-text text-transparent">
+      Our Services
+    </span>
+  </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Building tailored solutions
             </h2>
@@ -48,19 +48,19 @@ export default function Features() {
           </div>
           {/* Items */}
           <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
-            <article>
-              <svg
-                className="mb-3 fill-indigo-500"
-                xmlns="http://www.w3.org/2000/svg"
-                width={24}
-                height={24}
-              >
-                <path d="M0 0h14v17H0V0Zm2 2v13h10V2H2Z" />
-                <path
-                  fillOpacity=".48"
-                  d="m16.295 5.393 7.528 2.034-4.436 16.412L5.87 20.185l.522-1.93 11.585 3.132 3.392-12.55-5.597-1.514.522-1.93Z"
-                />
-              </svg>
+  <article>
+    <svg
+      className="mb-3 fill-blue-500"
+      xmlns="http://www.w3.org/2000/svg"
+      width={24}
+      height={24}
+    >
+      <path d="M0 0h14v17H0V0Zm2 2v13h10V2H2Z" />
+      <path
+        fillOpacity=".48"
+        d="m16.295 5.393 7.528 2.034-4.436 16.412L5.87 20.185l.522-1.93 11.585 3.132 3.392-12.55-5.597-1.514.522-1.93Z"
+      />
+    </svg>
               <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">
               Consulting Services
               </h3>
@@ -70,7 +70,7 @@ export default function Features() {
             </article>
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="mb-3 fill-blue-500"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
@@ -87,7 +87,7 @@ export default function Features() {
             </article>
             <article>
               <svg
-                className="mb-3 fill-indigo-500"
+                className="mb-3 fill-blue-500"
                 xmlns="http://www.w3.org/2000/svg"
                 width={24}
                 height={24}
