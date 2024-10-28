@@ -100,7 +100,7 @@ export default function Cta() {
 <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center bg-gray-950 after:inset-0 after:absolute after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 pb-4"> {/* Add pb-4 here */}
   <div data-aos="fade-up" data-aos-delay={400}>
     <a
-      className="btn group mb-4 w-full bg-gradient-to-t from-indigo-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto relative z-10"
+      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto relative z-10"
       href="https://pohlmanprotean.se/contact"
     >
       <span className="relative inline-flex items-center">
