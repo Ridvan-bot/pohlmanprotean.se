@@ -26,7 +26,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   Pricing &amp; Plans
@@ -34,7 +34,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   Our method
@@ -42,7 +42,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   User policy
@@ -56,7 +56,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   About us
@@ -64,7 +64,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   Blog
@@ -72,7 +72,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   Careers
@@ -86,7 +86,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   Terms of service
@@ -100,7 +100,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   Cookie manager
@@ -117,7 +117,7 @@ export default function Footer() {
               <p className="mb-3 text-indigo-200/65">
                 <span className="text-gray-700"> · </span>
                 <a
-                  className="text-indigo-200/65 transition hover:text-indigo-500"
+                  className="text-indigo-200/65 transition hover:text-blue-500"
                   href="#0"
                 >
                   Privacy Policy
@@ -126,7 +126,7 @@ export default function Footer() {
               <ul className="inline-flex gap-1">
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="flex items-center justify-center text-blue-500 transition hover:text-indigo-400"
                     href="#0"
                     aria-label="Twitter"
                   >
@@ -141,7 +141,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    className="flex items-center justify-center text-indigo-500 transition hover:text-indigo-400"
+                    className="flex items-center justify-center text-blue-500 transition hover:text-indigo-400"
                     href="https://github.com/Ridvan-bot?tab=repositories"
                     aria-label="Github"
                     target="_blank"
