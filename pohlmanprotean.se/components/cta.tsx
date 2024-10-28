@@ -90,21 +90,23 @@ export default function Cta() {
                       />
                     </div>
                     <div className="mb-3 flex gap-4">
-                    <input
-                        type="text"
-                        placeholder="Message"
-                        className="btn-sm w-full rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
-                      />
-                    </div>
+  <textarea
+    placeholder="Message"
+    className="btn-sm w-full rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50 overflow-auto scrollbar-custom"
+    rows={4} // Ensure rows is a number
+  ></textarea>
+</div>
+
+
 {/* Submit Button Container */}
-<div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center bg-gray-950 after:inset-0 after:absolute after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 pb-4"> {/* Add pb-4 here */}
+<div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center bg-gray-950 after:inset-0 after:absolute after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 pb-4">
   <div data-aos="fade-up" data-aos-delay={400}>
     <a
-      className="btn group mb-4 w-full bg-gradient-to-t from-indigo-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto relative z-10"
+      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto relative z-10"
       href="https://pohlmanprotean.se/contact"
     >
       <span className="relative inline-flex items-center">
-        Contact Us
+        Send Message
         <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
           -&gt;
         </span>
