@@ -3,7 +3,7 @@ import BlurredShape from "@/public/images/blurred-shape.svg";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 
 
-export default function Cta() {
+export default function Contact() {
   return (
     <section className="relative">
       <div
