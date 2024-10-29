@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Home - Open PRO",
-  description: "Page description",
+  title: "Pohlman Protean",
+  description: "Home of Pohlman Protean",
 };
 
 import About from "@/components/about";
