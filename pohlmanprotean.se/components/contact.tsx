@@ -1,36 +1,66 @@
+"use client";
+
+import React, { useState } from 'react';
 import Image from "next/image";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
 
-
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    company: '',
+    jobTitle: '',
+    email: '',
+    phoneNumber: '',
+    message: ''
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    // Perform any submission logic here, e.g., sending formData to an API
+    console.log('Form data submitted:', formData);
+  };
+
   return (
-    <section className="relative">
-      <div
-        className="pointer-events-none absolute left-1/2 top-0 -z-10 -mt-20 -translate-x-1/2"
-        aria-hidden="true"
-      >
-        <Image
-          className="max-w-none"
-          src={BlurredShapeGray}
-          width={760}
-          height={668}
-          alt="Blurred shape"
-        />
-      </div>
-      <div
-        className="pointer-events-none absolute bottom-0 left-1/2 -z-10 -mb-80 -translate-x-[120%] opacity-50"
-        aria-hidden="true"
-      >
-        <Image
-          className="max-w-none"
-          src={BlurredShape}
-          width={760}
-          height={668}
-          alt="Blurred shape"
-        />
-      </div>
-      <div id="contact" className="w-full px-4 sm:px-0 border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+<section className="relative flex items-center">
+  <div
+    className="absolute left-1/2 top-0 -translate-x-1/2"
+    aria-hidden="true"
+    style={{ zIndex: 0 }}
+  >
+    <Image
+      className="max-w-none"
+      src={BlurredShapeGray}
+      width={760}
+      height={668}
+      alt="Blurred shape"
+    />
+  </div>
+  <div
+    className="absolute top-30 right-1/2 -translate-x-1/2 opacity-50"
+    aria-hidden="true"
+    style={{ zIndex: -1 }}
+  >
+    <Image
+      className="max-w-none"
+      src={BlurredShape}
+      width={760}
+      height={668}
+      alt="Blurred shape"
+    />
+  </div>
+  
+  <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
+    <div id="contact" className="w-full px-4 sm:px-0 border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
           <div className="mx-auto max-w-3xl text-center">
           <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
               <span className="inline-flex bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-transparent">
@@ -48,78 +78,72 @@ export default function Contact() {
               {/* Card 1 */}
               <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px before:pointer-events-none before:absolute before:-left-40 before:-top-40 before:z-10 before:h-80 before:w-80 before:translate-x-[var(--mouse-x)] before:translate-y-[var(--mouse-y)] before:rounded-full before:bg-blue-500/80 before:opacity-0 before:blur-3xl before:transition-opacity before:duration-500 after:pointer-events-none after:absolute after:-left-48 after:-top-48 after:z-30 after:h-64 after:w-64 after:translate-x-[var(--mouse-x)] after:translate-y-[var(--mouse-y)] after:rounded-full after:bg-blue-500 after:opacity-0 after:blur-3xl after:transition-opacity after:duration-500 after:hover:opacity-20 before:group-hover:opacity-100">
                 <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950 after:absolute after:inset-0 after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50">
-                  <div className="p-6">
+                        <div className="p-6">
                     <div className="mb-3 flex gap-4">
-                      <input
-                        type="text"
-                        placeholder="First Name"
-                        className="btn-sm w-full rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
-                      />
-                      <input
-                        type="text"
-                        placeholder="Last Name"
-                        className="btn-sm w-full rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
-                      />
-                    </div>
-                    <div className="mb-3 flex gap-4">
-                    <input
-                        type="text"
-                        placeholder="Company"
-                        className="btn-sm w-full rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
-                      />
-                    </div>
-                    <div className="mb-3 flex gap-4">
-                    <input
-                        type="text"
-                        placeholder="Job Title"
-                        className="btn-sm w-full rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
-                      />
-                    </div>
-                    <div className="mb-3 flex gap-4">
-                    <input
-                        type="text"
-                        placeholder="Email"
-                        className="btn-sm w-full rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
-                      />
-                    </div>
-                    <div className="mb-3 flex gap-4">
-                    <input
-                        type="text"
-                        placeholder="Phone Number"
-                        className="btn-sm w-full rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
-                      />
-                    </div>
-                    <div className="mb-3 flex gap-4">
-  <textarea
-    placeholder="Message"
-    className="btn-sm w-full rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50 overflow-auto scrollbar-custom"
-    rows={4} // Ensure rows is a number
-  ></textarea>
-</div>
-
-
-{/* Submit Button Container */}
-<div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center bg-gray-950 after:inset-0 after:absolute after:bg-gradient-to-br after:from-gray-900/50 after:via-gray-800/25 after:to-gray-900/50 pb-4">
-  <div data-aos="fade-up" data-aos-delay={400}>
-    <a
-      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto relative z-10"
-      href="https://pohlmanprotean.se/contact"
-    >
-      <span className="relative inline-flex items-center">
-        Send Message
-        <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-          -&gt;
-        </span>
-      </span>
-    </a>
-  </div>
-</div>
-
-                  </div>  
-                </div>
-              </div>
-          </div>
-        </div>
+      <form onSubmit={handleSubmit} className="relative z-10 contact-form">
+        <input
+          type="text"
+          name="firstName"
+          placeholder="First Name"
+          onChange={handleChange}
+          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <input
+          type="text"
+          name="lastName"
+          placeholder="Last Name"
+          onChange={handleChange}
+          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
+        />
+        <input
+          type="text"
+          name="company"
+          placeholder="Company"
+          onChange={handleChange}
+          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
+        />
+        <input
+          type="text"
+          name="jobTitle"
+          placeholder="Job Title"
+          onChange={handleChange}
+          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
+        />
+        <input
+          type="text"
+          name="email"
+          placeholder="Email"
+          onChange={handleChange}
+          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
+        />
+        <input
+          type="text"
+          name="phoneNumber"
+          placeholder="Phone Number"
+          onChange={handleChange}
+          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
+        />
+        <textarea
+          name="message"
+          placeholder="Message"
+          onChange={handleChange}
+          className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500 z-50"
+          rows={4}
+        ></textarea>
+        <button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
+          Send Message
+          <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+      -&gt;
+    </span>
+        </button>
+      </form>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
       </div>
     </section>
   );
