@@ -33,11 +33,11 @@ export default function HeroHome() {
             }}
           >
 {words.map((word, wordIndex) => (
-  <motion.div key={wordIndex} className="flex space-x-2">
+  <motion.div key={wordIndex} className="flex space-x-1 md:space-x-2">
     {word.split("").map((letter, index) => (
       <motion.div
         key={`${wordIndex}-${index}`}
-        className="flex h-16 w-16 items-center justify-center text-3xl font-bold text-white md:h-20 md:w-20 md:text-4xl"
+        className="flex h-10 w-10 items-center justify-center text-2xl font-bold text-white sm:h-14 sm:w-14 sm:text-3xl md:h-20 md:w-20 md:text-4xl"
         variants={{
           hidden: { y: 50, opacity: 0, scale: 0.5 },
           visible: {
@@ -58,6 +58,7 @@ export default function HeroHome() {
     ))}
   </motion.div>
 ))}
+
 
           </motion.div>
         </motion.div>
