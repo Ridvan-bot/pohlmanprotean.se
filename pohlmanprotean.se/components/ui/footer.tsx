@@ -126,7 +126,7 @@ export default function Footer() {
               <ul className="inline-flex gap-1">
                 <li>
                   <a
-                    className="flex items-center justify-center text-blue-500 transition hover:text-indigo-400"
+                    className="flex items-center justify-center text-blue-500 transition hover:text-blue-300"
                     href="#0"
                     aria-label="Twitter"
                   >
@@ -141,7 +141,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <a
-                    className="flex items-center justify-center text-blue-500 transition hover:text-indigo-400"
+                    className="flex items-center justify-center text-blue-500 transition hover:text-blue-300"
                     href="https://github.com/Ridvan-bot?tab=repositories"
                     aria-label="Github"
                     target="_blank"
