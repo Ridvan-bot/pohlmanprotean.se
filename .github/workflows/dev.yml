@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - dev
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,10 +21,16 @@ jobs:
         with:
           credentials_json: ${{ secrets.DEV_GCP_SA_KEY }}
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
-      
+
+      - name: Configure gcloud CLI
+        run: |
+          gcloud config set project dev-pohlmanprotean-website
+          gcloud config set run/region europe-west1
+          gcloud auth configure-docker gcr.io
+
       - name: Build and push Docker image
         run: |
-          gcloud builds submit --tag gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image dev-pohlmanprotean.se
+          gcloud builds submit --tag gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
         run: |
