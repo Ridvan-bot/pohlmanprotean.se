@@ -30,7 +30,7 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          gcloud builds submit --tag gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image
+          gcloud builds submit dev-pohlmanprotean.se --tag gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
         run: |
