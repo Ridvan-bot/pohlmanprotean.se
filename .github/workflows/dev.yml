@@ -1,8 +1,10 @@
 name: Build and Deploy to Google Cloud Run
+
 on:
   push:
     branches:
       - dev
+      - main
 
 jobs:
   build:
@@ -11,36 +13,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: List directory contents
-        run: ls -R # List all files and directories to confirm structure
-
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ secrets.DEV_GCP_SA_KEY }}
+          credentials_json: ${{ secrets[github.ref == 'refs/heads/main' && 'MAIN_GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
 
       - name: Configure gcloud CLI
-        run: |
-          gcloud config set project dev-pohlmanprotean-website
+        run: |          
+          gcloud config set project ${{ github.event.repository.name }}-pohlmanprotean-website
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
 
       - name: Build Docker image
         run: |
-          docker build -t gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
+          docker build -t gcr.io/${{ github.event.repository.name }}-pohlmanprotean-website/${{ github.event.repository.name }}-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
 
       - name: Push Docker image to Google Container Registry
-        run: |
-          docker push gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image
+        run: |          
+          docker push gcr.io/${{ github.event.repository.name }}-pohlmanprotean-website/${{ github.event.repository.name }}-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
         run: |
-          gcloud run deploy dev-pohlmanprotean-website \
-            --image gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image \
+          
+          gcloud run deploy ${{ github.event.repository.name }}-pohlmanprotean-website \
+            --image gcr.io/${{ github.event.repository.name }}-pohlmanprotean-website/${{ github.event.repository.name }}-pohlmanprotean-website-image \
             --platform managed \
             --region europe-west1 \
             --allow-unauthenticated
