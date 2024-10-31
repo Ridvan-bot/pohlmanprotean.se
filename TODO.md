@@ -7,4 +7,6 @@
 - [ ] Setup DB connection
 - [ ] Merch dev and main.yml workflow
 - [ ] Enable links in footer
+- [ ] Fix warnings in github action
+
 
