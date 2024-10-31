@@ -22,8 +22,13 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ github.ref == 'refs/heads/main' && secrets.GCP_SA_KEY || secrets.DEV_GCP_SA_KEY }}
+          credentials_json: ${{ secrets[github.ref == 'refs/heads/main' && 'GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+
+      - name: Check IAM Permissions
+        run: |
+          gcloud projects get-iam-policy ${{ secrets.GCP_PROJECT }} --format=json
+
 
       - name: Configure gcloud CLI
         run: |          
