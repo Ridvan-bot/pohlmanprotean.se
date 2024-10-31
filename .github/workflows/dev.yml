@@ -22,9 +22,16 @@ jobs:
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ secrets[github.ref == 'refs/heads/main' && 'GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
+          credentials_json: ${{ secrets[env.BRANCH_NAME == 'main' && 'GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
-          
+      
+      - name: Echo the used service account key
+        run: |
+          if [ "${{ env.BRANCH_NAME }}" == "main" ]; then
+            echo "Using GCP_SA_KEY"
+          else
+            echo "Using DEV_GCP_SA_KEY"
+          fi
       - name: Configure gcloud CLI
         run: |          
           gcloud config set project ${{ env.BRANCH_NAME }}-pohlmanprotean-website
