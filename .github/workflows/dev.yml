@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - dev
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,9 +30,13 @@ jobs:
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
 
-      - name: Build and push Docker image
+      - name: Build Docker image
         run: |
-          gcloud builds submit pohlmanprotean.se --tag gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image
+          docker build -t gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image .
+
+      - name: Push Docker image to Google Container Registry
+        run: |
+          docker push gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
         run: |
