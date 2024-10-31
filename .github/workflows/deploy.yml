@@ -38,6 +38,23 @@ jobs:
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
 
+            # Enable required APIs
+      - name: Enable Google Container Registry
+        run: |
+          gcloud services enable containerregistry.googleapis.com
+
+      - name: Enable Google Cloud Build
+        run: |
+          gcloud services enable cloudbuild.googleapis.com
+
+      - name: Enable Artifact Registry
+        run: |
+          gcloud services enable artifactregistry.googleapis.com
+
+      - name: Enable Cloud Run Admin API
+        run: |
+          gcloud services enable run.googleapis.com
+
       - name: Build Docker image
         run: |
           docker build -t gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
