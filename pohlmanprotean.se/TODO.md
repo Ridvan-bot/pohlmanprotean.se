@@ -9,5 +9,6 @@
 - [ ] Enable links in footer
 - [ ] Fix warnings in github action
 - [ ] Mapp PROD DNS to main project
+- [ ] Automate service enablement in google cloud
 
 
