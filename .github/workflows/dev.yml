@@ -16,31 +16,34 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
+      - name: Set Branch Name
+        id: branch_name
+        run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v1
         with:
-          credentials_json: ${{ secrets[github.ref == 'refs/heads/main' && 'MAIN_GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
+          credentials_json: ${{ secrets[steps.branch_name.outputs.BRANCH_NAME == 'main' && 'GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
 
       - name: Configure gcloud CLI
         run: |          
-          gcloud config set project ${{ github.event.repository.name }}-pohlmanprotean-website
+          gcloud config set project ${BRANCH_NAME}-pohlmanprotean-website
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
 
       - name: Build Docker image
         run: |
-          docker build -t gcr.io/${{ github.event.repository.name }}-pohlmanprotean-website/${{ github.event.repository.name }}-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
+          docker build -t gcr.io/${BRANCH_NAME}-pohlmanprotean-website/${BRANCH_NAME}-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
 
       - name: Push Docker image to Google Container Registry
         run: |          
-          docker push gcr.io/${{ github.event.repository.name }}-pohlmanprotean-website/${{ github.event.repository.name }}-pohlmanprotean-website-image
+          docker push gcr.io/${BRANCH_NAME}-pohlmanprotean-website/${BRANCH_NAME}-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
         run: |
-          
-          gcloud run deploy ${{ github.event.repository.name }}-pohlmanprotean-website \
-            --image gcr.io/${{ github.event.repository.name }}-pohlmanprotean-website/${{ github.event.repository.name }}-pohlmanprotean-website-image \
+          gcloud run deploy ${BRANCH_NAME}-pohlmanprotean-website \
+            --image gcr.io/${BRANCH_NAME}-pohlmanprotean-website/${BRANCH_NAME}-pohlmanprotean-website-image \
             --platform managed \
             --region europe-west1 \
             --allow-unauthenticated
