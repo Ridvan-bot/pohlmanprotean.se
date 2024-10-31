@@ -1,0 +1,32 @@
+name: Update CHANGELOG
+
+on:
+  push:
+    branches:
+      - '**'  # Trigger on pushes to any branch
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Generate CHANGELOG.md
+        env:
+          GITHUB_REPO: ${{ github.event.repository.name }}
+          GITHUB_USERNAME: ${{ github.event.repository.owner.login }}
+        run: |
+          npm run changelog
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add CHANGELOG.md
+          git commit -m "docs: update CHANGELOG.md" || echo "No changes to commit"
+          git push
