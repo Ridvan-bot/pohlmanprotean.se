@@ -32,7 +32,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image .
+          docker build -t gcr.io/dev-pohlmanprotean-website/dev-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
 
       - name: Push Docker image to Google Container Registry
         run: |
