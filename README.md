@@ -62,9 +62,9 @@ The deployment process is defined in .github/workflows/deploy.yml.
 In cases where a manual deployment is needed, you can trigger the workflow directly from the GitHub Actions tab on your repository.
 
 ## Contributing
-We welcome contributions to PohlmanProtean! To contribute:
+We welcome contributions to PohlmanProtean! 
 
-## Fork the repository.
+To contribute: Fork the repository.
 Create a new branch with a descriptive name (feature/your-feature-name).
 Make your changes and commit them with clear, concise messages.
 Push your branch and create a pull request.
