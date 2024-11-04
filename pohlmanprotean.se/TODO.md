@@ -7,7 +7,7 @@
 - [ ] Setup DB connection
 - [x] Merch dev and main.yml workflow
 - [ ] Enable links in footer
-- [ ] Fix warnings in github action
+- [x] Fix warnings in github action
 - [w] Mapp PROD DNS to main project
 - [x] Automate service enablement in google cloud
 
