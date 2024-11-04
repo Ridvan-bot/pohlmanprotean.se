@@ -5,6 +5,7 @@ on:
     branches:
       - dev
       - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -31,7 +32,7 @@ jobs:
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
 
-          # Enable required APIs
+      # Enable required APIs
       - name: Enable Google Container Registry
         run: |
           gcloud services enable containerregistry.googleapis.com
