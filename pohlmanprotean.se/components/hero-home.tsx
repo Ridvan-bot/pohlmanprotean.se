@@ -11,7 +11,7 @@ export default function HeroHome() {
 
   return (
 
-    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-white-950">
+    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gray-950">
       <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
         
         <motion.div
