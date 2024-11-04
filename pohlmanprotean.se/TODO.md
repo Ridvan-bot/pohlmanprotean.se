@@ -1,14 +1,14 @@
 # TODO List
 - [ ] Implement user authentication
-- [ ] Update documentation
+- [ ] Update documentation, GIthub Wiki?
 - [ ] Implement auto ChangeLog
 - [x] Fix DNS for dev page
 - [ ] Send Message should send a message somewhere.
 - [ ] Setup DB connection
 - [x] Merch dev and main.yml workflow
 - [ ] Enable links in footer
-- [ ] Fix warnings in github action
-- [ ] Mapp PROD DNS to main project
-- [ ] Automate service enablement in google cloud
+- [x] Fix warnings in github action
+- [w] Mapp PROD DNS to main project
+- [x] Automate service enablement in google cloud
 
 

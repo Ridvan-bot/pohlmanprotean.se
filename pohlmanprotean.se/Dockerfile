@@ -1,5 +1,5 @@
 # Use the official Node.js image as a base
-FROM node:18
+FROM node:20
 
 # Set the working directory
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install
+RUN npm install sharp
 
 # Copy the rest of your application code to the working directory
 COPY . .
