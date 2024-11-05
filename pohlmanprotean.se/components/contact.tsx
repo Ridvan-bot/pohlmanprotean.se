@@ -121,7 +121,7 @@ export default function Contact() {
               Please complete the form below and submit your details. Our team will reach out to you promptly.
             </p>
             {waitMessage && (
-              <p className="text-red-500 mb-4">{waitMessage} {waitTime > 0 && `(${waitTime}s)`}</p>
+              <p className="text-red-500 mb-4">{waitMessage}</p>
             )}
             {successMessage && (
               <p className="text-green-500 mb-4">{successMessage}</p>
