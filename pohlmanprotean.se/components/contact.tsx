@@ -18,6 +18,7 @@ export default function Contact() {
   
   const [waitMessage, setWaitMessage] = useState('');
   const [waitTime, setWaitTime] = useState(0);
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -48,6 +49,10 @@ export default function Contact() {
           message: '',
         });
         setWaitMessage(''); // Clear wait message after success
+        setSuccessMessage('Thank you for reaching out! We will get back to you shortly.'); // Set success message
+        setTimeout(() => {
+          setSuccessMessage(''); // Clear success message after a delay (e.g., 5 seconds)
+        }, 5000);
       } else if (response.status === 429) {
         const jsonResponse = await response.json();
         setWaitMessage(jsonResponse.message);
@@ -116,7 +121,10 @@ export default function Contact() {
               Please complete the form below and submit your details. Our team will reach out to you promptly.
             </p>
             {waitMessage && (
-              <p className="text-red-500 mb-4">{waitMessage}</p>
+              <p className="text-red-500 mb-4">{waitMessage} {waitTime > 0 && `(${waitTime}s)`}</p>
+            )}
+            {successMessage && (
+              <p className="text-green-500 mb-4">{successMessage}</p>
             )}
             <div className="group mx-auto flex justify-center items-center max-w-sm flex-wrap gap-6 lg:max-w-none lg:flex-nowrap">
               <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
@@ -179,12 +187,12 @@ export default function Contact() {
                         className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         rows={4}
                       ></textarea>
-                      <button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
-                        Send Message
-                        <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-                          -&gt;
-                        </span>
-                      </button>
+<button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
+          Send Message
+          <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+      -&gt;
+    </span>
+        </button>
                     </form>
                   </div>
                 </div>
