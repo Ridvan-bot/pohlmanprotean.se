@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Sign Up - Open PRO",
-  description: "Page description",
+  title: "Sign Up",
+  description: "Register User",
 };
 
 import Link from "next/link";
@@ -20,67 +20,33 @@ export default function SignUp() {
           <form className="mx-auto max-w-[400px]">
             <div className="space-y-5">
               <div>
-                <label
-                  className="mb-1 block text-sm font-medium text-indigo-200/65"
-                  htmlFor="name"
-                >
+                <label className="mb-1 block text-sm font-medium text-indigo-200/65" htmlFor="name">
                   Name <span className="text-red-500">*</span>
                 </label>
-                <input
-                  id="name"
-                  type="text"
-                  className="form-input w-full"
-                  placeholder="Your full name"
-                  required
-                />
+                <input id="name" type="text" className="form-input w-full" placeholder="Your full name" required />
               </div>
               <div>
-                <label
-                  className="mb-1 block text-sm font-medium text-indigo-200/65"
-                  htmlFor="name"
-                >
+                <label className="mb-1 block text-sm font-medium text-indigo-200/65" htmlFor="company">
                   Company Name <span className="text-red-500">*</span>
                 </label>
-                <input
-                  id="company"
-                  type="text"
-                  className="form-input w-full"
-                  placeholder="Your company name"
-                  required
-                />
+                <input id="company" type="text" className="form-input w-full" placeholder="Your company name" required />
               </div>
               <div>
-                <label
-                  className="mb-1 block text-sm font-medium text-indigo-200/65"
-                  htmlFor="email"
-                >
+                <label className="mb-1 block text-sm font-medium text-indigo-200/65" htmlFor="email">
                   Work Email <span className="text-red-500">*</span>
                 </label>
-                <input
-                  id="email"
-                  type="email"
-                  className="form-input w-full"
-                  placeholder="Your work email"
-                />
+                <input id="email" type="email" className="form-input w-full" placeholder="Your work email" required />
               </div>
               <div>
-                <label
-                  className="block text-sm font-medium text-indigo-200/65"
-                  htmlFor="password"
-                >
+                <label className="block text-sm font-medium text-indigo-200/65" htmlFor="password">
                   Password <span className="text-red-500">*</span>
                 </label>
-                <input
-                  id="password"
-                  type="password"
-                  className="form-input w-full"
-                  placeholder="Password (at least 10 characters)"
-                />
+                <input id="password" type="password" className="form-input w-full" placeholder="Password (at least 10 characters)" required />
               </div>
             </div>
             <div className="mt-6 space-y-5">
-              <button className="btn w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]">
-                Register
+              <button className="btn w-full bg-gradient-to-t from-blue-700 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]">
+                Register...
               </button>
               <div className="flex items-center gap-3 text-center text-sm italic text-gray-600 before:h-px before:flex-1 before:bg-gradient-to-r before:from-transparent before:via-gray-400/25 after:h-px after:flex-1 after:bg-gradient-to-r after:from-transparent after:via-gray-400/25">
                 or

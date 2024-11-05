@@ -1,13 +1,13 @@
 export const metadata = {
-  title: "Sign Up - Open PRO",
-  description: "Page description",
+  title: "Sign Up",
+  description: "Sign Up",
 };
 
 import Link from "next/link";
 
 export default function SignUp() {
   return (
-    <section>
+    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gray-950">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="py-12 md:py-20">
           {/* Section header */}
@@ -79,7 +79,7 @@ export default function SignUp() {
               </div>
             </div>
             <div className="mt-6 space-y-5">
-              <button className="btn w-full bg-gradient-to-t from-indigo-600 to-indigo-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]">
+              <button className="btn w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%]">
                 Register
               </button>
               <div className="flex items-center gap-3 text-center text-sm italic text-gray-600 before:h-px before:flex-1 before:bg-gradient-to-r before:from-transparent before:via-gray-400/25 after:h-px after:flex-1 after:bg-gradient-to-r after:from-transparent after:via-gray-400/25">
@@ -93,7 +93,7 @@ export default function SignUp() {
           {/* Bottom link */}
           <div className="mt-6 text-center text-sm text-indigo-200/65">
             Already have an account?{" "}
-            <Link className="font-medium text-indigo-500" href="/signin">
+            <Link className="font-medium text-blue-500" href="/signin">
               Sign in
             </Link>
           </div>
