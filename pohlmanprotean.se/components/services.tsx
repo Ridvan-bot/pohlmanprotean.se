@@ -6,37 +6,27 @@ import BlurredShape from "@/public/images/blurred-shape.svg";
 import { useEffect, useRef, useState } from "react";
 
 export default function Features() {
-  const [visibleArticles, setVisibleArticles] = useState(Array(3).fill(false));
-  const articleRefs = useRef<(HTMLElement | null)[]>([]);
+  const [isVisible, setIsVisible] = useState(false);
+  const containerRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-          // Article is in view
-          setVisibleArticles((prev) => {
-            const newVisible = [...prev];
-            newVisible[index] = true; // Set to true if visible
-            return newVisible;
-          });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsVisible(true);
         } else {
-          // Article is out of view
-          setVisibleArticles((prev) => {
-            const newVisible = [...prev];
-            newVisible[index] = false; // Set to false if not visible
-            return newVisible;
-          });
+          setIsVisible(false);
         }
-      });
-    });
+      },
+      { threshold: 0.2 } // Adjust the threshold as needed
+    );
 
-    articleRefs.current.forEach((article) => {
-      if (article) {
-        observer.observe(article);
-      }
-    });
+    if (containerRef.current) {
+      observer.observe(containerRef.current);
+    }
 
     return () => {
+      if (containerRef.current) observer.unobserve(containerRef.current);
       observer.disconnect();
     };
   }, []);
@@ -82,7 +72,7 @@ export default function Features() {
               We offer a range of IT solutions, programming, and automation services tailored to your needs.
             </p>
           </div>
-          <div className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
+          <div ref={containerRef} className="mx-auto grid max-w-sm gap-12 sm:max-w-none sm:grid-cols-2 md:gap-x-14 md:gap-y-16 lg:grid-cols-3">
             {[
               {
                 title: "Consulting Services",
@@ -120,9 +110,8 @@ export default function Features() {
             ].map((article, index) => (
               <article
                 key={index}
-                ref={(el) => { articleRefs.current[index] = el; }}
                 className={`transition-transform duration-700 transform ${
-                  visibleArticles[index] ? "translate-x-0" : "-translate-x-full"
+                  isVisible ? "translate-x-0" : "-translate-x-full"
                 }`}
               >
                 {article.icon}

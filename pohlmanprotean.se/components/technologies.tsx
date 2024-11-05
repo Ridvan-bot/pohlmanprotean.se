@@ -12,7 +12,13 @@ import googlecloud from "@/public/images/googlecloud.svg";
 import ansible from "@/public/images/ansible.svg";
 import nodejs from "@/public/images/nodejs.svg";
 import prisma from "@/public/images/prisma.svg";
-
+interface Testimonial {
+  clientImg: StaticImageData;
+  name: string;
+  company: string;
+  content: string;
+  categories: number[];
+}
 
 const testimonials = [
   {
@@ -90,6 +96,7 @@ const testimonials = [
 export default function Testimonials() {
   const masonryContainer = useMasonry();
   const [category, setCategory] = useState<number>(1);
+
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
