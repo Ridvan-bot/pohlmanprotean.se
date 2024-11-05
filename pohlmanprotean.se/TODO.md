@@ -11,5 +11,6 @@
 - [w] Mapp PROD DNS to main project
 - [x] Automate service enablement in google cloud
 - [ ] Use a better and more secure solution than Google APP Password
+- [ ] Use more animation
 
 
