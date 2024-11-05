@@ -28,7 +28,7 @@ jobs:
           
       - name: Configure gcloud CLI
         run: |          
-          gcloud config set project ${{ env.BRANCH_NAME }}-hosandrej
+          gcloud config set project ${{ env.BRANCH_NAME }}-pohlmanprotean-website
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
 
@@ -51,16 +51,16 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t gcr.io/${{ env.BRANCH_NAME }}-hosandrej/${{ env.BRANCH_NAME }}-hosandrej-image -f hosandrejprotean.se/Dockerfile hosandrejprotean.se
+          docker build -t gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
 
       - name: Push Docker image to Google Container Registry
         run: |          
-          docker push gcr.io/${{ env.BRANCH_NAME }}-hosandrej/${{ env.BRANCH_NAME }}-hosandrej-image
+          docker push gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
         run: |
-          gcloud run deploy ${{ env.BRANCH_NAME }}-hosandrej \
-            --image gcr.io/${{ env.BRANCH_NAME }}-hosandrej/${{ env.BRANCH_NAME }}-hosandrej-image \
+          gcloud run deploy ${{ env.BRANCH_NAME }}-pohlmanprotean-website \
+            --image gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image \
             --platform managed \
             --region europe-west1 \
             --allow-unauthenticated
