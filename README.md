@@ -87,7 +87,7 @@ A new Git tag and GitHub release.
 Deploy the latest version to the appropriate environment.
 
 ## Contributing
-We welcome contributions to PohlmanProtean! To contribute:
+We welcome contributions to PohlmanProtean! To contribute please contact us via the webpage.
 
 ## Fork the repository.
 Create a new branch with a descriptive name (feature/your-feature-name).
