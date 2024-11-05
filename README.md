@@ -9,7 +9,11 @@
 - [Setup and Installation](#setup-and-installation)
 - [Running the Project Locally](#running-the-project-locally)
 - [Deployment](#deployment)
+- [DNS Registration](#dns-registration)
+- [Manual Deployment](#manual-deployment)
+- [Release](#release)
 - [Contributing](#contributing)
+- [Fork the repository](#fork-the-repository)
 - [License](#license)
 
 ## Project Overview
