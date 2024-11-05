@@ -66,6 +66,31 @@ Viewer, Cloud Run Admin, Cloud Build Editor, Service Account User, Storage Admin
 
 If you are new to Google Cloud Run, and you are using the free trail, make sure you enable billing. 
 
+### DNS Registration
+
+1. Visit Google Cloud
+2. Navigate to your Project
+3. Search for Custom Domains (App Engine)
+4. Create Application
+5. Choose Region
+6. Select your Service Account
+7. Click Next
+8. Once it completes, search for custom daomains again.
+9. Add a custom domain
+10. Type the DNS name
+11. Click verify
+12. Use TXT and add that entries in you Domain providers record as TXT
+13. Wait for 1h and try to verify
+14. When the verification works, link you domain to your google cloud run
+15. You will get a list of A records and AAAA recrods by google and CNAME
+16. Add those records in you Domain providers DNS settings
+17. You have to remove the old record that you had poiting towards verification URL
+18. Go to cloud Run
+19. Mark the Service that you want to mapp
+20. A menu above the service will be visible
+21. Click on Domains Mapping
+22. Click on Add Mapping
+23. Add the values in your DNS settings at the Domain vendors website, if you haven’t already
 
 ## Manual Deployment
 In cases where a manual deployment is needed, you can trigger the workflow directly from the GitHub Actions tab on your repository.
