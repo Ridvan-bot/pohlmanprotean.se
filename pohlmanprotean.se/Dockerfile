@@ -8,7 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
-RUN npm install sharp
+RUN npm install
 
 # Copy the rest of your application code to the working directory
 COPY . .
