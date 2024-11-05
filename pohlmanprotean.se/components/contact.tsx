@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({

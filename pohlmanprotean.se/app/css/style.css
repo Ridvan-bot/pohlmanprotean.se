@@ -10,4 +10,33 @@
 html {
     scroll-behavior: smooth;
   }
-  
+  @keyframes slide-in {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0); /* Move to the original position */
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: translateX(0); /* Start from the original position */
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-100%); /* Move out to the left */
+        opacity: 0;
+    }
+}
+
+.slide-in {
+    animation: slide-in 1.5s forwards; /* Adjust duration as needed */
+}
+
+.slide-out {
+    animation: slide-out 0.5s forwards; /* Adjust duration as needed */
+}
+
