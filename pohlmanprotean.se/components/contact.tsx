@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from "next/image";
 import BlurredShape from "@/public/images/blurred-shape.svg";
 import BlurredShapeGray from "@/public/images/blurred-shape-gray.svg";
@@ -15,6 +15,9 @@ export default function Contact() {
     phoneNumber: '',
     message: ''
   });
+  
+  const [waitMessage, setWaitMessage] = useState('');
+  const [waitTime, setWaitTime] = useState(0);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -44,6 +47,11 @@ export default function Contact() {
           phoneNumber: '',
           message: '',
         });
+        setWaitMessage(''); // Clear wait message after success
+      } else if (response.status === 429) {
+        const jsonResponse = await response.json();
+        setWaitMessage(jsonResponse.message);
+        setWaitTime(jsonResponse.waitTime);
       } else {
         const errorText = await response.text();
         console.log('Failed to send message:', errorText);
@@ -52,6 +60,17 @@ export default function Contact() {
       console.error('Error sending message:', error);
     }
   };
+
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+    if (waitTime > 0) {
+      timer = setInterval(() => {
+        setWaitTime(prevTime => prevTime - 1);
+      }, 1000);
+    }
+    
+    return () => clearInterval(timer);
+  }, [waitTime]);
 
   return (
     <section className="relative flex items-center">
@@ -96,6 +115,9 @@ export default function Contact() {
             <p className="text-lg text-indigo-200/65 mb-10">
               Please complete the form below and submit your details. Our team will reach out to you promptly.
             </p>
+            {waitMessage && (
+              <p className="text-red-500 mb-4">{waitMessage}</p>
+            )}
             <div className="group mx-auto flex justify-center items-center max-w-sm flex-wrap gap-6 lg:max-w-none lg:flex-nowrap">
               <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
                 <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950">
