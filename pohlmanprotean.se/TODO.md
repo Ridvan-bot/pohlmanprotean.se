@@ -1,7 +1,7 @@
 # TODO List
 - [ ] Implement user authentication
 - [ ] Update documentation, GIthub Wiki?
-- [ ] Implement auto ChangeLog
+- [x] Implement auto ChangeLog
 - [x] Fix DNS for dev page
 - [x] Send Message should send a message somewhere.
 - [ ] Setup DB connection
