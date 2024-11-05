@@ -12,7 +12,13 @@ import googlecloud from "@/public/images/googlecloud.svg";
 import ansible from "@/public/images/ansible.svg";
 import nodejs from "@/public/images/nodejs.svg";
 import prisma from "@/public/images/prisma.svg";
-
+interface Testimonial {
+  clientImg: StaticImageData;
+  name: string;
+  company: string;
+  content: string;
+  categories: number[];
+}
 
 const testimonials = [
   {
@@ -106,8 +112,8 @@ export default function Testimonials() {
 
         <div>
           {/* Buttons */}
-          <div className="flex justify-center pb-12 max-md:hidden md:pb-16">
-            <div className="relative inline-flex flex-wrap justify-center rounded-[1.25rem] bg-gray-800/40 p-1">
+          <div className="flex flex-wrap justify-center gap-2 pb-12">
+   <button className={`px-3 py-1 sm:py-2 md:py-3 ${category === 1 ? "bg-blue-500" : "bg-gray-500"} `}>View All</button>
               {/* Button #1 */}
               <button
                 className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 1 ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
@@ -208,6 +214,12 @@ export function Testimonial({
   category: number;
   children: React.ReactNode;
 }) {
+
+  
+  const filteredTestimonials = testimonials.filter(testimonial =>
+    testimonial.categories.includes(category)
+  );
+  
   return (
     <article
       className={`relative rounded-2xl bg-gradient-to-br from-gray-900/50 via-gray-800/25 to-gray-900/50 p-5 backdrop-blur-sm transition-opacity before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] ${!testimonial.categories.includes(category) ? "opacity-30" : ""}`}

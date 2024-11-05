@@ -118,17 +118,18 @@ export default function Features() {
                 ),
               },
             ].map((article, index) => (
-              <article
-                key={index}
-                ref={(el) => { articleRefs.current[index] = el; }}
-                className={`transition-transform duration-700 transform ${
-                  visibleArticles[index] ? "translate-x-0" : "-translate-x-full"
-                }`}
-              >
-                {article.icon}
-                <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">{article.title}</h3>
-                <p className="text-indigo-200/65">{article.description}</p>
-              </article>
+<article
+  key={index}
+  ref={(el) => { articleRefs.current[index] = el; }}
+  className={`transition-transform duration-500 sm:duration-700 transform ${
+    visibleArticles[index] ? "translate-x-0" : "-translate-x-1/2 sm:-translate-x-full"
+  }`}
+>
+  {article.icon}
+  <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">{article.title}</h3>
+  <p className="text-indigo-200/65">{article.description}</p>
+</article>
+
             ))}
           </div>
         </div>
