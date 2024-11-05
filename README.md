@@ -61,6 +61,31 @@ The deployment process is defined in .github/workflows/deploy.yml.
 ## Manual Deployment
 In cases where a manual deployment is needed, you can trigger the workflow directly from the GitHub Actions tab on your repository.
 
+
+### Release 
+
+Versioning & Changelog
+This project follows a standardized release and versioning process using Conventional Commits to ensure consistent commit messages, making it easier to track changes and automate versioning.
+
+Changelog Generation: 
+The changelog is automatically generated and maintained using standard-version. With each release, a new version is generated, and an entry is added to CHANGELOG.md.
+
+How to Create a New Release
+
+Make sure all commit messages follow the Conventional Commits format.
+Run the following command to create a new version and update the changelog:
+
+   ```bash
+   npm run release
+   git push --follow-tags origin dev/main
+   ```
+
+What will happen:
+
+A new changelog entry in CHANGELOG.md.
+A new Git tag and GitHub release.
+Deploy the latest version to the appropriate environment.
+
 ## Contributing
 We welcome contributions to PohlmanProtean! To contribute:
 
