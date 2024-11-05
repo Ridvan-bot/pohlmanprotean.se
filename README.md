@@ -44,7 +44,7 @@ The GitHub workflow file responsible for deployments is located at `.github/work
 1. **Clone the repository**:
    ```bash
    git clone git@github.com:Ridvan-bot/website.git
-   cd website
+   cd website/pohlmanprotean.se/
    npm install
    npm run dev
    ```
@@ -57,6 +57,15 @@ This project uses GitHub Actions to handle automatic deployments:
 Production: Any push to the main branch triggers a deployment to pohlmanprotean.se.
 Development: Any push to the dev branch triggers a deployment to dev.pohlmanprotean.se.
 The deployment process is defined in .github/workflows/deploy.yml.
+
+Make sure you create a project in Google Gloud Run before you try to commit any code to a repo.
+Once you pushed the code, and if it failes, make sure the service account in Google Cloud has all the permission it needs.
+These are the Permissions:
+
+Viewer, Cloud Run Admin, Cloud Build Editor, Service Account User, Storage Admin, Artifact Registry Writer, Registry Administrator.
+
+If you are new to Google Cloud Run, and you are using the free trail, make sure you enable billing. 
+
 
 ## Manual Deployment
 In cases where a manual deployment is needed, you can trigger the workflow directly from the GitHub Actions tab on your repository.
