@@ -1,0 +1,41 @@
+name: Setup Google Cloud Infrastructure
+
+# Trigger this workflow manually with inputs for branch and project name
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch name (e.g., dev or main)'
+        required: true
+        default: 'dev'
+      project_name:
+        description: 'Google Cloud Project name (e.g., dev-my-project or main-my-project)'
+        required: true
+        default: 'dev-my-project'
+
+jobs:
+  setup-infrastructure:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets[github.event.inputs.branch == 'main' && 'MAIN_GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
+          access_token_scopes: https://www.googleapis.com/auth/cloud-platform
+
+      - name: Configure gcloud CLI
+        run: |
+          gcloud config set project ${{ github.event.inputs.project_name }}
+          gcloud config set run/region europe-west1
+
+      # Enable required APIs once
+      - name: Enable Google APIs
+        run: |
+          gcloud services enable containerregistry.googleapis.com
+          gcloud services enable cloudbuild.googleapis.com
+          gcloud services enable artifactregistry.googleapis.com
+          gcloud services enable run.googleapis.com
