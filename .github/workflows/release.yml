@@ -1,10 +1,7 @@
 name: Semantic Release
 
 on:
-  push:
-    branches:
-      - dev
-      - main
+  workflow_dispatch:
 
 jobs:
   # release:
@@ -30,13 +27,14 @@ jobs:
   #         GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Required for semantic-release to push tags and create releases
 
   trigger_deploy:
-  #  needs: release  # Wait for the release job to complete before triggering deployment
+    # needs: release  # Wait for the release job to complete before triggering deployment
     runs-on: ubuntu-22.04
 
     steps:
       - name: Trigger Deployment Workflow
         uses: peter-evans/workflow-dispatch@v1
         with:
-          repository: ${{ github.repository }}
-          workflow: deploy.yml  # This should be the filename of your deployment workflow
+          repository: Ridvan-bot/website  # Specify the repository that contains the deploy workflow
+          workflow: deploy.yml  # Name of the workflow file to trigger
           ref: ${{ github.ref }}  # Ensures that the same branch is used in deploy
+          token: ${{ secrets.GH_TOKEN }}  # Ensure this token has access to trigger workflows
