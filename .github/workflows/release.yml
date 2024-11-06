@@ -17,13 +17,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16'  # Adjust to your preferred version
+          node-version: '20'  # Adjust to your preferred version
 
       - name: Install dependencies
         run: |
           cd pohlmanprotean.se  # Change to the directory where package.json is located
           npm install
-        working-directory: ../pohlmanprotean.se  # Set the correct working directory
+        working-directory: ./pohlmanprotean.se  # Set the correct working directory relative to the root
 
       - name: Run semantic-release
         run: |
