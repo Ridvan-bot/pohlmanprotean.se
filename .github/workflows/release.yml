@@ -9,6 +9,3 @@ jobs:
         uses: ridvan-bot/workflows/.github/workflows/semantic-release.yaml@dev
         with:
             branches: 'dev'
-        
-        secrets:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
