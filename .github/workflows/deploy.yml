@@ -7,8 +7,22 @@ on:
       - main
 
 jobs:
-  build:
+  release:
     runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Semantic Release step to handle release creation
+      - name: Release
+        run: npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    runs-on: ubuntu-22.04
+    needs: release  # Waits for the release job to complete
+    if: github.ref_name == 'dev' || github.ref_name == 'main'  # Deploys only on specific branches
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -25,9 +39,9 @@ jobs:
         with:
           credentials_json: ${{ secrets[env.BRANCH_NAME == 'main' && 'MAIN_GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
-          
+
       - name: Configure gcloud CLI
-        run: |          
+        run: |
           gcloud config set project ${{ env.BRANCH_NAME }}-pohlmanprotean-website
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
@@ -37,7 +51,7 @@ jobs:
           docker build -t gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
 
       - name: Push Docker image to Google Container Registry
-        run: |          
+        run: |
           docker push gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
