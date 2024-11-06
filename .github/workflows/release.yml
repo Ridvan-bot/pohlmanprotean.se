@@ -13,7 +13,7 @@ jobs:
     if: ${{ inputs.branches != 'main' }}
     runs-on: ubuntu-latest
     steps:
-      - name: No release if not main
+      - name: No release
         run: echo "Branch is not main, no need to release."
 
   # Execute semantic release only if branches is "main"
