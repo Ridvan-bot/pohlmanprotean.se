@@ -27,7 +27,7 @@ jobs:
         run: npm run release
         working-directory: ./pohlmanprotean.se  # Run semantic-release in the same directory
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Required for semantic-release to push tags and create releases
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}  # Required for semantic-release to push tags and create releases
 
   trigger_deploy:
     needs: release  # Wait for the release job to complete before triggering deployment
