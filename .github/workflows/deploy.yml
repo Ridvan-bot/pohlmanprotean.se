@@ -1,8 +1,8 @@
 name: Build and Deploy to Google Cloud Run
 
 on:
-  workflow_dispatch:  # This workflow will now be triggered by a manual dispatch event
-  
+  workflow_dispatch: 
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
