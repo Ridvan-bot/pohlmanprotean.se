@@ -16,6 +16,8 @@ jobs:
       # Semantic Release step to handle release creation
       - name: Release
         run: npm run release
+        working-directory: ./website/pohlmanprotean.se/
+  
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
