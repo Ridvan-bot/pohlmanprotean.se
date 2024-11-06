@@ -1,0 +1,14 @@
+name: Trigger Semantic Release
+
+on:
+  workflow_call:
+    inputs:
+      branches:
+        required: true
+        type: string
+jobs:
+  execute-semantic-release:
+    if: ${{ inputs.branches == 'main' }}
+    uses: ridvan-bot/workflows/.github/workflows/semantic-release.yaml@main
+    with:
+      branches: ${{ inputs.branches }}

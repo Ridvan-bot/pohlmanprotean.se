@@ -5,9 +5,16 @@ on:
     branches:
       - dev
       - main
-
 jobs:
-  build:
+  execute-release:
+    if: ${{ github.ref_name == 'main' }}
+    uses: ridvan-bot/website/.github/workflows/release.yml@main
+    with:
+      branches: ${{ github.ref_name }}
+
+  deploy:
+    if: ${{ github.ref_name == 'main' }}
+    needs: [execute-release]
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
