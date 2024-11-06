@@ -1,0 +1,42 @@
+name: Semantic Release
+
+on:
+  push:
+    branches:
+      - dev
+      - main
+
+jobs:
+  release:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'  # Adjust to your preferred version
+
+      - name: Install dependencies
+        run: |
+          npm install
+
+      - name: Run semantic-release
+        run: |
+          npm run release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Required for semantic-release to push tags and create releases
+
+  trigger_deploy:
+    needs: release  # Wait for the release job to complete before triggering deployment
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Trigger Deployment Workflow
+        uses: ridvan-bot/workflow-dispatch@v1
+        with:
+          repository: ${{ github.repository }}
+          workflow: deploy.yml  # This should be the filename of your deployment workflow
+          ref: ${{ github.ref }}  # Ensures that the same branch is used in deploy
