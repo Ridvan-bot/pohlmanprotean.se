@@ -7,11 +7,12 @@ on:
       - main
 jobs:
   execute-relese:
-    uses: ridvan-bot/website/.github/workflows/release.yaml@dev
+    uses: ridvan-bot/website/.github/workflows/release.yml@dev
     with:
       branches: ${{ github.ref_name }}
 
   deploy:
+    needs: execute-relese
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
