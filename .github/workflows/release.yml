@@ -9,7 +9,7 @@ on:
 
 jobs:
   # Early exit job to complete workflow if branches is not "main"
-  exit-if-not-main:
+  No-release:
     if: ${{ inputs.branches != 'main' }}
     runs-on: ubuntu-latest
     steps:
