@@ -125,9 +125,10 @@ A new Git tag and GitHub release.
 Deploy the latest version to the appropriate environment.
 
 ## Contributing
+
 We welcome contributions to PohlmanProtean! To contribute please contact us via the webpage.
 
-## Fork the repository.
+To contribute: Fork the repository.
 Create a new branch with a descriptive name (feature/your-feature-name).
 Make your changes and commit them with clear, concise messages.
 Push your branch and create a pull request.
