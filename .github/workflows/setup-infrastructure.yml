@@ -4,10 +4,6 @@ name: Setup Google Cloud Infrastructure
 on:
   workflow_dispatch:
     inputs:
-      branch:
-        description: 'Branch name (e.g., dev or main)'
-        required: true
-        default: 'dev'
       project_name:
         description: 'Google Cloud Project name (e.g., dev-my-project or main-my-project)'
         required: true
@@ -20,6 +16,11 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - name: Extract Branch Name
+        id: branch_name
+        run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
+
 
       - name: Authenticate to Google Cloud
         uses: google-github-actions/auth@v2
