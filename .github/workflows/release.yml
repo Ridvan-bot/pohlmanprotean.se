@@ -1,40 +1,14 @@
-name: Semantic Release
+name: Trigger Dummy Workflow
 
 on:
-  workflow_dispatch:
-
+  push:
+    branches:
+      - dev
 jobs:
-  # release:
-  #   runs-on: ubuntu-22.04
-
-  #   steps:
-  #     - name: Checkout code
-  #       uses: actions/checkout@v4
-
-  #     - name: Set up Node.js
-  #       uses: actions/setup-node@v3
-  #       with:
-  #         node-version: '20'  # Adjust to your preferred version
-
-  #     - name: Install dependencies
-  #       run: npm install
-  #       working-directory: ./pohlmanprotean.se  # Point to the directory where package.json is located
-
-  #     - name: Run semantic-release
-  #       run: npm run release
-  #       working-directory: ./pohlmanprotean.se  # Run semantic-release in the same directory
-  #       env:
-  #         GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Required for semantic-release to push tags and create releases
-
-  trigger_deploy:
-    # needs: release  # Wait for the release job to complete before triggering deployment
-    runs-on: ubuntu-22.04
-
-    steps:
-      - name: Trigger Deployment Workflow
-        uses: peter-evans/workflow-dispatch@v1
+    execute-semantic-release:
+        uses: ridvan-bot/workflows/.github/workflows/semantic-release.yaml@dev
         with:
-          repository: Ridvan-bot/website  # Specify the repository that contains the deploy workflow
-          workflow: deploy.yml  # Name of the workflow file to trigger
-          ref: ${{ github.ref }}  # Ensures that the same branch is used in deploy
-          token: ${{ secrets.GH_TOKEN }}  # Ensure this token has access to trigger workflows
+            branches: 'dev'
+        
+        secrets:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
