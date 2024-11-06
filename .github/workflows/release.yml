@@ -6,7 +6,17 @@ on:
       branches:
         required: true
         type: string
+
 jobs:
+  # Early exit job to complete workflow if branches is not "main"
+  exit-if-not-main:
+    if: ${{ inputs.branches != 'main' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: No release if not main
+        run: echo "Branch is not main, no need to release."
+
+  # Execute semantic release only if branches is "main"
   execute-semantic-release:
     if: ${{ inputs.branches == 'main' }}
     uses: ridvan-bot/workflows/.github/workflows/semantic-release.yaml@main
