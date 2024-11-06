@@ -6,7 +6,6 @@ on:
       branches:
         required: true
         type: string
-
 jobs:
   execute-semantic-release:
     if: ${{ inputs.branches == 'main' }}
