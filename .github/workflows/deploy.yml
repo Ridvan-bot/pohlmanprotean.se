@@ -6,13 +6,15 @@ on:
       - dev
       - main
 jobs:
-  execute-relese:
-    uses: ridvan-bot/website/.github/workflows/release.yml@dev
+  execute-release:
+    if: ${{ github.ref_name == 'main' }}
+    uses: ridvan-bot/website/.github/workflows/release.yml@main
     with:
       branches: ${{ github.ref_name }}
 
   deploy:
-    needs: execute-relese
+    if: ${{ github.ref_name == 'main' }}
+    needs: [execute-release]
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
