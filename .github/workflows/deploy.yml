@@ -6,7 +6,11 @@ on:
       - dev
       - main
 jobs:
-  
+  execute-relese:
+    uses: ridvan-bot/website/.github/workflows/release.yaml@dev
+    with:
+      branches: ${{ github.ref_name }}
+
   deploy:
     runs-on: ubuntu-22.04
     steps:
