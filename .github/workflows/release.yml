@@ -1,4 +1,4 @@
-name: Trigger Dummy Workflow
+name: Trigger Semantic Release
 
 on:
   push:
