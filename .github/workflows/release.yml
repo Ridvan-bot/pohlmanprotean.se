@@ -7,30 +7,30 @@ on:
       - main
 
 jobs:
-  release:
-    runs-on: ubuntu-22.04
+  # release:
+  #   runs-on: ubuntu-22.04
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v4
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'  # Adjust to your preferred version
+  #     - name: Set up Node.js
+  #       uses: actions/setup-node@v3
+  #       with:
+  #         node-version: '20'  # Adjust to your preferred version
 
-      - name: Install dependencies
-        run: npm install
-        working-directory: ./pohlmanprotean.se  # Point to the directory where package.json is located
+  #     - name: Install dependencies
+  #       run: npm install
+  #       working-directory: ./pohlmanprotean.se  # Point to the directory where package.json is located
 
-      - name: Run semantic-release
-        run: npm run release
-        working-directory: ./pohlmanprotean.se  # Run semantic-release in the same directory
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Required for semantic-release to push tags and create releases
+  #     - name: Run semantic-release
+  #       run: npm run release
+  #       working-directory: ./pohlmanprotean.se  # Run semantic-release in the same directory
+  #       env:
+  #         GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Required for semantic-release to push tags and create releases
 
   trigger_deploy:
-    needs: release  # Wait for the release job to complete before triggering deployment
+  #  needs: release  # Wait for the release job to complete before triggering deployment
     runs-on: ubuntu-22.04
 
     steps:
