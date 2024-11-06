@@ -54,6 +54,15 @@ The GitHub workflow file responsible for deployments is located at `.github/work
    ```
 The project should now be running at http://localhost:3000.
 
+## Setup Google Cloud Infrastructure
+
+Go to the Actions tab in your GitHub repository.
+Select the Setup Google Cloud Infrastructure workflow from the list of workflows.
+Click Run workflow on the right side of the page.
+In the Use workflow from field, select dev or main branch.
+In the Project Name field, enter the Google Cloud project ID you want to configure (e.g., dev-my-project or main-my-project).
+Click Run workflow to start the action.
+
 ## Deployment 
 Automatic Deployment with GitHub Workflows
 This project uses GitHub Actions to handle automatic deployments:
