@@ -7,7 +7,7 @@ on:
       - main
 jobs:
   execute-release:
-    uses: ridvan-bot/website/.github/workflows/release.yml@main
+    uses: ridvan-bot/website/.github/workflows/release.yml@dev
     with:
       branches: ${{ github.ref_name }}
       repo_path: './pohlmanprotean.se/'
