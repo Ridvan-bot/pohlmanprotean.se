@@ -11,7 +11,6 @@ jobs:
     with:
       branches: ${{ github.ref_name }}
       repo_path: './pohlmanprotean.se/'
-
   deploy:
     needs: [execute-release]
     runs-on: ubuntu-22.04
