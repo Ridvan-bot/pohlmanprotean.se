@@ -112,20 +112,14 @@ In cases where a manual deployment is needed, you can trigger the workflow direc
 ## Release 
 
 ### Versioning & Changelog
-This project follows a standardized release and versioning process using Conventional Commits to ensure consistent commit messages, making it easier to track changes and automate versioning.
+This project will soon follow a standardized release and versioning process using Semantic Release to ensure consistent commit messages, making it easier to track changes and automate versioning.
 
 ### Changelog Generation: 
 The changelog is automatically generated and maintained using standard-version. With each release, a new version is generated, and an entry is added to CHANGELOG.md.
 
 ### How to Create a New Release
 
-Make sure all commit messages follow the Conventional Commits format.
-Run the following command to create a new version and update the changelog:
-
-   ```bash
-   npm run release
-   git push --follow-tags origin dev/main
-   ```
+Make sure all commit messages follow the Semantic Release format.
 
 ### What will happen:
 
