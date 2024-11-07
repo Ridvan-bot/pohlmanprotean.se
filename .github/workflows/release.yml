@@ -10,10 +10,9 @@ on:
         required: true
         type: string
         default: '/pohlmanprotean.se/'
+    secrets:
       token:
         required: true
-        type: string
-        description: 'GitHub token for authentication'
 
 jobs:
   # Early exit job to complete workflow if branches is not "dev"
@@ -31,3 +30,5 @@ jobs:
     with:
       branches: ${{ inputs.branches }}
       repo_path: ${{ inputs.repo_path }}
+    secrets:
+      token: ${{ secrets.token }}

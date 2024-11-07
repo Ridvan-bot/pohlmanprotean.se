@@ -11,7 +11,9 @@ jobs:
     with:
       branches: ${{ github.ref_name }}
       repo_path: '/pohlmanprotean.se/'
-      token: ${{ secrets.GH_TOKEN }}
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}  # Pass the token as an environment variable
+  
   deploy:
     needs: [execute-release]
     runs-on: ubuntu-22.04
