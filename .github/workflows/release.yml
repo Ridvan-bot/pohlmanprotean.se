@@ -12,7 +12,7 @@ on:
         default: './pohlmanprotean.se/'
 
 jobs:
-  # Early exit job to complete workflow if branches is not "main"
+  # Early exit job to complete workflow if branches is not "dev"
   No-release:
     if: ${{ inputs.branches != 'dev' }}
     runs-on: ubuntu-latest
@@ -20,9 +20,9 @@ jobs:
       - name: No release
         run: echo "Branch is not dev, no need to release."
 
-  # Execute semantic release only if branches is "main"
+  # Execute semantic release only if branches is "dev"
   execute-semantic-release:
-    if: ${{ inputs.branches == 'main' }}
+    if: ${{ inputs.branches == 'dev' }}
     uses: ridvan-bot/workflows/.github/workflows/semantic-release.yaml@dev
     with:
       branches: ${{ inputs.branches }}
