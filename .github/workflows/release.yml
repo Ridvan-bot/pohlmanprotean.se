@@ -15,20 +15,26 @@ on:
         required: true
 
 jobs:
-  # Early exit job to complete workflow if branches is not "dev"
+  # Early exit job to complete workflow if branches is not "main"
   No-release:
     if: ${{ inputs.branches != 'main' }}
     runs-on: ubuntu-latest
     steps:
       - name: No release
-        run: echo "Branch is not dev, no need to release."
+        run: echo "Branch is not main, no need to release."
 
-  # Execute semantic release only if branches is "dev"
+  # Execute semantic release only if branches is "main"
   execute-semantic-release:
     if: ${{ inputs.branches == 'main' }}
-    uses: ridvan-bot/workflows/.github/workflows/semantic-release.yaml@main
-    with:
-      branches: ${{ inputs.branches }}
-      repo_path: ${{ inputs.repo_path }}
-    secrets:
-      token: ${{ secrets.token }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Run semantic release
+        env:
+          GITHUB_TOKEN: ${{ secrets.token }}
+        run: npx semantic-release
