@@ -10,8 +10,10 @@ jobs:
     uses: ridvan-bot/website/.github/workflows/release.yml@main
     with:
       branches: ${{ github.ref_name }}
-      repo_path: './pohlmanprotean.se/'
-
+      repo_path: 'pohlmanprotean.se/'
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml
+ # Pass the token as an environment variable
   deploy:
     needs: [execute-release]
     runs-on: ubuntu-22.04
