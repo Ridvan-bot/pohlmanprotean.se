@@ -13,7 +13,6 @@ on:
     secrets:
       token:
         required: true
-
 jobs:
   # Early exit job to complete workflow if branches is not "main"
   No-release:
