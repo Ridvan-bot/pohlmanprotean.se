@@ -13,5 +13,6 @@
 - [ ] Use a better and more secure solution than Google APP Password
 - [w] Use more animation
 - [w] Use semantic release
+- [ ] Develop the API
 
 

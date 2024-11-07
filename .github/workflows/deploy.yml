@@ -10,6 +10,7 @@ jobs:
     uses: ridvan-bot/website/.github/workflows/release.yml@main
     with:
       branches: ${{ github.ref_name }}
+      repo_path: './pohlmanprotean.se/'
 
   deploy:
     needs: [execute-release]
