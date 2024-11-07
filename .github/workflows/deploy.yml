@@ -10,7 +10,7 @@ jobs:
     uses: ridvan-bot/website/.github/workflows/release.yml@dev
     with:
       branches: ${{ github.ref_name }}
-      repo_path: '/pohlmanprotean.se/'
+      repo_path: 'pohlmanprotean.se/'
     secrets:
       token: ${{ secrets.GH_TOKEN }}  # Pass the token as an environment variable
   deploy:
