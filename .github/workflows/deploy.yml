@@ -10,7 +10,8 @@ jobs:
     uses: ridvan-bot/website/.github/workflows/release.yml@dev
     with:
       branches: ${{ github.ref_name }}
-      repo_path: './pohlmanprotean.se/'
+      repo_path: '/pohlmanprotean.se/'
+      token: ${{ secrets.GH_TOKEN }}
   deploy:
     needs: [execute-release]
     runs-on: ubuntu-22.04

@@ -9,7 +9,11 @@ on:
       repo_path:
         required: true
         type: string
-        default: './pohlmanprotean.se/'
+        default: '/pohlmanprotean.se/'
+      token:
+        required: true
+        type: string
+        description: 'GitHub token for authentication'
 
 jobs:
   # Early exit job to complete workflow if branches is not "dev"
