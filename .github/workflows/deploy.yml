@@ -8,9 +8,9 @@ on:
 
 jobs:
   execute-release:
-    uses: ridvan-bot/website/.github/workflows/release.yml@dev
+    uses: .github/workflows/release.yml@dev
     with:
-      branches: "dev"
+      branches: "${{ github.ref_name }}"
       repo_path: 'pohlmanprotean.se/'
     secrets:
       token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml
