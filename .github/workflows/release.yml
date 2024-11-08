@@ -25,15 +25,9 @@ jobs:
   # Execute semantic release only if branches is "dev"
   execute-semantic-release:
     if: ${{ inputs.branches == 'dev' }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-      - name: Run semantic release
-        env:
-          GITHUB_TOKEN: ${{ secrets.token }}
-        run: npx semantic-release
+    uses: Ridvan-bot/workflows/.github/workflows/semantic-release.yml@dev
+    with:
+      branches: "${{ github.ref_name }}"
+      repo_path: 'pohlmanprotean.se/'
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml
