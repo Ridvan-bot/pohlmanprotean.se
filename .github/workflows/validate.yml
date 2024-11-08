@@ -29,3 +29,10 @@ jobs:
   call-nodejs-test-workflow:
     name: Node.js Test
     uses: Ridvan-bot/workflows/.github/workflows/nodejs-test.yml@dev
+    with:
+      eslint-enable: ${{ inputs.eslint-enable }}
+      eslint-command: ${{ inputs.eslint-command }}
+      unit-test-enable: ${{ inputs.unit-test-enable }}
+      unit-test-command: ${{ inputs.unit-test-command }}
+    secrets:
+      token: ${{ secrets.GH_TOKEN }}
