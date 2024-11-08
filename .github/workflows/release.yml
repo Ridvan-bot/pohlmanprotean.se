@@ -14,17 +14,17 @@ on:
       token:
         required: true
 jobs:
-  # Early exit job to complete workflow if branches is not "dev"
+  # Early exit job to complete workflow if branches is not "main"
   No-release:
-    if: ${{ inputs.branches != 'dev' }}
+    if: ${{ inputs.branches != 'main' }}
     runs-on: ubuntu-latest
     steps:
       - name: No release
-        run: echo "Branch is not dev, no need to release."
+        run: echo "Branch is not main, no need to release."
 
-  # Execute semantic release only if branches is "dev"
+  # Execute semantic release only if branches is "main"
   execute-semantic-release:
-    if: ${{ inputs.branches == 'dev' }}
+    if: ${{ inputs.branches == 'main' }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
