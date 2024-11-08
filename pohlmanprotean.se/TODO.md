@@ -14,5 +14,6 @@
 - [w] Use more animation
 - [x] Use semantic release
 - [ ] Develop the API
+- [ ] Use ESLint via shared workflows
 
 
