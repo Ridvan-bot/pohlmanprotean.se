@@ -52,7 +52,7 @@ The GitHub workflow file responsible for deployments is located at `.github/work
    npm install
    npm run dev
    ```
-The project should now be running at http://localhost:3000.
+The project should now be running at http://localhost:3000
 
 ## Setup Google Cloud Infrastructure
 
