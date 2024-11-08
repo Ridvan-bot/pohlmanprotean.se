@@ -15,6 +15,7 @@ jobs:
       token: ${{ secrets.GH_TOKEN }}
 
   execute-release:
+    needs: execute-code-quality-validation
     uses: Ridvan-bot/website/.github/workflows/release.yml@main
     with:
       branches: "${{ github.ref_name }}"
