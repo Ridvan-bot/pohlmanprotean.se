@@ -5,17 +5,17 @@ on:
     branches:
       - dev
       - main
+
 jobs:
   execute-release:
-    uses: ridvan-bot/website/.github/workflows/release.yml@dev
+    uses: Ridvan-bot/website/.github/workflows/release.yml@dev
     with:
-      branches: ${{ github.ref_name }}
+      branches: "${{ github.ref_name }}"
       repo_path: 'pohlmanprotean.se/'
     secrets:
       token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml
- # Pass the token as an environment variable
   deploy:
-    needs: [execute-release]
+    needs: execute-release
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout code
@@ -35,7 +35,7 @@ jobs:
           access_token_scopes: https://www.googleapis.com/auth/cloud-platform
           
       - name: Configure gcloud CLI
-        run: |          
+        run: |
           gcloud config set project ${{ env.BRANCH_NAME }}-pohlmanprotean-website
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
@@ -45,7 +45,7 @@ jobs:
           docker build -t gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image -f pohlmanprotean.se/Dockerfile pohlmanprotean.se
 
       - name: Push Docker image to Google Container Registry
-        run: |          
+        run: |
           docker push gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image
 
       - name: Deploy to Google Cloud Run
