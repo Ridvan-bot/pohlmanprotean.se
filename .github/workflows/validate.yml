@@ -22,7 +22,9 @@ on:
             type: string
             description: "Used to override the default command to run your unit tests e.g. yarn test:unit-ci"
             default: "npm run test:unit-ci"
-      
+    secrets:
+      token:
+        required: true
 jobs:
   call-nodejs-test-workflow:
     name: Node.js Test
