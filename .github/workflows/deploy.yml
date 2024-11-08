@@ -13,7 +13,7 @@ jobs:
       branches: "${{ github.ref_name }}"
       repo_path: 'pohlmanprotean.se/'
     secrets:
-      token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml
+      token: ${{ secrets.GH_TOKEN }}
   deploy:
     needs: execute-release
     runs-on: ubuntu-22.04
