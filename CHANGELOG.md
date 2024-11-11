@@ -1,3 +1,10 @@
+## [0.5.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.4.1...v0.5.0) (2024-11-11)
+
+### Bug Fixes
+
+* Change version tag to [@main](https://github.com/main) ([d48bd82](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/d48bd82c6c64c7910d121822b23f36d7daa25ca1))
+* Change version tag to 1.1 ([acf9080](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/acf9080d44ef545208190d70cad8a13270d5c7cf))
+
 ## [0.4.1](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.4.0...v0.4.1) (2024-11-11)
 
 ### Bug Fixes
