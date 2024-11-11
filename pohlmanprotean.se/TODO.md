@@ -14,6 +14,6 @@
 - [w] Use more animation
 - [x] Use semantic release
 - [ ] Develop the API
-- [ ] Use ESLint via shared workflows
-
+- [w] Use ESLint via shared workflows
+- [w] Shared semantic release should update package.json file and create a CHANGELOG file
 
