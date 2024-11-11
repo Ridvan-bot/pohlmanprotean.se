@@ -6,10 +6,9 @@ on:
       branches:
         required: true
         type: string
-      repo_path:
+      monorepo-path:
         required: true
         type: string
-        default: '/pohlmanprotean.se/'
     secrets:
       token:
         required: true
@@ -27,7 +26,7 @@ jobs:
     if: ${{ inputs.branches == 'main' }}
     uses: Ridvan-bot/workflows/.github/workflows/semantic-release.yml@main
     with:
-      branches: "${{ github.ref_name }}"
-      repo_path: 'pohlmanprotean.se/'
+      branches: "${{ inputs.branches }}"
+      monorepo-path: 'pohlmanprotean.se/'
     secrets:
       token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml

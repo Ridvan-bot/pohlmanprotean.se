@@ -8,7 +8,7 @@ on:
 
 jobs:
   execute-code-quality-validation:
-    uses: Ridvan-bot/website/.github/workflows/validate.yml@dev
+    uses: .github/workflows/validate.yml
     with:
       eslint-enable: true
     secrets:
@@ -16,10 +16,10 @@ jobs:
 
   execute-release:
     needs: execute-code-quality-validation
-    uses: Ridvan-bot/website/.github/workflows/release.yml@main
+    uses: .github/workflows/release.yml
     with:
       branches: "${{ github.ref_name }}"
-      repo_path: 'pohlmanprotean.se/'
+      monorepo-path: 'pohlmanprotean.se/'
     secrets:
       token: ${{ secrets.GH_TOKEN }}
   deploy:
