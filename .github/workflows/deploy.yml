@@ -8,7 +8,7 @@ on:
 
 jobs:
   execute-code-quality-validation:
-    uses: .github/workflows/validate.yml
+    uses: ./.github/workflows/validate.yml
     with:
       eslint-enable: true
     secrets:
@@ -16,7 +16,7 @@ jobs:
 
   execute-release:
     needs: execute-code-quality-validation
-    uses: .github/workflows/release.yml
+    uses: ./.github/workflows/release.yml
     with:
       branches: "${{ github.ref_name }}"
       monorepo-path: 'pohlmanprotean.se/'
