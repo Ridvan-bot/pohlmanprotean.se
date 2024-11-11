@@ -31,5 +31,5 @@ jobs:
       customer_name: ${{ github.event.inputs.customer_name }}
       branch: ${{ github.event.inputs.branch }}
     secrets:
-      GH_TOKEN: ${{ secrets.GH_TOKEN }}
-
+      token: ${{ secrets.GH_TOKEN }}
+  
