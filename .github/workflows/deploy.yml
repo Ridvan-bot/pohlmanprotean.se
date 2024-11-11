@@ -19,7 +19,6 @@ jobs:
     uses: ./.github/workflows/release.yml
     with:
       branches: "${{ github.ref_name }}"
-      monorepo-path: 'pohlmanprotean.se/'
     secrets:
       token: ${{ secrets.GH_TOKEN }}
   deploy:
