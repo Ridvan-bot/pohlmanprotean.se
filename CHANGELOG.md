@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.4.0...v0.4.1) (2024-11-11)
+
+### Bug Fixes
+
+* calling version 1.0.0 shared workflow ([4ba76dd](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/4ba76dd870d58b69b985948b49b52f861532bf9f))
+* typo in version  tag ([6715b52](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/6715b52174aa52ad7c596df446198f285cbffb71))
+
 ## [0.4.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.3.0...v0.4.0) (2024-11-11)
 
 ### Bug Fixes
