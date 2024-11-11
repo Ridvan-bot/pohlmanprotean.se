@@ -1,4 +1,4 @@
-name: Setup Google Cloud Infrastructure
+name: Prep Google Cloud With Required Infrastructure
 
 # Trigger this workflow manually with inputs for branch and project name
 on:
@@ -8,35 +8,28 @@ on:
         description: 'Google Cloud Project name (e.g., dev-my-project or main-my-project)'
         required: true
         default: 'dev-my-project'
+      customer_name:
+        description: 'Select the customer'
+        required: true
+        type: choice
+        options:
+          - pohlmanprotean
+          - hosandrej
+      branch:
+        description: 'Select branch (e.g., dev or main)'
+        required: true
+        type: choice
+        options:  
+          - dev
+          - main
 
 jobs:
-  setup-infrastructure:
-    runs-on: ubuntu-22.04
+  prep-gcloud:
+    uses: Ridvan-bot/workflows/.github/workflows/prep-gcloud-.yml@main
+    with:
+      project_name: ${{ github.event.inputs.project_name }}
+      customer_name: ${{ github.event.inputs.customer_name }}
+      branch: ${{ github.event.inputs.branch }}
+    secrets:
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Extract Branch Name
-        id: branch_name
-        run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
-
-
-      - name: Authenticate to Google Cloud
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets[github.event.inputs.branch == 'main' && 'MAIN_GCP_SA_KEY' || 'DEV_GCP_SA_KEY'] }}
-          access_token_scopes: https://www.googleapis.com/auth/cloud-platform
-
-      - name: Configure gcloud CLI
-        run: |
-          gcloud config set project ${{ github.event.inputs.project_name }}
-          gcloud config set run/region europe-west1
-
-      # Enable required APIs once
-      - name: Enable Google APIs
-        run: |
-          gcloud services enable containerregistry.googleapis.com
-          gcloud services enable cloudbuild.googleapis.com
-          gcloud services enable artifactregistry.googleapis.com
-          gcloud services enable run.googleapis.com
