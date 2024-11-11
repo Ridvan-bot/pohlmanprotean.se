@@ -25,7 +25,7 @@ on:
 
 jobs:
   prep-gcloud:
-    uses: Ridvan-bot/workflows/.github/workflows/prep-gcloud-.yml@v1.1.0
+    uses: Ridvan-bot/workflows/.github/workflows/prep-gcloud-.yml@main
     with:
       project_name: ${{ github.event.inputs.project_name }}
       customer_name: ${{ github.event.inputs.customer_name }}
