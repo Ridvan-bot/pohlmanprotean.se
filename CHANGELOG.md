@@ -1,3 +1,9 @@
+## [0.5.1](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.0...v0.5.1) (2024-11-11)
+
+### Bug Fixes
+
+* Change workflow name ([c83264e](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/c83264e6e395ac6760e85ba81698cdf2028319aa))
+
 ## [0.5.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.4.1...v0.5.0) (2024-11-11)
 
 ### Bug Fixes
