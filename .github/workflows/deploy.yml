@@ -11,6 +11,7 @@ jobs:
     uses: ./.github/workflows/validate.yml
     with:
       eslint-enable: true
+      eslint-command: npm run lint
     secrets:
       token: ${{ secrets.GH_TOKEN }}
 
