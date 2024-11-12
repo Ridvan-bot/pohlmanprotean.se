@@ -1,3 +1,10 @@
+## [0.5.3](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.2...v0.5.3) (2024-11-12)
+
+### Bug Fixes
+
+* change the secrets related code, make it easier to work with ([091d174](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/091d174ffb8680508d236d3abb7df217e26e63a6))
+* remove prep-cloud, better to run it once via shared workflow since it's a one time run ([f397398](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/f3973989087b9a4fabcbb9db8b82157cacb5660b))
+
 ## [0.5.2](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.1...v0.5.2) (2024-11-11)
 
 ### Bug Fixes
