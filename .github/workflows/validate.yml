@@ -12,6 +12,7 @@ on:
           required: false
           type: string
           description: ESLint command
+          default: npx eslint --config eslint.config.mjs '**/*.{js,ts,tsx}' || exit 1
       unit-test-enable:
             required: false
             type: boolean
