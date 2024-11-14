@@ -1,3 +1,9 @@
+## [0.5.4](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.3...v0.5.4) (2024-11-14)
+
+### Bug Fixes
+
+* deploy sends a eslint command ([23e1f74](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/23e1f74efffad7ba960a84db59bf66f82330db0d))
+
 ## [0.5.3](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.2...v0.5.3) (2024-11-12)
 
 ### Bug Fixes
