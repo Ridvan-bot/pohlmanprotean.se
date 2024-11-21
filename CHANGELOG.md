@@ -1,3 +1,10 @@
+## [0.5.5](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.4...v0.5.5) (2024-11-21)
+
+### Bug Fixes
+
+* google mail credentials misisng in env vars ([e4c89e6](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/e4c89e6194e36f6437917a6f45a56378bef0f06a))
+* google mail credentials misisng in env vars ([9ae0133](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/9ae0133bdc8a6f34696c14588ee8db39ed99af62))
+
 ## [0.5.4](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.3...v0.5.4) (2024-11-14)
 
 ### Bug Fixes
