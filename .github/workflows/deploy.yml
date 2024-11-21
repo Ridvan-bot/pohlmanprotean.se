@@ -58,7 +58,9 @@ jobs:
       - name: Deploy to Google Cloud Run
         run: |
           gcloud run deploy ${{ env.BRANCH_NAME }}-pohlmanprotean-website \
-            --image gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image \
-            --platform managed \
-            --region europe-west1 \
-            --allow-unauthenticated
+          --image gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image \
+          --platform managed \
+          --region europe-west1 \
+          --allow-unauthenticated \
+          --update-env-vars "EMAIL_APP_PASS=${{ secrets.EMAIL_APP_PASS }},EMAIL_TO=${{ secrets.EMAIL_TO }},EMAIL_USER=${{ secrets.EMAIL_USER }}"
+
