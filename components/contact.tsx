@@ -51,9 +51,6 @@ export default function Contact() {
         });
         setWaitMessage(''); // Clear wait message after success
         setSuccessMessage('Thank you for reaching out! We will get back to you shortly.'); // Set success message
-        setTimeout(() => {
-          setSuccessMessage(''); // Clear success message after a delay (e.g., 5 seconds)
-        }, 5000);
       } else if (response.status === 429) {
         const jsonResponse = await response.json();
         setWaitMessage(jsonResponse.message);
