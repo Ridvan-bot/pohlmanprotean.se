@@ -63,5 +63,3 @@ jobs:
             --region europe-west1 \
             --allow-unauthenticated
             --set-env-vars EMAIL_APP_PASS=${{ secrets.EMAIL_APP_PASS }}
-            --set-env-vars EMAIL_TO=${{ secrets.EMAIL_TO }}
-            --set-env-vars EMAIL_USER=${{ secrets.EMAIL_USER }}
