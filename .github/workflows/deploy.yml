@@ -47,6 +47,8 @@ jobs:
           gcloud config set run/region europe-west1
           gcloud auth configure-docker gcr.io
 
+      - name: Check gcloud SDK version
+        run: gcloud --version
       - name: Build Docker image
         run: |
           docker build -t gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image -f Dockerfile .
