@@ -7,7 +7,6 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Ridvan-bot/pohlmanprotean.se)
 ![Node Version](https://img.shields.io/node/v/express)
 ![GitHub Repo Stars](https://img.shields.io/github/stars/Ridvan-bot/pohlmanprotean.se)
-![Build Status](https://github.com/Ridvan-bot/pohlmanprotean.se/actions/workflows/build.yml/badge.svg?branch=dev)
 
 
 
