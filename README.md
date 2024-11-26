@@ -5,11 +5,6 @@
 ![Last Commit](https://img.shields.io/github/last-commit/Ridvan-bot/pohlmanprotean.se)
 ![GitHub issues](https://img.shields.io/github/issues/Ridvan-bot/pohlmanprotean.se)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Ridvan-bot/pohlmanprotean.se)
-![Node Version](https://img.shields.io/node/v/express)
-![GitHub Repo Stars](https://img.shields.io/github/stars/Ridvan-bot/pohlmanprotean.se)
-
-
-
 
 
 
