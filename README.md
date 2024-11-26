@@ -2,6 +2,16 @@
 
 ![Build Status](https://github.com/Ridvan-bot/pohlmanprotean.se/actions/workflows/deploy.yml/badge.svg)
 ![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/Ridvan-bot/pohlmanprotean.se?label=version&sort=semver)
+![Last Commit](https://img.shields.io/github/last-commit/Ridvan-bot/pohlmanprotean.se)
+![GitHub issues](https://img.shields.io/github/issues/Ridvan-bot/pohlmanprotean.se)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Ridvan-bot/pohlmanprotean.se)
+![Node Version](https://img.shields.io/node/v/express)
+![GitHub Repo Stars](https://img.shields.io/github/stars/Ridvan-bot/pohlmanprotean.se)
+![Build Status](https://github.com/Ridvan-bot/pohlmanprotean.se/actions/workflows/build.yml/badge.svg?branch=dev)
+
+
+
+
 
 
 **PohlmanProtean** is a TypeScript-based Next.js web application hosted on Google Cloud. This project supports both production and development environments, with automated deployments triggered via GitHub workflows.
