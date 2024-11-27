@@ -10,7 +10,7 @@ jobs:
   execute-code-quality-validation:
     uses: ./.github/workflows/validate.yml
     with:
-      branches: "main"
+      branches: "dev"
       eslint-enable: true
       unit-test-enable: true
       unit-test-command: npm run test
