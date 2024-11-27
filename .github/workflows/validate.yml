@@ -22,7 +22,7 @@ on:
             required: false
             type: boolean
             description: "To disable the unit-tests job set to false"
-            default: false
+            default: true
       unit-test-command:
             required: false
             type: string
