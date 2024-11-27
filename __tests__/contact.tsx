@@ -31,8 +31,8 @@ test('fills out the form and submits it', async () => {
     expect(screen.getByText('Thank you for reaching out! We will get back to you shortly.')).toBeInTheDocument();
   });
 
-  // Ensure fetch was called with the correct data, for the future
-  /*
+  // Ensure fetch was called with the correct data
+  
   expect(global.fetch).toHaveBeenCalledWith('/api/sendMessage', expect.objectContaining({
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -46,5 +46,5 @@ test('fills out the form and submits it', async () => {
       message: 'Hello, this is a test message.',
     }),
   }));
-  */
+
 });
