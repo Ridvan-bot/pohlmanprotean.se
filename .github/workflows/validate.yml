@@ -3,6 +3,11 @@ name: Validate Code Quality
 on:
   workflow_call:
     inputs:
+      branches:
+        required: true
+        type: string
+        description: "The branch to run the workflow on"
+        default: "main"
       eslint-enable:
         required: false
         type: boolean
@@ -35,5 +40,6 @@ jobs:
       eslint-command: ${{ inputs.eslint-command }}
       unit-test-enable: ${{ inputs.unit-test-enable }}
       unit-test-command: ${{ inputs.unit-test-command }}
+      branch: ${{ inputs.branches }}
     secrets:
       token: ${{ secrets.GH_TOKEN }}
