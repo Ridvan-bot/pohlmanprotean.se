@@ -15,7 +15,8 @@
 - [x] Shared semantic release should update package.json file and create a CHANGELOG file
 - [x] User draw.io extenstion 
 - [x] Fix the Error from eslint error log
-- [ ] Use Unit Test
+- [x] Use Unit Test
+- [ ] Setup more test to test functions on webpage
 - [ ] Implement user authentication
 - [ ] Setup DB connection
 - [ ] Enable links in footer
