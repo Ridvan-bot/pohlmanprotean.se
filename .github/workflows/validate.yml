@@ -4,7 +4,7 @@ on:
   workflow_call:
     inputs:
       branches:
-        required: true
+        required: false
         type: string
         description: "The branch to run the workflow on"
         default: "main"
