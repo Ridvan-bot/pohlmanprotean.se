@@ -1,3 +1,12 @@
+## [0.6.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.5...v0.6.0) (2024-11-27)
+
+### Bug Fixes
+
+* missing semicolon from unittest result ([cde8584](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/cde85841c8654164ee4568a5a7fced89acd35779))
+* remove old branch on push ([10da3dc](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/10da3dc6d2d07d0b3711916146bc694c663c63d4))
+* rename test folder to match shared workflow jest config ([8d351e1](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/8d351e1fd7fc7fa3e6d1208a5f5a325a44875cd6))
+* use branches as input when calling shared workflow ([52ac996](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/52ac996e58131f18e8f01f9cacfba780ac475f48))
+
 ## [0.5.5](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.4...v0.5.5) (2024-11-21)
 
 ### Bug Fixes
