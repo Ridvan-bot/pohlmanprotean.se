@@ -29,7 +29,7 @@ on:
 jobs:
   call-nodejs-test-workflow:
     name: Node.js Test
-    uses: Ridvan-bot/workflows/.github/workflows/nodejs-test.yml@unit-test
+    uses: Ridvan-bot/workflows/.github/workflows/nodejs-test.yml@dev
     with:
       eslint-enable: ${{ inputs.eslint-enable }}
       eslint-command: ${{ inputs.eslint-command }}
