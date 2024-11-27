@@ -3,6 +3,11 @@ name: Validate Code Quality
 on:
   workflow_call:
     inputs:
+      branches:
+        required: false
+        type: string
+        description: "The branch to run the workflow on"
+        default: "main"
       eslint-enable:
         required: false
         type: boolean
@@ -17,23 +22,24 @@ on:
             required: false
             type: boolean
             description: "To disable the unit-tests job set to false"
-            default: true
+            default: false
       unit-test-command:
             required: false
             type: string
             description: "Used to override the default command to run your unit tests e.g. yarn test:unit-ci"
-            default: "npm run test:unit-ci"
+            default: "npm run test"
     secrets:
       token:
         required: true
 jobs:
   call-nodejs-test-workflow:
     name: Node.js Test
-    uses: Ridvan-bot/workflows/.github/workflows/nodejs-test.yml@dev
+    uses: Ridvan-bot/workflows/.github/workflows/nodejs-test.yml@main
     with:
       eslint-enable: ${{ inputs.eslint-enable }}
       eslint-command: ${{ inputs.eslint-command }}
       unit-test-enable: ${{ inputs.unit-test-enable }}
       unit-test-command: ${{ inputs.unit-test-command }}
+      branch: ${{ inputs.branches }}
     secrets:
       token: ${{ secrets.GH_TOKEN }}

@@ -1,5 +1,13 @@
 # PohlmanProtean.se
 
+![Build Status](https://github.com/Ridvan-bot/pohlmanprotean.se/actions/workflows/deploy.yml/badge.svg)
+![GitHub tag (latest SemVer)](https://img.shields.io/github/v/tag/Ridvan-bot/pohlmanprotean.se?label=version&sort=semver)
+![Last Commit](https://img.shields.io/github/last-commit/Ridvan-bot/pohlmanprotean.se)
+![GitHub issues](https://img.shields.io/github/issues/Ridvan-bot/pohlmanprotean.se)
+![GitHub pull requests](https://img.shields.io/github/issues-pr/Ridvan-bot/pohlmanprotean.se)
+
+
+
 **PohlmanProtean** is a TypeScript-based Next.js web application hosted on Google Cloud. This project supports both production and development environments, with automated deployments triggered via GitHub workflows.
 
 ## Table of Contents
@@ -60,6 +68,35 @@ To setup everything you need in Google Cloud please visit the shared workflow re
 https://github.com/Ridvan-bot/workflows/blob/main/README.md 
 
 You will find the most relevant information at Prep GCLOUD Workflow
+
+## Code Validation
+
+This project uses GitHub Actions to validate code quality before deployment. The validation process includes running ESLint and unit tests to ensure code quality and functionality.
+
+### Code Quality Validation Workflow
+
+The code quality validation workflow is defined in [`.github/workflows/validate.yml`](.github/workflows/validate.yml). This workflow is triggered on every push to the `main` and `dev` branches by workflow [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml).
+
+The validation workflow performs the following steps:
+1. **ESLint**: Lints the codebase using ESLint to ensure code quality and consistency.
+2. **Unit Tests**: Runs unit tests to verify the functionality of the code.
+
+### Configuration
+
+The validation workflow can be configured using the following inputs:
+- `branches`: The branch to run the shared workflow on (default: `main`).
+- `eslint-enable`: Enable or disable ESLint (default: `false`).
+- `eslint-command`: The command to run ESLint (default: `npx eslint --config eslint.config.mjs '**/*.{js,ts,tsx}' || exit 1`).
+- `unit-test-enable`: Enable or disable unit tests (default: `true`).
+- `unit-test-command`: The command to run unit tests (default: `npm run test`).
+
+### Secrets
+
+The validation workflow requires the following secrets:
+- `GH_TOKEN`: GitHub token for authentication.
+
+For more details, refer to the [validation workflow file](.github/workflows/validate.yml).
+
 
 ## Deployment 
 Automatic Deployment with GitHub Workflows
