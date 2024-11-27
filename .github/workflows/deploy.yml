@@ -3,6 +3,7 @@ name: Build and Deploy to Google Cloud Run
 on:
   push:
     branches:
+      - unittest
       - dev
       - main
 
@@ -11,6 +12,8 @@ jobs:
     uses: ./.github/workflows/validate.yml
     with:
       eslint-enable: true
+      unit-test-enable: true
+      unit-test-command: npm run test
     secrets:
       token: ${{ secrets.GH_TOKEN }}
 
@@ -22,8 +25,10 @@ jobs:
     secrets:
       token: ${{ secrets.GH_TOKEN }}
   deploy:
+
     needs: execute-release
     runs-on: ubuntu-22.04
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
