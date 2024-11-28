@@ -12,6 +12,8 @@ import googlecloud from "@/public/images/googlecloud.svg";
 import ansible from "@/public/images/ansible.svg";
 import nodejs from "@/public/images/nodejs.svg";
 import prisma from "@/public/images/prisma.svg";
+import terraform from "@/public/images/terraform.svg";
+
 interface Testimonial {
   clientImg: StaticImageData;
   name: string;
@@ -89,6 +91,14 @@ const testimonials = [
     company: "",
     content:
     "Prisma is an open-source ORM (Object-Relational Mapping) tool that simplifies database access and management for developers. It provides a type-safe interface for interacting with databases, ensuring that queries are checked at compile time, which helps catch errors early.",
+    categories: [1, 3],
+  },
+  {
+    clientImg: terraform,
+    name: "Terraform",
+    company: "",
+    content:
+    "Terrafrom is an open-source infrastructure as code (IaC) tool that enables developers to define and provision cloud resources using declarative configuration files. It supports multiple cloud providers, allowing users to manage infrastructure across different environments consistently.",
     categories: [1, 3],
   },
 ];
