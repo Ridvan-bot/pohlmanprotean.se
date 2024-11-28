@@ -16,6 +16,7 @@
 - [x] User draw.io extenstion 
 - [x] Fix the Error from eslint error log
 - [x] Use Unit Test
+- [x] Add Terraform in technologies
 - [ ] Setup more test to test functions on webpage
 - [ ] Implement user authentication
 - [ ] Setup DB connection
