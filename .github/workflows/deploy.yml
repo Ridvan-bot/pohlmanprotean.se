@@ -37,19 +37,9 @@ jobs:
         id: branch_name
         run: echo "BRANCH_NAME=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
-      - name: Get latest tag
-        id: get_latest_tag
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const latestTag = await github.repos.getLatestRelease({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            core.exportVariable('LATEST_TAG', latestTag.data.tag_name);
-
-      - name: Print latest tag
-        run: echo "Latest tag is ${{ env.LATEST_TAG }}"
+      - name: Echo tags
+        run: |
+          echo "Tags: $(git tag -l)"
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3.7.1
