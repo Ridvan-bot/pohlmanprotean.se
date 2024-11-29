@@ -15,6 +15,16 @@ global.fetch = jest.fn(() =>
   })
 ) as jest.Mock;
 
+test('renders the contact form', () => {
+  render(<Contact />);
+  expect(screen.getByPlaceholderText('First Name')).toBeInTheDocument();
+});
+
+test('mock fetch works', async () => {
+  const response = await fetch('/api/sendMessage');
+  expect(response.ok).toBe(true);
+});
+
 test('fills out the form and submits it', async () => {
   render(<Contact />);
 
@@ -36,7 +46,6 @@ test('fills out the form and submits it', async () => {
   });
 
   // Ensure fetch was called with the correct data
-  
   expect(global.fetch).toHaveBeenCalledWith('/api/sendMessage', expect.objectContaining({
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -50,5 +59,4 @@ test('fills out the form and submits it', async () => {
       message: 'Hello, this is a test message.',
     }),
   }));
-
 });
