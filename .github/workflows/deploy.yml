@@ -67,7 +67,9 @@ jobs:
       - name: Push Docker image to Google Container Registry
         run: |
           docker push gcr.io/${{ env.BRANCH_NAME }}-pohlmanprotean-website/${{ env.BRANCH_NAME }}-pohlmanprotean-website-image:${{ env.LATEST_TAG }}
-
+      - name: Replace dots in tag for Cloud Run
+        run: echo "REVISION_TAG=$(echo ${{ env.LATEST_TAG }} | sed 's/\./-/g')" >> $GITHUB_ENV
+      
       - name: Deploy to Google Cloud Run
         run: |
           gcloud run deploy ${{ env.BRANCH_NAME }}-pohlmanprotean-website \
@@ -76,7 +78,7 @@ jobs:
           --region europe-west1 \
           --allow-unauthenticated \
           --update-env-vars "EMAIL_APP_PASS=${{ secrets.EMAIL_APP_PASS }},EMAIL_TO=${{ secrets.EMAIL_TO }},EMAIL_USER=${{ secrets.EMAIL_USER }}" \
-          --tag ${{ env.LATEST_TAG }}
+          --tag ${{ env.REVISION_TAG }}
 
 
 
