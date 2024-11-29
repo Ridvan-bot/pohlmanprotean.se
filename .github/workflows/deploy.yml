@@ -75,6 +75,8 @@ jobs:
           --platform managed \
           --region europe-west1 \
           --allow-unauthenticated \
-          --update-env-vars "EMAIL_APP_PASS=${{ secrets.EMAIL_APP_PASS }},EMAIL_TO=${{ secrets.EMAIL_TO }},EMAIL_USER=${{ secrets.EMAIL_USER }}"
+          --update-env-vars "EMAIL_APP_PASS=${{ secrets.EMAIL_APP_PASS }},EMAIL_TO=${{ secrets.EMAIL_TO }},EMAIL_USER=${{ secrets.EMAIL_USER }}" \
+          --tag ${{ env.LATEST_TAG }}
+
 
 
