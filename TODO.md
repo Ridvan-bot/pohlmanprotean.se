@@ -10,7 +10,6 @@
 - [x] Automate service enablement in google cloud
 - [w] Use more animation
 - [x] Use semantic release
-- [ ] Develop the API
 - [x] Use ESLint via shared workflows
 - [x] Shared semantic release should update package.json file and create a CHANGELOG file
 - [x] User draw.io extenstion 
@@ -22,6 +21,10 @@
 - [ ] Setup DB connection
 - [ ] Enable links in footer
 - [ ] Use a better and more secure solution than Google APP Password
+- [ ] Develop the API
+- [ ] Use tags in artifact repo revision
+- [ ] Must have a better solution than local env secrects in google cloud
+
 
 
 
