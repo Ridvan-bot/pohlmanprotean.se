@@ -1,3 +1,13 @@
+## [0.8.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.7.0...v0.8.0) (2024-11-29)
+
+### Bug Fixes
+
+* correct command for echoing tags in deployment workflow ([2a86f92](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/2a86f92c41eadc55e53a7dc25eb34be13bcae26d))
+* correct command for echoing tags in deployment workflow ([31deeb1](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/31deeb11eaa3d46f03108c4e0efde8193f54130b))
+* correct indentation for Google Cloud authentication step in deployment workflow ([97e42eb](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/97e42ebe1ced7ef0009075c5fa85d3d843046788))
+* simplify tag echoing in deployment workflow by removing unnecessary command ([f90739a](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/f90739a662c2956067b3ce1994b2c01aa2a32e7c))
+* update Node.js test workflow reference to use 'main' branch and add mock for Next.js image component ([8cb654d](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/8cb654d82e4f623406aa85e6ff068cbd7435bfd8))
+
 ## [0.7.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.6.0...v0.7.0) (2024-11-27)
 
 ## [0.6.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.5.5...v0.6.0) (2024-11-27)
