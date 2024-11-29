@@ -39,7 +39,7 @@ jobs:
 
       - name: Echo tags
         run: |
-          echo "Tags: $(git tag)"
+          git tag
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3.7.1
