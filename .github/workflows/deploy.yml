@@ -79,6 +79,3 @@ jobs:
           --allow-unauthenticated \
           --update-env-vars "EMAIL_APP_PASS=${{ secrets.EMAIL_APP_PASS }},EMAIL_TO=${{ secrets.EMAIL_TO }},EMAIL_USER=${{ secrets.EMAIL_USER }}" \
           --tag ${{ env.REVISION_TAG }}
-
-
-

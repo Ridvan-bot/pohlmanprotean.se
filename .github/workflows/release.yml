@@ -26,3 +26,15 @@ jobs:
       branches: "${{ inputs.branches }}"
     secrets:
       token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml
+
+        
+  semantic-release-success:
+    if: ${{ needs.execute-semantic-release.result == 'success' }}
+    needs: execute-semantic-release
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
