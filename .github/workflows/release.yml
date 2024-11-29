@@ -9,6 +9,8 @@ on:
     secrets:
       token:
         required: true
+      slack_webhook:
+        required: false
 jobs:
   # Early exit job to complete workflow if branches is not "main"
   No-release:
@@ -26,8 +28,7 @@ jobs:
       branches: "${{ inputs.branches }}"
     secrets:
       token: ${{ secrets.GH_TOKEN }}  # Pass the GH_TOKEN as 'token' to release.yml
-
-        
+ 
   semantic-release-success:
     if: ${{ needs.execute-semantic-release.result == 'success' }}
     needs: execute-semantic-release
