@@ -18,7 +18,7 @@
 - [x] Add Terraform in technologies
 - [x] Use tags in artifact repo revision
 - [ ] Setup more test to test functions on webpage
-- [W] Move slack notification to shared workflow
+- [x] Move slack notification to shared workflow
 - [ ] Implement user authentication
 - [ ] Setup DB connection
 - [ ] Enable links in footer
