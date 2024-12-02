@@ -12,7 +12,7 @@ jobs:
     with:
       branches: "main"
       eslint-enable: true
-      unit-test-enable: false
+      unit-test-enable: true
       unit-test-command: npm run test
     secrets:
       token: ${{ secrets.GH_TOKEN }}
