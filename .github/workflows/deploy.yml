@@ -22,11 +22,11 @@ jobs:
     uses: ./.github/workflows/release.yml
     with:
       branches: "${{ github.ref_name }}"
+      slack_enabled: true
     secrets:
       token: ${{ secrets.GH_TOKEN }}
       slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
   deploy:
-
     needs: execute-release
     runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
