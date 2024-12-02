@@ -16,14 +16,16 @@
 - [x] Fix the Error from eslint error log
 - [x] Use Unit Test
 - [x] Add Terraform in technologies
+- [x] Use tags in artifact repo revision
 - [ ] Setup more test to test functions on webpage
+- [ ] Move slack notification to shared workflow
 - [ ] Implement user authentication
 - [ ] Setup DB connection
 - [ ] Enable links in footer
 - [ ] Use a better and more secure solution than Google APP Password
 - [ ] Develop the API
-- [ ] Use tags in artifact repo revision
 - [ ] Must have a better solution than local env secrects in google cloud
+
 
 
 
