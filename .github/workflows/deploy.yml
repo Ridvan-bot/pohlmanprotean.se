@@ -27,7 +27,6 @@ jobs:
       token: ${{ secrets.GH_TOKEN }}
       slack_webhook: ${{ secrets.SLACK_WEBHOOK }}
   deploy:
-
     needs: execute-release
     runs-on: ubuntu-22.04
     if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/dev'
