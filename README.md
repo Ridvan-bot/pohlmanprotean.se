@@ -6,8 +6,6 @@
 ![GitHub issues](https://img.shields.io/github/issues/Ridvan-bot/pohlmanprotean.se)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/Ridvan-bot/pohlmanprotean.se)
 
-
-
 **PohlmanProtean** is a TypeScript-based Next.js web application hosted on Google Cloud. This project supports both production and development environments, with automated deployments triggered via GitHub workflows.
 
 ## Table of Contents
@@ -147,7 +145,7 @@ In cases where a manual deployment is needed, you can trigger the workflow direc
 ## Release 
 
 ### Versioning & Changelog
-This project will soon follow a standardized release and versioning process using Semantic Release to ensure consistent commit messages, making it easier to track changes and automate versioning.
+This project follows a standardized release and versioning process using Semantic Release to ensure consistent commit messages, making it easier to track changes and automate versioning.
 
 ### Changelog Generation: 
 The changelog is automatically generated and maintained using standard-version. With each release, a new version is generated, and an entry is added to CHANGELOG.md.
@@ -161,6 +159,7 @@ Make sure all commit messages follow the Semantic Release format.
 A new changelog entry in CHANGELOG.md.
 A new Git tag and GitHub release.
 Deploy the latest version to the appropriate environment.
+Post a release message in Slack (Optional)
 
 ## Contributing
 
