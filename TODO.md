@@ -23,7 +23,7 @@
 - [ ] Setup DB connection
 - [ ] Enable links in footer
 - [ ] Use a better and more secure solution than Google APP Password
-- [ ] Develop the API
+- [x] Develop the API - will have a seperate project for the API
 - [ ] Must have a better solution than local env secrects in google cloud (Google Secret Manager)
 
 
