@@ -78,5 +78,5 @@ jobs:
           --platform managed \
           --region europe-west1 \
           --allow-unauthenticated \
-          --update-env-vars "EMAIL_TO=${{ secrets.EMAIL_TO }},EMAIL_USER=${{ secrets.EMAIL_USER }}" \
+          --update-secrets "MY_SECRET=projects/${{ env.BRANCH_NAME }}-pohlmanprotean-website/secrets/hemlig/versions/latest" \
           --tag ${{ env.REVISION_TAG }}
