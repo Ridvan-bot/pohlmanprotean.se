@@ -78,5 +78,5 @@ jobs:
           --platform managed \
           --region europe-west1 \
           --allow-unauthenticated \
-          --update-secrets "hemlig=projects/${{ env.BRANCH_NAME }}-pohlmanprotean-website/secrets/hemlig/versions/latest" \
+          --update-secrets "hemlig=projects/${{ env.BRANCH_NAME }}-pohlmanprotean-website/secrets/hemlig:latest" \
           --tag ${{ env.REVISION_TAG }}
