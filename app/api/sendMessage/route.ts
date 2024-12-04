@@ -1,16 +1,26 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 import { SecretManagerServiceClient } from '@google-cloud/secret-manager';
+import axios from 'axios';
 
 const client = new SecretManagerServiceClient();
 const COOLDOWN_PERIOD = 60000; // Example cooldown period in milliseconds
 const userTimestamps: { [key: string]: number } = {};
 
-async function getSecret(secretName: string): Promise<string> {
-  const [version] = await client.accessSecretVersion({
-    name: `projects/1022290610235/secrets/${secretName}/versions/latest`,
-  });
+async function getProjectId(): Promise<string> {
+    const response = await axios.get('http://metadata.google.internal/computeMetadata/v1/project/project-id', {
+      headers: { 'Metadata-Flavor': 'Google' },
+    });
+    return response.data;
+  }
 
+
+  async function getSecret(secretName: string): Promise<string> {
+    const projectId = await getProjectId();
+  
+    const [version] = await client.accessSecretVersion({
+      name: `projects/${projectId}/secrets/${secretName}/versions/latest`,
+    });
   const payload = version.payload?.data?.toString();
   if (!payload) {
     throw new Error(`Secret ${secretName} not found`);
