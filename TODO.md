@@ -24,7 +24,8 @@
 - [ ] Enable links in footer
 - [ ] Use a better and more secure solution than Google APP Password
 - [x] Develop the API - will have a seperate project for the API
-- [ ] Use Google Secret Manger to fetch secret during run time. 
+- [x] Use Google Secret Manger to fetch secret during run time. 
+- [w] Replace hardcoded projectID during fetch secretes.
 
 
 
