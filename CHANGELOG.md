@@ -1,3 +1,13 @@
+## [0.12.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.11.0...v0.12.0) (2024-12-04)
+
+### Bug Fixes
+
+* update secret version retrieval to use a specific version instead of latest ([c3210c9](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/c3210c9b29eb9a769451877bba4c7dcc43ee9355))
+* update secret version retrieval to use latest version by default ([df35088](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/df35088a707f3f35e173a7c41f97de5dc99ec9ec))
+* update secret version retrieval to use latest version explicitly ([f285a27](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/f285a2762203e2ca42bee5ae3f9f8b7b3b1c334e))
+* update secret version retrieval to use latest version instead of a specific version ([64f05d3](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/64f05d3601029b2043eb40f21c1d7fff79febab6))
+* update TODO to mark Google Secret Manager usage as complete and add note to replace hardcoded projectID ([1b7d8c2](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/1b7d8c2abebd4482260b2e3d8d2a79c52d9e9518))
+
 ## [0.11.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.10.0...v0.11.0) (2024-12-02)
 
 ## [0.10.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.9.0...v0.10.0) (2024-11-29)
