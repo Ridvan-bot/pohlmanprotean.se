@@ -93,7 +93,18 @@ The validation workflow can be configured using the following inputs:
 The validation workflow requires the following secrets:
 - `GH_TOKEN`: GitHub token for authentication.
 
+
 For more details, refer to the [validation workflow file](.github/workflows/validate.yml).
+
+The Google Cloud run requiers following secrets:
+- `DEV_GCP_SA_KEY`: Development Project Google Cloud Json Key.
+- `MAIN_GCP_SA_KEY`: Production Project Google Cloud Json Key.
+
+This project also use Google Cloud Secret Manager. Add your local secretes here. 
+
+
+The Semantic Release has an option to post release info in Slack Channel:
+- `SLACK_WEBHOOK`: Key to pass relese content to Slack Channel.
 
 
 ## Deployment 
