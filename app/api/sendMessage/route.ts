@@ -8,7 +8,7 @@ const userTimestamps: { [key: string]: number } = {};
 
 async function getSecret(secretName: string): Promise<string> {
   const [version] = await client.accessSecretVersion({
-    name: `projects/1022290610235/secrets/${secretName}/versions/latest`,
+    name: `projects/1022290610235/secrets/${secretName}`,
   });
 
   const payload = version.payload?.data?.toString();
