@@ -1,11 +1,27 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
+import { SecretManagerServiceClient } from '@google-cloud/secret-manager';
 
+const client = new SecretManagerServiceClient();
 // A simple in-memory store to keep track of user message timestamps
 const userTimestamps: { [key: string]: number } = {}; // Type for userTimestamps
 
 // Define the cooldown period in milliseconds (5 minutes)
 const COOLDOWN_PERIOD = 5 * 60 * 1000;
+
+async function getSecret(secretName: string): Promise<string> {
+    const [version] = await client.accessSecretVersion({
+      name: `projects/1022290610235/secrets/${secretName}/versions/latest`,
+    });
+  
+    const payload = version.payload?.data?.toString();
+    if (!payload) {
+      throw new Error(`Secret ${secretName} not found`);
+    }
+  
+    return payload;
+  }
+
 
 export async function POST(request: Request) {
   try {
@@ -47,34 +63,39 @@ export async function POST(request: Request) {
     // Update the user's last sent timestamp
     userTimestamps[ip] = currentTime;
 
+    // Fetch secrets from Google Cloud Secret Manager
+    const emailUser = await getSecret('EMAIL_USER');
+    const emailAppPass = await getSecret('email_app_pass');
+    const emailTo = await getSecret('EMAIL_TO');
+
     // Set up nodemailer transport
     const transporter = nodemailer.createTransport({
-      service: 'Gmail',
-      auth: {
-        user: process.env.EMAIL_USER, // Your email username
-        pass: process.env.EMAIL_APP_PASS, // Use the generated app password here
-      },
-    });
+        service: 'Gmail',
+        auth: {
+          user: emailUser, // Your email username
+          pass: emailAppPass, // Use the generated app password here
+        },
+      });
 
-    // Define email options
-    const mailOptions = {
-      from: data.email,
-      to: process.env.EMAIL_TO, // Your receiving email address
-      subject: `New message from ${data.firstName} ${data.lastName} on pohlmanprotean.se`,
-      text: `
-      First Name: ${data.firstName}
-      Last Name: ${data.lastName}
-      Company: ${data.company}
-      Job Title: ${data.jobTitle}
-      Email: ${data.email}
-      Phone Number: ${data.phoneNumber}
-      
-      Message:
-      ${data.message}
-      
-      Sent from the contact form on pohlmanprotean.se
-    `.trim(), // Use trim() to remove any leading or trailing whitespace
-    };
+      const mailOptions = {
+        from: data.email,
+        to: emailTo, // Your receiving email address
+        subject: `New message from ${data.firstName} ${data.lastName} on pohlmanprotean.se`,
+        text: `
+        First Name: ${data.firstName}
+        Last Name: ${data.lastName}
+        Company: ${data.company}
+        Job Title: ${data.jobTitle}
+        Email: ${data.email}
+        Phone Number: ${data.phoneNumber}
+        
+        Message:
+        ${data.message}
+        
+        Sent from the contact form on pohlmanprotean.se
+      `.trim(), // Use trim() to remove any leading or trailing whitespace
+      };
+  
 
     // Send the email
     await transporter.sendMail(mailOptions);
