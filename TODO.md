@@ -23,8 +23,9 @@
 - [ ] Setup DB connection
 - [ ] Enable links in footer
 - [ ] Use a better and more secure solution than Google APP Password
-- [ ] Develop the API
-- [ ] Must have a better solution than local env secrects in google cloud (Google Secret Manager)
+- [x] Develop the API - will have a seperate project for the API
+- [x] Use Google Secret Manger to fetch secret during run time. 
+- [w] Replace hardcoded projectID during fetch secretes.
 
 
 
