@@ -142,7 +142,7 @@ export default function Footer() {
                 <li>
                   <a
                     className="flex items-center justify-center text-blue-500 transition hover:text-blue-300"
-                    href="https://github.com/Ridvan-bot?tab=repositories"
+                    href="https://github.com/Ridvan-bot"
                     aria-label="Github"
                     target="_blank"
                     rel="noopener noreferrer"
