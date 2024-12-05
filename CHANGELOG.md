@@ -1,3 +1,10 @@
+## [0.12.1](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.12.0...v0.12.1) (2024-12-05)
+
+### Bug Fixes
+
+* remove unused import of framer-motion in contact component ([72a19ad](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/72a19ad226fe5cf1d5671b495ca836a5b0b05b13))
+* update GitHub link in footer to remove unnecessary tab parameter ([2ed36e4](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/2ed36e4641b7d57810ee2c9541277406b4e5472c))
+
 ## [0.12.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.11.0...v0.12.0) (2024-12-04)
 
 ### Bug Fixes
