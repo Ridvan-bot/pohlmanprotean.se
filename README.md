@@ -183,3 +183,6 @@ Push your branch and create a pull request.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
+
+##
+Crafted with care by **Robin Pohlman** at **Pohlman Protean AB**.
