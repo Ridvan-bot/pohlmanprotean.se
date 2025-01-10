@@ -182,4 +182,6 @@ Make your changes and commit them with clear, concise messages.
 Push your branch and create a pull request.
 
 ##
-Crafted with care by **Robin Pohlman** at **Pohlman Protean AB**.
+<p align="center">
+  Crafted with care by <strong>Robin Pohlman</strong> at <strong>Pohlman Protean AB</strong>.
+</p>
