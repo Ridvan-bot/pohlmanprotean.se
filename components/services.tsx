@@ -97,9 +97,9 @@ export default function Features() {
                 ),
               },
               {
-                title: "Google Run Deployment",
+                title: "Cloud Deployment",
                 description:
-                  "We specialize in deploying applications on Google Run, allowing for efficient scaling and management of your applications without the hassle of managing infrastructure. Our services ensure a smooth deployment process tailored to your needs.",
+                  "We specialize in deploying applications on any cloud provider, allowing for efficient scaling and management of your applications without the hassle of managing infrastructure. Our services ensure a smooth deployment process tailored to your needs.",
                 icon: (
                   <svg className="mb-3 fill-blue-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
                     <path d="M23.414 6 18 .586 16.586 2l3 3H7a6 6 0 0 0-6 6h2a4 4 0 0 1 4-4h12.586l-3 3L18 11.414 23.414 6Z" />
