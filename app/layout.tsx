@@ -1,22 +1,19 @@
-// Import the global CSS styles for the application
+
 import "./css/style.css";
 
-// Import the Inter font from Google Fonts using Next.js font optimization
 import { Inter } from "next/font/google";
-// Import a local font using Next.js font optimization
+
 import localFont from "next/font/local";
 
-// Import the Header component from the UI components directory
+
 import Header from "@/components/ui/header";
 
-// Initialize the Inter font with specific configuration
 const inter = Inter({
-  subsets: ["latin"], // Specify the character subsets to include (e.g., Latin characters)
-  variable: "--font-inter", // Define a CSS variable for the font
-  display: "swap", // Use 'swap' to ensure text is displayed while the font is loading
+  subsets: ["latin"], 
+  variable: "--font-inter", 
+  display: "swap",
 });
 
-// Initialize the Nacelle font with specific configuration
 const nacelle = localFont({
   src: [ 
     {
@@ -40,24 +37,23 @@ const nacelle = localFont({
       style: "italic", 
     },
   ],
-  variable: "--font-nacelle", // Define a CSS variable for the font
-  display: "swap", // Use 'swap' to ensure text is displayed while the font is loading
+  variable: "--font-nacelle", 
+  display: "swap", 
 });
 
-// Metadata for the application, used for SEO and document settings
 export const metadata = {
   title: "Pohlman Protean",
-  description: "Home of Pohlman Protean", // Description of the application
+  description: "Home of Pohlman Protean", 
 };
 
-// Define the RootLayout component, which serves as the main layout for the application
+
 export default function RootLayout({
-  children, // Accepts children props which will be rendered inside the layout
+  children, 
 }: {
-  children: React.ReactNode; // Type definition for children, indicating it can be any React node
+  children: React.ReactNode; 
 }) {
   return (
-    <html lang="en"> {/* Set the language of the document to English */}
+    <html lang="en">
       <body
         className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
       >
