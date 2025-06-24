@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+
+<svg
+   width="800"
+   height="800"
+   viewBox="0 0 512 512"
+   version="1.1"
+   id="svg13360"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs13364">
+    <linearGradient
+       id="linearGradient13873">
+      <stop
+         style="stop-color:#3b82f6;stop-opacity:1;"
+         offset="0"
+         id="stop13869" />
+      <stop
+         style="stop-color:#2563d6;stop-opacity:1;"
+         offset="1"
+         id="stop13871" />
+    </linearGradient>
+    <linearGradient
+       xlink:href="#linearGradient13873"
+       id="linearGradient13875"
+       x1="64"
+       y1="256"
+       x2="448"
+       y2="256"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       xlink:href="#linearGradient13873"
+       id="linearGradient15368"
+       gradientUnits="userSpaceOnUse"
+       x1="64"
+       y1="256"
+       x2="448"
+       y2="256" />
+    <linearGradient
+       xlink:href="#linearGradient13873"
+       id="linearGradient15370"
+       gradientUnits="userSpaceOnUse"
+       x1="64"
+       y1="256"
+       x2="448"
+       y2="256" />
+  </defs>
+  <title
+     id="title13355">ai</title>
+  <g
+     id="Page-1"
+     stroke="none"
+     stroke-width="1"
+     fill="none"
+     fill-rule="evenodd"
+     style="fill:url(#linearGradient13875);fill-opacity:1">
+    <g
+       id="icon"
+       fill="#000000"
+       transform="translate(64,64)"
+       style="fill:url(#linearGradient15370);fill-opacity:1">
+      <path
+         d="M 320,64 V 320 H 64 V 64 Z M 171.74939,128 H 146.81784 L 99.484039,256 h 22.492591 l 8.93641,-25.023 h 56.662 L 196.31961,256 h 23.84756 z m 88.34439,0 h -22.40226 v 128 h 22.40226 z m -100.99905,21.47526 22.31431,63.85774 h -44.274 z M 341.33333,256 H 384 v 42.66667 H 341.33333 Z M 85.333333,341.33333 H 128 V 384 H 85.333333 Z m 85.333337,0 h 42.66666 V 384 H 170.66667 Z M 85.333333,0 H 128 V 42.666667 H 85.333333 Z M 256,341.33333 h 42.66667 V 384 H 256 Z M 170.66667,0 h 42.66666 V 42.666667 H 170.66667 Z M 256,0 h 42.66667 V 42.666667 H 256 Z m 85.33333,170.66667 H 384 v 42.66666 H 341.33333 Z M 0,256 h 42.666667 v 42.66667 H 0 Z M 341.33333,85.333333 H 384 V 128 H 341.33333 Z M 0,170.66667 h 42.666667 v 42.66666 H 0 Z M 0,85.333333 H 42.666667 V 128 H 0 Z"
+         id="Combined-Shape"
+         style="fill:url(#linearGradient15368);fill-opacity:1" />
+    </g>
+  </g>
+</svg>

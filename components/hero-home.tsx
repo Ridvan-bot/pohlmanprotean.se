@@ -5,7 +5,7 @@ import BlurredShape from "@/public/images/blurred-shape.svg";
 import Image from "next/image";
 
 export default function HeroHome() {
-  const [isRedirecting, ] = useState(false);
+  const [isRedirecting,] = useState(false);
 
   const words = ["POHLMAN", "PROTEAN"];
 
@@ -13,7 +13,7 @@ export default function HeroHome() {
 
     <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gray-950">
       <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
-        
+
         <motion.div
           className="flex flex-col items-center justify-center"
           initial={{ opacity: 1 }}
@@ -32,34 +32,32 @@ export default function HeroHome() {
               },
             }}
           >
-{words.map((word, wordIndex) => (
-  <motion.div key={wordIndex} className="flex space-x-1 md:space-x-2">
-    {word.split("").map((letter, index) => (
-      <motion.div
-        key={`${wordIndex}-${index}`}
-        className="flex h-10 w-10 items-center justify-center text-2xl font-bold text-white sm:h-14 sm:w-14 sm:text-3xl md:h-20 md:w-20 md:text-4xl"
-        variants={{
-          hidden: { y: 50, opacity: 0, scale: 0.5 },
-          visible: {
-            y: 0,
-            opacity: 1,
-            scale: 1,
-            transition: {
-              type: "spring",
-              damping: 12,
-              stiffness: 200,
-            },
-          },
-        }}
-        whileHover={{ scale: 1.1, rotate: 5 }}
-      >
-        {letter}
-      </motion.div>
-    ))}
-  </motion.div>
-))}
-
-
+            {words.map((word, wordIndex) => (
+              <motion.div key={wordIndex} className="flex space-x-1 md:space-x-2">
+                {word.split("").map((letter, index) => (
+                  <motion.div
+                    key={`${wordIndex}-${index}`}
+                    className="flex h-10 w-10 items-center justify-center text-2xl font-bold text-white sm:h-14 sm:w-14 sm:text-3xl md:h-20 md:w-20 md:text-4xl"
+                    variants={{
+                      hidden: { y: 50, opacity: 0, scale: 0.5 },
+                      visible: {
+                        y: 0,
+                        opacity: 1,
+                        scale: 1,
+                        transition: {
+                          type: "spring",
+                          damping: 12,
+                          stiffness: 200,
+                        },
+                      },
+                    }}
+                    whileHover={{ scale: 1.1, rotate: 5 }}
+                  >
+                    {letter}
+                  </motion.div>
+                ))}
+              </motion.div>
+            ))}
           </motion.div>
         </motion.div>
 
@@ -89,34 +87,34 @@ export default function HeroHome() {
             IT Solutions • Programming • Automation
           </motion.h2>
           <div data-aos="fade-up" data-aos-delay={400}>
-    <a
-      className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-      href="#contact"
-    >
-  <span className="relative inline-flex items-center">
-    Contact Us
-    <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-      -&gt;
-    </span>
-  </span>
-</a>
+            <a
+              className="btn group mb-4 w-full bg-gradient-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-[inset_0px_1px_0px_0px_theme(colors.white/.16)] hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
+              href="#contact"
+            >
+              <span className="relative inline-flex items-center">
+                Contact Us
+                <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                  -&gt;
+                </span>
+              </span>
+            </a>
           </div>
         </motion.div>
-  </div>
-   {/* Blue Blurred Shape on the left */}
- <div
-    className="absolute right-[20%] bottom-0" // Adjust position here
-    aria-hidden="true"
-    style={{ zIndex: 0 }}
-  >
-    <Image
-      className="max-w-none"
-      src={BlurredShape}
-      width={760}
-      height={668}
-      alt="Blurred shape gray"
-    />
-  </div>
-</section>
+      </div>
+      {/* Blue Blurred Shape on the left */}
+      <div
+        className="absolute right-[20%] bottom-0" // Adjust position here
+        aria-hidden="true"
+        style={{ zIndex: 0 }}
+      >
+        <Image
+          className="max-w-none"
+          src={BlurredShape}
+          width={760}
+          height={668}
+          alt="Blurred shape gray"
+        />
+      </div>
+    </section>
   );
 }

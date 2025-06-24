@@ -77,7 +77,7 @@ export default function Features() {
               {
                 title: "Consulting Services",
                 description:
-                  "Our consulting service focuses on software engineering, specifically in backend development. We collaborate with clients to build robust and scalable solutions that meet their business needs.",
+                  "Our consulting service focuses on software engineering, specifically in Fullstack development. We collaborate with clients to build robust and scalable solutions that meet their business needs.",
                 icon: (
                   <svg className="mb-3 fill-blue-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
                     <path d="M0 0h14v17H0V0Zm2 2v13h10V2H2Z" />
@@ -86,9 +86,9 @@ export default function Features() {
                 ),
               },
               {
-                title: "Simple Websites for Small Businesses",
+                title: "Simple and Complex Websites for Small, Medium, and Large Businesses",
                 description:
-                  "We create simple, user-friendly websites tailored for small businesses, ensuring you have a strong online presence without complexity. Our designs focus on clarity and functionality, helping you connect with your customers effectively.",
+                  "We create simple, user-friendly websites tailored for small, medium, and large businesses, ensuring you have a strong online presence without complexity. Our designs focus on clarity and functionality, helping you connect with your customers effectively.",
                 icon: (
                   <svg className="mb-3 fill-blue-500" xmlns="http://www.w3.org/2000/svg" width={24} height={24}>
                     <path fillOpacity=".48" d="M7 8V0H5v8h2Zm12 16v-4h-2v4h2Z" />

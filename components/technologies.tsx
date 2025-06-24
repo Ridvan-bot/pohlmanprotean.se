@@ -13,6 +13,9 @@ import ansible from "@/public/images/ansible.svg";
 import nodejs from "@/public/images/nodejs.svg";
 import prisma from "@/public/images/prisma.svg";
 import terraform from "@/public/images/terraform.svg";
+import react from "@/public/images/react.svg";
+import nextjs from "@/public/images/nextjs.svg";
+import ai from "@/public/images/ai.svg";
 
 interface Testimonial {
   clientImg: StaticImageData;
@@ -28,7 +31,7 @@ const testimonials = [
     name: "Bash",
     company: "",
     content:
-    "Bash (Bourne Again SHell) is a Unix-based command-line interpreter and scripting language commonly used in Linux and macOS environments. It allows users to interact with the operating system by executing commands, automating tasks, and running scripts.",
+      "Bash (Bourne Again SHell) is a Unix-based command-line interpreter and scripting language commonly used in Linux and macOS environments. It allows users to interact with the operating system by executing commands, automating tasks, and running scripts.",
     categories: [1, 2, 5],
   },
   {
@@ -36,7 +39,7 @@ const testimonials = [
     name: "JavaScript",
     company: "",
     content:
-    "JavaScript is a high-level, dynamic programming language primarily used to create interactive and dynamic content on websites. It runs in web browsers and enables developers to build features like animations, form validations, real-time updates, and user interface elements.",
+      "JavaScript is a high-level, dynamic programming language primarily used to create interactive and dynamic content on websites. It runs in web browsers and enables developers to build features like animations, form validations, real-time updates, and user interface elements.",
     categories: [1, 2,],
   },
   {
@@ -44,7 +47,7 @@ const testimonials = [
     name: "TypeScript",
     company: "",
     content:
-    "TypeScript is a superset of JavaScript that adds static typing, allowing developers to define types for variables, function parameters, and return values. ",
+      "TypeScript is a superset of JavaScript that adds static typing, allowing developers to define types for variables, function parameters, and return values. ",
     categories: [1, 2, 5],
   },
   {
@@ -66,7 +69,7 @@ const testimonials = [
     name: "Google Cloud Run",
     company: "",
     content:
-    "Google Cloud Run is a fully managed platform that allows developers to run containerized applications in the cloud without worrying about infrastructure management.",
+      "Google Cloud Run is a fully managed platform that allows developers to run containerized applications in the cloud without worrying about infrastructure management.",
     categories: [1, 3, 4],
   },
   {
@@ -74,15 +77,15 @@ const testimonials = [
     name: "Ansible",
     company: "",
     content:
-   "Ansible is an open-source automation tool used for configuration management, application deployment, and task automation. It allows developers and system administrators to automate repetitive tasks across multiple systems by writing simple, human-readable YAML files called playbooks.", 
-   categories: [1, 3, 4],
+      "Ansible is an open-source automation tool used for configuration management, application deployment, and task automation. It allows developers and system administrators to automate repetitive tasks across multiple systems by writing simple, human-readable YAML files called playbooks.",
+    categories: [1, 3, 4],
   },
   {
     clientImg: nodejs,
     name: "Node.js",
     company: "",
     content:
-    "Node.js is an open-source, server-side runtime environment that allows developers to run JavaScript outside the browser. Built on the V8 JavaScript engine, it enables the development of scalable, high-performance applications, particularly for handling asynchronous, I/O-intensive tasks like web servers and APIs. ",
+      "Node.js is an open-source, server-side runtime environment that allows developers to run JavaScript outside the browser. Built on the V8 JavaScript engine, it enables the development of scalable, high-performance applications, particularly for handling asynchronous, I/O-intensive tasks like web servers and APIs. ",
     categories: [1, 3],
   },
   {
@@ -90,7 +93,7 @@ const testimonials = [
     name: "Prisma",
     company: "",
     content:
-    "Prisma is an open-source ORM (Object-Relational Mapping) tool that simplifies database access and management for developers. It provides a type-safe interface for interacting with databases, ensuring that queries are checked at compile time, which helps catch errors early.",
+      "Prisma is an open-source ORM (Object-Relational Mapping) tool that simplifies database access and management for developers. It provides a type-safe interface for interacting with databases, ensuring that queries are checked at compile time, which helps catch errors early.",
     categories: [1, 3],
   },
   {
@@ -98,8 +101,32 @@ const testimonials = [
     name: "Terraform",
     company: "",
     content:
-    "Terrafrom is an open-source infrastructure as code (IaC) tool that enables developers to define and provision cloud resources using declarative configuration files. It supports multiple cloud providers, allowing users to manage infrastructure across different environments consistently.",
+      "Terrafrom is an open-source infrastructure as code (IaC) tool that enables developers to define and provision cloud resources using declarative configuration files. It supports multiple cloud providers, allowing users to manage infrastructure across different environments consistently.",
     categories: [1, 3],
+  },
+  {
+    clientImg: react,
+    name: "React",
+    company: "",
+    content:
+      "React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage the state of their applications efficiently.",
+    categories: [1, 6],
+  },
+  {
+    clientImg: nextjs,
+    name: "Next.js",
+    company: "",
+    content:
+      "Next.js is a React framework for building server-side rendered and static websites. It provides a seamless development experience for building web applications with features like automatic code splitting, server-side rendering, and API routes.",
+    categories: [1, 6],
+  },
+  {
+    clientImg: ai,
+    name: "AI",
+    company: "",
+    content:
+      "LLMs are large language models that are trained on a large dataset of text. They are used to generate text, images, and other media. With MCP Client and MCP Server, we can use LLMs to interact with internal and external resources.",
+    categories: [1, 2],
   },
 ];
 
@@ -114,10 +141,10 @@ export default function Testimonials() {
         {/* Section header */}
         <div className="mx-auto max-w-3xl pb-12 text-center">
           <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-          Technologies We Use
+            Some of the Technologies We Use
           </h2>
           <p className="text-lg text-indigo-200/65">
-          We use the following technologies for our services:
+            We use the following technologies for our services:
           </p>
         </div>
 
@@ -188,6 +215,22 @@ export default function Testimonials() {
                   <path d="M3.757 3.758a6 6 0 0 1 8.485 8.485 5.992 5.992 0 0 1-5.301 1.664 1 1 0 1 0-.351 1.969 8 8 0 1 0-4.247-2.218 1 1 0 0 0 1.415-.001L9.12 8.294v1.827a1 1 0 1 0 2 0v-4.2a.997.997 0 0 0-1-1.042H5.879a1 1 0 1 0 0 2h1.829l-4.599 4.598a6 6 0 0 1 .648-7.719Z" />
                 </svg>
                 <span>Cloud</span>
+              </button>
+              {/* Button #6 */}
+              <button
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 6 ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                aria-pressed={category === 6}
+                onClick={() => setCategory(6)}
+              >
+                <svg
+                  className={`fill-current ${category === 6 ? "text-blue-500" : "text-gray-600"}`}
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height={16}
+                >
+                  <path d="M4 4h6v6H4V4zm10 0h6v6h-6V4zM4 14h6v6H4v-6zm10 10v-6h6v6h-6zm0-10h6v6h-6v-6zm-5-5h8v8h-8V9z" />
+                </svg>
+                <span>Frameworks</span>
               </button>
             </div>
           </div>
