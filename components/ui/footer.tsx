@@ -27,25 +27,19 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
+                  href="#services"
                 >
-                  Pricing &amp; Plans
+                  Our Services
                 </a>
               </li>
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
+                  href="https://pohlmanprotean-manager.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  Our method
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
-                >
-                  User policy
+                  Project Manager
                 </a>
               </li>
             </ul>
@@ -57,7 +51,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
+                  href="#about"
                 >
                   About us
                 </a>
@@ -65,15 +59,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
-                >
-                  Blog
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
+                  href="/careers"
                 >
                   Careers
                 </a>
@@ -87,7 +73,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
+                  href="/terms"
                 >
                   Terms of service
                 </a>
@@ -101,7 +87,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
+                  href="/cookies"
                 >
                   Cookie manager
                 </a>
@@ -118,7 +104,7 @@ export default function Footer() {
                 <span className="text-gray-700"> · </span>
                 <a
                   className="text-indigo-200/65 transition hover:text-blue-500"
-                  href="#0"
+                  href="/privacy"
                 >
                   Privacy Policy
                 </a>
@@ -127,15 +113,17 @@ export default function Footer() {
                 <li>
                   <a
                     className="flex items-center justify-center text-blue-500 transition hover:text-blue-300"
-                    href="#0"
-                    aria-label="Twitter"
+                    href="https://www.linkedin.com/company/pohlman-protean/"
+                    aria-label="LinkedIn"
+                    target="_blank"
+                    rel="noopener noreferrer"
                   >
                     <svg
                       className="h-8 w-8 fill-current"
                       viewBox="0 0 32 32"
                       xmlns="http://www.w3.org/2000/svg"
                     >
-                      <path d="m13.063 9 3.495 4.475L20.601 9h2.454l-5.359 5.931L24 23h-4.938l-3.866-4.893L10.771 23H8.316l5.735-6.342L8 9h5.063Zm-.74 1.347h-1.457l8.875 11.232h1.36l-8.778-11.232Z" />
+                      <path d="M7.25 8.5a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0ZM5 10h4v14H5V10Zm6.5 0H15v1.5h.5c1.5-2 4-2.5 6-1.5 3 1.5 3.5 4.5 3.5 7v6h-4v-5.5c0-1.5-.5-3-2.5-3s-3 1.5-3 3V24h-4V10Z"/>
                     </svg>
                   </a>
                 </li>

@@ -11,7 +11,7 @@ export default function Workflows() {
   const [isDelayedVisible, setIsDelayedVisible] = useState(false); // State to manage delayed visibility
 
   const handleScroll = () => {
-      const section = document.getElementById("workflows-section");
+      const section = document.getElementById("about");
 
       if (section) {
           const { top: sectionTop, bottom: sectionBottom } = section.getBoundingClientRect();
@@ -40,7 +40,7 @@ export default function Workflows() {
     }, []);
 
     return (
-        <section id="workflows-section">
+        <section id="about">
             <div className="mx-auto max-w-6xl px-4 sm:px-6">
                 <div className="pb-12 md:pb-20">
                     {/* Section header */}
