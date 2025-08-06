@@ -73,7 +73,7 @@ export async function POST(request: Request) {
     const emailTo = await getSecret('EMAIL_TO');
 
     // Set up nodemailer transport
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: 'Gmail',
       auth: {
         user: emailUser, // Your email username
