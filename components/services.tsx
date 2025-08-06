@@ -61,14 +61,14 @@ export default function Features() {
         <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
           <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-200/50">
-              <span className="inline-flex bg-gradient-to-r from-blue-500 to-blue-200 bg-clip-text text-transparent">
+              <span className="inline-flex bg-gradient-to-r from-blue-600 to-blue-400 dark:from-blue-500 dark:to-blue-200 bg-clip-text text-transparent">
                 Our Services
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.800),theme(colors.indigo.600),theme(colors.gray.900),theme(colors.indigo.700),theme(colors.gray.800))] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Building tailored solutions
             </h2>
-            <p className="text-lg text-indigo-200/65">
+            <p className="text-lg text-gray-600 dark:text-indigo-200/65">
               We offer a range of IT solutions, programming, and automation services tailored to your needs.
             </p>
           </div>
@@ -115,8 +115,8 @@ export default function Features() {
                 }`}
               >
                 {article.icon}
-                <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-200">{article.title}</h3>
-                <p className="text-indigo-200/65">{article.description}</p>
+                <h3 className="mb-1 font-nacelle text-[1rem] font-semibold text-gray-800 dark:text-gray-200">{article.title}</h3>
+                <p className="text-gray-600 dark:text-indigo-200/65">{article.description}</p>
               </article>
             ))}
           </div>

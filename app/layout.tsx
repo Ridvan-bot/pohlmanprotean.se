@@ -7,6 +7,7 @@ import localFont from "next/font/local";
 
 
 import Header from "@/components/ui/header";
+import { ThemeProvider } from "@/utils/ThemeContext";
 
 const inter = Inter({
   subsets: ["latin"], 
@@ -55,14 +56,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${nacelle.variable} bg-gray-950 font-inter text-base text-gray-200 antialiased`}
+        className={`${inter.variable} ${nacelle.variable} bg-white dark:bg-gray-950 font-inter text-base text-gray-900 dark:text-gray-200 antialiased transition-colors duration-300`}
       >
-        {/* Apply styles from Inter and Nacelle fonts, background color, font color, and antialiasing */}
-        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
-          {/* Set up a flex container to ensure full height and flexible layout */}
-          <Header /> {/* Render the Header component */}
-          {children} {/* Render the children passed to the RootLayout */}
-        </div>
+        <ThemeProvider>
+          {/* Apply styles from Inter and Nacelle fonts, background color, font color, and antialiasing */}
+          <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+            {/* Set up a flex container to ensure full height and flexible layout */}
+            <Header /> {/* Render the Header component */}
+            {children} {/* Render the children passed to the RootLayout */}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

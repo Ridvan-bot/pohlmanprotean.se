@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 // Exporting the configuration object for Tailwind CSS
 module.exports = {
+  // Enable dark mode using class strategy
+  darkMode: 'class',
   // Specify the paths to all of the template files in the project
   content: [
     // Look for Tailwind classes in any JS, TS, JSX, or TSX files in the app directory
