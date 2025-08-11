@@ -137,13 +137,18 @@ export default function Testimonials() {
 
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6">
-      <div className="border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+            <div className="
+  border-t py-12
+  [border-image:linear-gradient(to_right,transparent,theme(colors.blue.900/.25),transparent)1]
+  dark:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1]
+  md:py-20
+">
         {/* Section header */}
         <div className="mx-auto max-w-3xl pb-12 text-center">
-          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-4 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+          <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.900),theme(colors.blue.600),theme(colors.gray.900))] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
             Some of the Technologies We Use
           </h2>
-          <p className="text-lg text-indigo-200/65">
+          <p className="text-lg text-gray-600 dark:text-indigo-200/65">
             We use the following technologies for our services:
           </p>
         </div>
@@ -151,10 +156,10 @@ export default function Testimonials() {
         <div>
           {/* Buttons */}
           <div className="flex justify-center pb-12 max-md:hidden md:pb-16">
-            <div className="relative inline-flex flex-wrap justify-center rounded-[1.25rem] bg-gray-800/40 p-1">
+            <div className="relative inline-flex flex-wrap justify-center rounded-[1.25rem] bg-white/80 border border-gray-200 shadow-sm dark:bg-gray-800/40 dark:border-transparent dark:shadow-none p-1">
               {/* Button #1 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 1 ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 1 ? "relative border border-gray-950 shadow-sm dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900 dark:before:pointer-events-none dark:before:absolute dark:before:inset-0 dark:before:rounded-[inherit] dark:before:border dark:before:border-transparent dark:before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] dark:before:[mask-composite:exclude_!important] dark:before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
                 aria-pressed={category === 1}
                 onClick={() => setCategory(1)}
               >
@@ -170,7 +175,7 @@ export default function Testimonials() {
               </button>
               {/* Button #2 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 2 ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 2 ? "relative border border-gray-950 shadow-sm dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900 dark:before:pointer-events-none dark:before:absolute dark:before:inset-0 dark:before:rounded-[inherit] dark:before:border dark:before:border-transparent dark:before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] dark:before:[mask-composite:exclude_!important] dark:before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
                 aria-pressed={category === 2}
                 onClick={() => setCategory(2)}
               >
@@ -186,7 +191,7 @@ export default function Testimonials() {
               </button>
               {/* Button #3 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 3 ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 3 ? "relative border border-gray-950 shadow-sm dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900 dark:before:pointer-events-none dark:before:absolute dark:before:inset-0 dark:before:rounded-[inherit] dark:before:border dark:before:border-transparent dark:before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] dark:before:[mask-composite:exclude_!important] dark:before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
                 aria-pressed={category === 3}
                 onClick={() => setCategory(3)}
               >
@@ -202,7 +207,7 @@ export default function Testimonials() {
               </button>
               {/* Button #4 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 4 ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 4 ? "relative border border-gray-950 shadow-sm dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900 dark:before:pointer-events-none dark:before:absolute dark:before:inset-0 dark:before:rounded-[inherit] dark:before:border dark:before:border-transparent dark:before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] dark:before:[mask-composite:exclude_!important] dark:before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
                 aria-pressed={category === 4}
                 onClick={() => setCategory(4)}
               >
@@ -218,7 +223,7 @@ export default function Testimonials() {
               </button>
               {/* Button #6 */}
               <button
-                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 6 ? "relative bg-gradient-to-b from-gray-900 via-gray-800/60 to-gray-900 before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
+                className={`flex h-8 flex-1 items-center gap-2.5 whitespace-nowrap rounded-full px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring focus-visible:ring-indigo-200 ${category === 6 ? "relative border border-gray-950 shadow-sm dark:bg-gradient-to-b dark:from-gray-900 dark:via-gray-800/60 dark:to-gray-900 dark:before:pointer-events-none dark:before:absolute dark:before:inset-0 dark:before:rounded-[inherit] dark:before:border dark:before:border-transparent dark:before:[background:linear-gradient(to_bottom,theme(colors.indigo.500/0),theme(colors.indigo.500/.5))_border-box] dark:before:[mask-composite:exclude_!important] dark:before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)]" : "opacity-65 transition-opacity hover:opacity-90"}`}
                 aria-pressed={category === 6}
                 onClick={() => setCategory(6)}
               >
@@ -270,21 +275,21 @@ export function Testimonial({
 }) {
   return (
     <article
-      className={`relative rounded-2xl bg-gradient-to-br from-gray-900/50 via-gray-800/25 to-gray-900/50 p-5 backdrop-blur-sm transition-opacity before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] ${!testimonial.categories.includes(category) ? "opacity-30" : ""}`}
+      className={`relative rounded-2xl dark:bg-gradient-to-br from-gray-900/50 via-gray-800/25 to-gray-900/50 p-5 backdrop-blur-sm transition-opacity before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_right,theme(colors.gray.800),theme(colors.gray.700),theme(colors.gray.800))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] ${!testimonial.categories.includes(category) ? "opacity-30" : ""}`}
     >
       <div className="flex flex-col gap-4">
         <div>
           <Image src={testimonial.clientImg} height={36} alt="Client logo" />
         </div>
-        <p className="text-indigo-200/65 before:content-['“'] after:content-['”']">
+        <p className="text-gray-600 dark:text-indigo-200/65 before:content-['“'] after:content-['”']">
           {children}
         </p>
         <div className="flex items-center gap-3">
-          <div className="text-sm font-medium text-gray-200">
+          <div className="text-sm font-medium text-gray-400 dark:text-gray-200">
             <span>{testimonial.name}</span>
-            <span className="text-gray-700"> </span>
+            <span className="text-gray-700 dark:text-gray-200"> </span>
             <a
-              className="text-indigo-200/65 transition-colors hover:text-blue-500"
+              className="text-gray-600 dark:text-indigo-200/65 transition-colors hover:text-blue-500"
               href="#0"
             >
               {testimonial.company}
