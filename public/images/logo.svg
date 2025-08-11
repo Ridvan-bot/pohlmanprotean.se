@@ -28,8 +28,8 @@
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
      inkscape:zoom="3.1879911"
-     inkscape:cx="45.483188"
-     inkscape:cy="71.988909"
+     inkscape:cx="44.698996"
+     inkscape:cy="72.302586"
      inkscape:window-width="2880"
      inkscape:window-height="1288"
      inkscape:window-x="464"
@@ -50,10 +50,6 @@
          style="stop-color:#3084e6;stop-opacity:1;"
          offset="0.5"
          id="stop39548" />
-      <stop
-         style="stop-color:#d6ffff;stop-opacity:1;"
-         offset="1"
-         id="stop13839" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -66,10 +62,6 @@
          style="stop-color:#2a73de;stop-opacity:1;"
          offset="0.5"
          id="stop40278" />
-      <stop
-         style="stop-color:#d6ffff;stop-opacity:1;"
-         offset="1"
-         id="stop13763" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -82,10 +74,6 @@
          style="stop-color:#3084e6;stop-opacity:1;"
          offset="0.64444447"
          id="stop38748" />
-      <stop
-         style="stop-color:#d6ffff;stop-opacity:1;"
-         offset="1"
-         id="stop39513" />
     </linearGradient>
     <linearGradient
        inkscape:collect="always"
@@ -110,10 +98,6 @@
          style="stop-color:#3086f0;stop-opacity:1;"
          offset="0.5"
          id="stop38750" />
-      <stop
-         style="stop-color:#d6ffff;stop-opacity:1;"
-         offset="1"
-         id="stop39458" />
     </linearGradient>
     <rect
        x="16.413441"
@@ -311,7 +295,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:44.6447px;font-family:'Copperplate Gothic Bold';-inkscape-font-specification:'Copperplate Gothic Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect6);display:inline;fill:url(#linearGradient39462);fill-opacity:1;stroke:none;stroke-width:0;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><tspan
          x="202.15625"
          y="355.56487"
-         id="tspan40340">P</tspan></text>
+         id="tspan1023">P</tspan></text>
     <text
        xml:space="preserve"
        transform="matrix(-0.26519788,0,0,0.21530218,70.26167,-87.214428)"
@@ -319,7 +303,7 @@
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:53.1489px;font-family:'Copperplate Gothic Bold';-inkscape-font-specification:'Copperplate Gothic Bold, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;white-space:pre;shape-inside:url(#rect5);display:inline;fill:url(#linearGradient39470);fill-opacity:1;stroke:none;stroke-width:0.418495;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"><tspan
          x="199.76562"
          y="515.68384"
-         id="tspan40342">P
+         id="tspan1025">P
 </tspan></text>
     <circle
        style="fill:none;fill-opacity:1;stroke:url(#linearGradient39517);stroke-width:1.027;stroke-dasharray:none;stroke-opacity:1"
