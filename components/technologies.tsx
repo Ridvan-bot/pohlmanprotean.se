@@ -16,6 +16,7 @@ import terraform from "@/public/images/terraform.svg";
 import react from "@/public/images/react.svg";
 import nextjs from "@/public/images/nextjs.svg";
 import ai from "@/public/images/ai.svg";
+import azure from "@/public/images/azure.svg";  
 
 interface Testimonial {
   clientImg: StaticImageData;
@@ -127,6 +128,14 @@ const testimonials = [
     content:
       "LLMs are large language models that are trained on a large dataset of text. They are used to generate text, images, and other media. With MCP Client and MCP Server, we can use LLMs to interact with internal and external resources.",
     categories: [1, 2],
+  },
+  {
+    clientImg: azure,
+    name: "Azure",
+    company: "",
+    content:
+      "Azure is a cloud computing platform that provides a range of services for building, deploying, and managing applications. It includes services for storage, networking, and compute, as well as tools for development and management.",
+    categories: [1, 3, 4],
   },
 ];
 
