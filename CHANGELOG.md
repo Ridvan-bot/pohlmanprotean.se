@@ -1,3 +1,9 @@
+## [0.16.1](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.16.0...v0.16.1) (2025-08-11)
+
+### Bug Fixes
+
+* adjust logo SVG attributes and remove unnecessary gradient stops for cleaner design ([59a5942](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/59a5942e80616b65cefae726b67b5a84e031a786))
+
 ## [0.16.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.15.0...v0.16.0) (2025-08-11)
 
 ## [0.15.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.14.0...v0.15.0) (2025-08-11)
