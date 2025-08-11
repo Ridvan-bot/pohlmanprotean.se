@@ -1,3 +1,5 @@
+## [0.14.0](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.13.1...v0.14.0) (2025-08-11)
+
 ## [0.13.1](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.13.0...v0.13.1) (2025-08-06)
 
 ### Bug Fixes
