@@ -17,13 +17,14 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     setMounted(true);
-    // Load theme from localStorage or default to 'dark'
+    // Load theme from localStorage or default to user's system preference
     if (typeof window !== 'undefined') {
-      const savedTheme = localStorage.getItem('theme') as Theme;
-      if (savedTheme) {
+      const savedTheme = localStorage.getItem('theme') as Theme | null;
+      if (savedTheme === 'light' || savedTheme === 'dark') {
         setTheme(savedTheme);
       } else {
-        setTheme('dark'); // Default to dark mode
+        const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        setTheme(prefersDark ? 'dark' : 'light');
       }
     }
   }, []);
@@ -49,6 +50,31 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const toggleTheme = () => {
     setTheme(prev => prev === 'light' ? 'dark' : 'light');
   };
+
+  // Keep theme in sync if user changes OS preference while app is open
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const media = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = (e: MediaQueryListEvent) => {
+      const savedTheme = localStorage.getItem('theme') as Theme | null;
+      if (!savedTheme) {
+        setTheme(e.matches ? 'dark' : 'light');
+      }
+    };
+    if (media.addEventListener) {
+      media.addEventListener('change', handleChange);
+    } else {
+      // Safari
+      media.addListener(handleChange);
+    }
+    return () => {
+      if (media.removeEventListener) {
+        media.removeEventListener('change', handleChange);
+      } else {
+        media.removeListener(handleChange);
+      }
+    };
+  }, []);
 
   // Prevent hydration mismatch
   if (!mounted) {
