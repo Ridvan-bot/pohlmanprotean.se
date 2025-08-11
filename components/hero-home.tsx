@@ -11,7 +11,7 @@ export default function HeroHome() {
 
   return (
 
-    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-gray-950">
+    <section className="relative flex h-screen items-center justify-center overflow-hidden bg-white dark:bg-gray-950 transition-colors duration-300">
       <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
 
         <motion.div
@@ -37,7 +37,7 @@ export default function HeroHome() {
                 {word.split("").map((letter, index) => (
                   <motion.div
                     key={`${wordIndex}-${index}`}
-                    className="flex h-10 w-10 items-center justify-center text-2xl font-bold text-white sm:h-14 sm:w-14 sm:text-3xl md:h-20 md:w-20 md:text-4xl"
+                    className="flex h-10 w-10 items-center justify-center text-2xl font-bold text-gray-950 dark:text-white sm:h-14 sm:w-14 sm:text-3xl md:h-20 md:w-20 md:text-4xl"
                     variants={{
                       hidden: { y: 50, opacity: 0, scale: 0.5 },
                       visible: {
@@ -69,17 +69,17 @@ export default function HeroHome() {
           transition={{ delay: 1.5, duration: 0.5 }}
         >
           <motion.div
-            className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50"
+            className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-600/60 dark:before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-600/60 dark:after:to-indigo-200/50"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1.7, duration: 0.5, ease: "easeOut" }}
           >
-            <span className="inline-flex bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-transparent">
+            <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
               Innovating for the future
             </span>
           </motion.div>
           <motion.h2
-            className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
+            className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.900),theme(colors.blue.600),theme(colors.gray.900))] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1.9, duration: 0.5, ease: "easeOut" }}

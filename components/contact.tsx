@@ -16,7 +16,7 @@ export default function Contact() {
     phoneNumber: '',
     message: ''
   });
-  
+
   const [waitMessage, setWaitMessage] = useState('');
   const [waitTime, setWaitTime] = useState(0);
   const [successMessage, setSuccessMessage] = useState('');
@@ -30,14 +30,14 @@ export default function Contact() {
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  
+
     try {
       const response = await fetch('/api/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
-      
+
       if (response.ok) {
         console.log('Message sent successfully!');
         setFormData({
@@ -71,7 +71,7 @@ export default function Contact() {
         setWaitTime(prevTime => prevTime - 1);
       }, 1000);
     }
-    
+
     return () => clearInterval(timer);
   }, [waitTime]);
 
@@ -105,17 +105,22 @@ export default function Contact() {
       </div>
 
       <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
-        <div id="contact" className="w-full px-4 sm:px-0 border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+        <div className="
+  border-t py-12
+  [border-image:linear-gradient(to_right,transparent,theme(colors.blue.900/.25),transparent)1]
+  dark:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1]
+  md:py-20
+">
           <div className="mx-auto max-w-3xl text-center">
-            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
-              <span className="inline-flex bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-transparent">
+            <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-600/60 dark:before:to-blue-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-600/60 dark:after:to-blue-200/50">
+              <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
                 Contact
               </span>
             </div>
-            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+            <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.900),theme(colors.blue.600),theme(colors.gray.900))] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
               Contact us for more info
             </h2>
-            <p className="text-lg text-indigo-200/65 mb-10">
+            <p className="text-lg text-gray-600 dark:text-indigo-200/65 mb-10">
               Please complete the form below and submit your details. Our team will reach out to you promptly.
             </p>
             {waitMessage && (
@@ -125,8 +130,8 @@ export default function Contact() {
               <p className="text-green-500 mb-4">{successMessage}</p>
             )}
             <div className="group mx-auto flex justify-center items-center max-w-sm flex-wrap gap-6 lg:max-w-none lg:flex-nowrap">
-              <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
-                <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950">
+              <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-200 dark:bg-gray-800 p-px">
+                <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-white dark:bg-gray-950">
                   <div className="p-6">
                     <form onSubmit={handleSubmit} className="relative z-10 contact-form">
                       <input
@@ -135,7 +140,7 @@ export default function Contact() {
                         placeholder="First Name"
                         value={formData.firstName}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <input
                         type="text"
@@ -143,7 +148,7 @@ export default function Contact() {
                         placeholder="Last Name"
                         value={formData.lastName}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <input
                         type="text"
@@ -151,7 +156,7 @@ export default function Contact() {
                         placeholder="Company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <input
                         type="text"
@@ -159,7 +164,7 @@ export default function Contact() {
                         placeholder="Job Title"
                         value={formData.jobTitle}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <input
                         type="email"
@@ -167,7 +172,7 @@ export default function Contact() {
                         placeholder="Email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <input
                         type="text"
@@ -175,22 +180,22 @@ export default function Contact() {
                         placeholder="Phone Number"
                         value={formData.phoneNumber}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <textarea
                         name="message"
                         placeholder="Message"
                         value={formData.message}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-100 dark:bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         rows={4}
                       ></textarea>
-<button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
-          Send Message
-          <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
-      -&gt;
-    </span>
-        </button>
+                      <button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
+                        Send Message
+                        <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
+                          -&gt;
+                        </span>
+                      </button>
                     </form>
                   </div>
                 </div>

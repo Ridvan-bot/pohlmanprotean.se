@@ -111,7 +111,12 @@ export default function Careers() {
         </div>
 
         <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
-          <div className="w-full px-4 sm:px-0 border-t py-12 [border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1] md:py-20">
+        <div className="
+  border-t py-12
+  [border-image:linear-gradient(to_right,transparent,theme(colors.blue.900/.25),transparent)1]
+  dark:[border-image:linear-gradient(to_right,transparent,theme(colors.slate.400/.25),transparent)1]
+  md:py-20
+">
             <div className="mx-auto max-w-3xl text-center">
               <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
                 <span className="inline-flex bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-transparent">
