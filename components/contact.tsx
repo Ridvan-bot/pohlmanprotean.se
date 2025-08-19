@@ -104,7 +104,7 @@ export default function Contact() {
         />
       </div>
 
-      <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
+      <div id="contact" className="mx-auto max-w-3xl flex-1 text-center relative z-10 scroll-mt-24 md:scroll-mt-28">
         <div className="
   border-t py-12
   [border-image:linear-gradient(to_right,transparent,theme(colors.blue.900/.25),transparent)1]
