@@ -104,7 +104,7 @@ export default function Contact() {
         />
       </div>
 
-      <div className="mx-auto max-w-3xl flex-1 text-center relative z-10">
+      <div id="contact" className="mx-auto max-w-3xl flex-1 text-center relative z-10 scroll-mt-24 md:scroll-mt-28">
         <div className="
   border-t py-12
   [border-image:linear-gradient(to_right,transparent,theme(colors.blue.900/.25),transparent)1]
@@ -187,7 +187,7 @@ export default function Contact() {
                         placeholder="Message"
                         value={formData.message}
                         onChange={handleChange}
-                        className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-100 dark:bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-100 dark:bg-gray-800/40 px-4 py-6 text-sm font-normal text-gray-800 dark:text-indigo-200 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         rows={4}
                       ></textarea>
                       <button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">

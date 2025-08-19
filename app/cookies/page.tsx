@@ -159,44 +159,44 @@ export default function CookieManager() {
 ">
             <div className="mx-auto max-w-4xl">
               <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
-                  <span className="inline-flex bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-transparent">
+                <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-600/60 dark:before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-600/60 dark:after:to-indigo-200/50">
+                  <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
                     Privacy
                   </span>
                 </div>
-                <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+                <h1 className="dark:animate-[gradient_6s_linear_infinite] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] dark:bg-[length:200%_auto] dark:bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-gray-950 dark:text-transparent md:text-4xl">
                   Cookie Manager
                 </h1>
-                <p className="text-lg text-indigo-200/65">
+                <p className="text-lg text-gray-600 dark:text-indigo-200/65">
                   Manage your cookie preferences and control how we use cookies on our website.
                 </p>
               </div>
 
               {savedMessage && (
-                <div className="mb-8 p-4 bg-green-600/20 border border-green-500/30 rounded-lg text-center">
-                  <p className="text-green-400">{savedMessage}</p>
+                <div className="mb-8 p-4 rounded-lg text-center bg-green-50 border border-green-200 text-green-700 dark:bg-green-600/20 dark:border-green-500/30 dark:text-green-400">
+                  <p>{savedMessage}</p>
                 </div>
               )}
 
-              <div className="space-y-8 text-indigo-200/80">
+              <div className="space-y-8 text-gray-700 dark:text-indigo-200/80">
                 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-200 mb-4">What Are Cookies?</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-4">What Are Cookies?</h2>
                   <p className="mb-4">
                     Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and analyzing how you use our site.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-200 mb-6">Cookie Categories</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Cookie Categories</h2>
                   
                   <div className="space-y-6">
                     {/* Essential Cookies */}
-                    <div className="bg-gray-800/40 rounded-lg p-6 border border-gray-700/50">
+                    <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-200">Essential Cookies</h3>
-                          <p className="text-sm text-indigo-200/60">Always Active</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Essential Cookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Always Active</p>
                         </div>
                         <div className="relative">
                           <input
@@ -210,17 +210,17 @@ export default function CookieManager() {
                           </div>
                         </div>
                       </div>
-                      <p className="text-indigo-200/70">
+                      <p className="text-gray-700 dark:text-indigo-200/70">
                         These cookies are necessary for the website to function and cannot be switched off. They are usually set in response to actions made by you which amount to a request for services, such as setting your privacy preferences or filling in forms.
                       </p>
                     </div>
 
                     {/* Analytics Cookies */}
-                    <div className="bg-gray-800/40 rounded-lg p-6 border border-gray-700/50">
+                    <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-200">Analytics Cookies</h3>
-                          <p className="text-sm text-indigo-200/60">Help us improve our website</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Analytics Cookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Help us improve our website</p>
                         </div>
                         <div className="relative">
                           <input
@@ -239,17 +239,17 @@ export default function CookieManager() {
                           </div>
                         </div>
                       </div>
-                      <p className="text-indigo-200/70">
+                      <p className="text-gray-700 dark:text-indigo-200/70">
                         These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are most and least popular and see how visitors move around the site.
                       </p>
                     </div>
 
                     {/* Marketing Cookies */}
-                    <div className="bg-gray-800/40 rounded-lg p-6 border border-gray-700/50">
+                    <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-200">Marketing Cookies</h3>
-                          <p className="text-sm text-indigo-200/60">Used for advertising and social media</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Marketing Cookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Used for advertising and social media</p>
                         </div>
                         <div className="relative">
                           <input
@@ -268,17 +268,17 @@ export default function CookieManager() {
                           </div>
                         </div>
                       </div>
-                      <p className="text-indigo-200/70">
+                      <p className="text-gray-700 dark:text-indigo-200/70">
                         These cookies may be set through our site by our advertising partners. They may be used to build a profile of your interests and show you relevant adverts on other sites.
                       </p>
                     </div>
 
                     {/* Functional Cookies */}
-                    <div className="bg-gray-800/40 rounded-lg p-6 border border-gray-700/50">
+                    <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-200">Functional Cookies</h3>
-                          <p className="text-sm text-indigo-200/60">Enhanced functionality and personalization</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Functional Cookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Enhanced functionality and personalization</p>
                         </div>
                         <div className="relative">
                           <input
@@ -297,7 +297,7 @@ export default function CookieManager() {
                           </div>
                         </div>
                       </div>
-                      <p className="text-indigo-200/70">
+                      <p className="text-gray-700 dark:text-indigo-200/70">
                         These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third party providers whose services we have added to our pages.
                       </p>
                     </div>
@@ -320,7 +320,7 @@ export default function CookieManager() {
                     </button>
                     <button
                       onClick={savePreferences}
-                      className="btn bg-gradient-to-t from-indigo-600 to-indigo-500 text-white px-8 py-3"
+                      className="btn bg-gradient-to-t from-green-600 to-green-500 text-white px-8 py-3"
                     >
                       Save My Preferences
                     </button>

@@ -118,25 +118,25 @@ export default function Careers() {
   md:py-20
 ">
             <div className="mx-auto max-w-3xl text-center">
-              <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
-                <span className="inline-flex bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-transparent">
+              <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-600/60 dark:before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-600/60 dark:after:to-indigo-200/50">
+                <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
                   Careers
                 </span>
               </div>
-              <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
+              <h1 className="dark:animate-[gradient_6s_linear_infinite] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] dark:bg-[length:200%_auto] dark:bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-gray-950 dark:text-transparent md:text-4xl">
                 Join Our Team
               </h1>
-              <p className="text-lg text-indigo-200/65 mb-10">
+              <p className="text-lg text-gray-600 dark:text-indigo-200/65 mb-10">
                 We're always looking for talented individuals to join our team. Apply for one of our available positions below.
               </p>
 
               {/* Available Positions */}
               <div className="mb-12">
-                <h3 className="text-xl font-semibold text-gray-200 mb-6">Available Positions</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Available Positions</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   {availablePositions.map((position, index) => (
-                    <div key={index} className="bg-gray-800/40 rounded-lg p-4 border border-gray-700/50">
-                      <h4 className="text-indigo-200 font-medium">{position}</h4>
+                    <div key={index} className="rounded-lg p-4 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
+                      <h4 className="font-medium text-gray-800 dark:text-indigo-200">{position}</h4>
                     </div>
                   ))}
                 </div>
@@ -150,8 +150,8 @@ export default function Careers() {
               )}
               
               <div className="group mx-auto flex justify-center items-center max-w-sm flex-wrap gap-6 lg:max-w-none lg:flex-nowrap">
-                <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-800 p-px">
-                  <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-gray-950">
+                <div className="group/card relative h-full overflow-hidden rounded-2xl bg-gray-200 dark:bg-gray-800 p-px">
+                  <div className="relative z-20 h-full overflow-hidden rounded-[inherit] bg-white dark:bg-gray-950">
                     <div className="p-6">
                       <form onSubmit={handleSubmit} className="relative z-10 application-form">
                         <input
@@ -161,7 +161,7 @@ export default function Careers() {
                           value={formData.firstName}
                           onChange={handleChange}
                           required
-                          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <input
                           type="text"
@@ -170,7 +170,7 @@ export default function Careers() {
                           value={formData.lastName}
                           onChange={handleChange}
                           required
-                          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <input
                           type="email"
@@ -179,7 +179,7 @@ export default function Careers() {
                           value={formData.email}
                           onChange={handleChange}
                           required
-                          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <input
                           type="text"
@@ -187,18 +187,18 @@ export default function Careers() {
                           placeholder="Phone Number"
                           value={formData.phoneNumber}
                           onChange={handleChange}
-                          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <select
                           name="position"
                           value={formData.position}
                           onChange={handleChange}
                           required
-                          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
                           <option value="">Select Position *</option>
                           {availablePositions.map((position, index) => (
-                            <option key={index} value={position} className="bg-gray-800 text-indigo-200">
+                            <option key={index} value={position} className="bg-white dark:bg-gray-800 text-gray-800 dark:text-indigo-200">
                               {position}
                             </option>
                           ))}
@@ -209,7 +209,7 @@ export default function Careers() {
                           placeholder="Years of Experience"
                           value={formData.experience}
                           onChange={handleChange}
-                          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <input
                           type="url"
@@ -217,7 +217,7 @@ export default function Careers() {
                           placeholder="Portfolio/LinkedIn URL"
                           value={formData.portfolio}
                           onChange={handleChange}
-                          className="btn-sm w-full mb-4 rounded-full bg-gray-800/40 px-4 py-4 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <textarea
                           name="coverLetter"
@@ -225,7 +225,7 @@ export default function Careers() {
                           value={formData.coverLetter}
                           onChange={handleChange}
                           required
-                          className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-800/40 px-4 py-6 text-sm font-normal text-indigo-200 placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                          className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-100 dark:bg-gray-800/40 px-4 py-6 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                           rows={6}
                         ></textarea>
                         <button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
