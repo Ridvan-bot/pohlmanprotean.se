@@ -78,6 +78,16 @@ export default function Footer() {
                   Terms of service
                 </a>
               </li>
+              <li>
+                <a
+                  className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
+                  href="/files/robinpohlman_pohlmanprotean.pdf"
+                  download="Robin-Pohlman-Consultant-Profile.pdf"
+                  type="application/pdf"
+                >
+                  Consultant Profile (PDF)
+                </a>
+              </li>
             </ul>
           </div>
           {/* 4th block */}
