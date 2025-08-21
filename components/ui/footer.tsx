@@ -35,7 +35,7 @@ export default function Footer() {
               <li>
                 <a
                   className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
-                  href="https://pohlmanprotean-manager.vercel.app/"
+                  href="https://manager.pohlmanprotean.se/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
