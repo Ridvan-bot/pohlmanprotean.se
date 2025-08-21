@@ -1,3 +1,9 @@
+## [0.16.2](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.16.1...v0.16.2) (2025-08-21)
+
+### Bug Fixes
+
+* update footer link to point to the new manager URL for accurate navigation ([ba6b48f](https://github.com/Ridvan-bot/pohlmanprotean.se/commit/ba6b48fd9b1512ff03fe1e26f352490db869a972))
+
 ## [0.16.1](https://github.com/Ridvan-bot/pohlmanprotean.se/compare/v0.16.0...v0.16.1) (2025-08-11)
 
 ### Bug Fixes
