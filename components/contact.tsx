@@ -49,8 +49,8 @@ export default function Contact() {
           phoneNumber: '',
           message: '',
         });
-        setWaitMessage(''); // Clear wait message after success
-        setSuccessMessage('Thank you for reaching out! We will get back to you shortly.'); // Set success message
+        setWaitMessage('');
+        setSuccessMessage('Tack för ditt meddelande! Vi återkommer inom kort.');
       } else if (response.status === 429) {
         const jsonResponse = await response.json();
         setWaitMessage(jsonResponse.message);
@@ -114,14 +114,14 @@ export default function Contact() {
           <div className="mx-auto max-w-3xl text-center">
             <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-600/60 dark:before:to-blue-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-600/60 dark:after:to-blue-200/50">
               <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
-                Contact
+                Kontakt
               </span>
             </div>
             <h2 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.900),theme(colors.blue.600),theme(colors.gray.900))] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-              Contact us for more info
+              Kontakta oss för mer information
             </h2>
             <p className="text-lg text-gray-600 dark:text-indigo-200/65 mb-10">
-              Please complete the form below and submit your details. Our team will reach out to you promptly.
+              Fyll i formuläret nedan och skicka dina uppgifter så återkommer vi så snart som möjligt.
             </p>
             {waitMessage && (
               <p className="text-red-500 mb-4">{waitMessage}</p>
@@ -137,7 +137,7 @@ export default function Contact() {
                       <input
                         type="text"
                         name="firstName"
-                        placeholder="First Name"
+                        placeholder="Förnamn"
                         value={formData.firstName}
                         onChange={handleChange}
                         className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -145,7 +145,7 @@ export default function Contact() {
                       <input
                         type="text"
                         name="lastName"
-                        placeholder="Last Name"
+                        placeholder="Efternamn"
                         value={formData.lastName}
                         onChange={handleChange}
                         className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -153,7 +153,7 @@ export default function Contact() {
                       <input
                         type="text"
                         name="company"
-                        placeholder="Company"
+                        placeholder="Företag"
                         value={formData.company}
                         onChange={handleChange}
                         className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -161,7 +161,7 @@ export default function Contact() {
                       <input
                         type="text"
                         name="jobTitle"
-                        placeholder="Job Title"
+                        placeholder="Befattning"
                         value={formData.jobTitle}
                         onChange={handleChange}
                         className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -169,7 +169,7 @@ export default function Contact() {
                       <input
                         type="email"
                         name="email"
-                        placeholder="Email"
+                        placeholder="E‑post"
                         value={formData.email}
                         onChange={handleChange}
                         className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -177,21 +177,21 @@ export default function Contact() {
                       <input
                         type="text"
                         name="phoneNumber"
-                        placeholder="Phone Number"
+                        placeholder="Telefonnummer"
                         value={formData.phoneNumber}
                         onChange={handleChange}
                         className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                       />
                       <textarea
                         name="message"
-                        placeholder="Message"
+                        placeholder="Meddelande"
                         value={formData.message}
                         onChange={handleChange}
                         className="btn-sm w-full mb-4 rounded-tl-2xl rounded-tr-2xl rounded-bl-2xl rounded-br-2xl bg-gray-100 dark:bg-gray-800/40 px-4 py-6 text-sm font-normal text-gray-800 dark:text-indigo-200 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         rows={4}
                       ></textarea>
                       <button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
-                        Send Message
+                        Skicka meddelande
                         <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                           -&gt;
                         </span>
