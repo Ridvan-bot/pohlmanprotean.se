@@ -22,14 +22,14 @@ export default function Footer() {
         <div className="grid grid-cols-2 justify-between gap-12 py-8 sm:grid-rows-[auto_auto] md:grid-cols-4 md:grid-rows-[auto_auto] md:py-12 lg:grid-cols-[repeat(4,minmax(0,140px))_1fr] lg:grid-rows-1 xl:gap-20">
           {/* 1st block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Product</h3>
+            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Produkt</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
                   href="#services"
                 >
-                  Our Services
+                  Våra tjänster
                 </a>
               </li>
               <li>
@@ -39,21 +39,21 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Project Manager
+                  Projektverktyg
                 </a>
               </li>
             </ul>
           </div>
           {/* 2nd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Company</h3>
+            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Företag</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
                   href="#about"
                 >
-                  About us
+                  Om oss
                 </a>
               </li>
               <li>
@@ -61,21 +61,21 @@ export default function Footer() {
                   className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
                   href="/careers"
                 >
-                  Careers
+                  Karriär
                 </a>
               </li>
             </ul>
           </div>
           {/* 3rd block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Resources</h3>
+            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Resurser</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
                   href="/terms"
                 >
-                  Terms of service
+                  Användarvillkor
                 </a>
               </li>
               <li>
@@ -85,21 +85,21 @@ export default function Footer() {
                   download="Robin-Pohlman-Consultant-Profile.pdf"
                   type="application/pdf"
                 >
-                  Consultant Profile (PDF)
+                  Konsultprofil (PDF)
                 </a>
               </li>
             </ul>
           </div>
           {/* 4th block */}
           <div className="space-y-2">
-            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Content Library</h3>
+            <h3 className="text-sm font-medium text-gray-800 dark:text-gray-200">Innehållsbibliotek</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <a
                   className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
                   href="/cookies"
                 >
-                  Cookie manager
+                  Cookie-hanterare
                 </a>
               </li>
             </ul>
@@ -116,7 +116,7 @@ export default function Footer() {
                   className="text-gray-600 dark:text-indigo-200/65 transition hover:text-blue-500"
                   href="/privacy"
                 >
-                  Privacy Policy
+                  Integritetspolicy
                 </a>
               </p>
               <ul className="inline-flex gap-1">

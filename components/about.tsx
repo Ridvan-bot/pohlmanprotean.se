@@ -47,7 +47,7 @@ export default function Workflows() {
                     <div className="mx-auto max-w-3xl pb-12 text-center md:pb-20">
                         <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-blue-600/60 dark:before:to-blue-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-blue-600/60 dark:after:to-blue-200/50">
                             <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-blue-200 bg-clip-text text-transparent">
-                                About us
+                                Om oss
                             </span>
                         </div>
                         <h2
@@ -55,21 +55,20 @@ export default function Workflows() {
                             data-aos="fade-up"
                             data-aos-delay={400}
                         >
-                            At Pohlman Protean
+                            På Pohlman Protean
                         </h2>
                         <div data-aos="fade-up" data-aos-delay={400}>
                             <p className="text-lg text-gray-600 dark:text-indigo-200/65">
-                                We are dedicated to providing top-notch IT solutions, programming expertise, and automation services.
+                                Vi brinner för att leverera förstklassiga IT‑lösningar, programmeringskompetens och tjänster inom automatisering.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-indigo-200/65">
-                                Our mission is to drive innovation by delivering advanced IT solutions that empower businesses to achieve efficiency, scalability, and success.
-                                We specialize in providing cutting-edge programming, automation, and DevOps services to help clients navigate the complexities of modern technology.
+                                Vårt uppdrag är att driva innovation genom att leverera moderna IT‑lösningar som hjälper företag att bli mer effektiva, skalbara och framgångsrika. Vi erbjuder spetskompetens inom programmering, automatisering och DevOps.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-indigo-200/65">
-                                With years of experience in IT, programming, and automation, Pohlman Protean is your trusted partner for solving complex technical challenges. Whether you're looking to improve efficiency through automation or scale your infrastructure to meet growing demands, we have the skills and expertise to help you succeed.
+                                Med många års erfarenhet inom IT, programmering och automatisering är Pohlman Protean din pålitliga partner för att lösa komplexa tekniska utmaningar.
                             </p>
                             <p className="text-lg text-gray-600 dark:text-indigo-200/65">
-                                Our work is guided by core values that help us deliver the best solutions to our clients:
+                                Våra kärnvärden hjälper oss att leverera bästa möjliga resultat:
                             </p>
                         </div>
                     </div>
@@ -94,12 +93,12 @@ export default function Workflows() {
                                     <div className="mb-3">
                                         <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                                             <span className="bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-gray-950 dark:text-transparent">
-                                                Collaboration
+                                                Samarbete
                                             </span>
                                         </span>
                                     </div>
                                     <p className="text-gray-600 dark:text-indigo-200/65">
-                                        We work closely with our clients to ensure their success is at the forefront of everything we do.
+                                        Vi arbetar nära våra kunder för att säkerställa att deras framgång står i fokus i allt vi gör.
                                     </p>
                                 </div>
                             </div>
@@ -123,12 +122,12 @@ export default function Workflows() {
                                     <div className="mb-3">
                                         <span className="btn-sm relative rounded-full bg-gray-800/40 px-2.5 py-0.5 text-xs font-normal before:pointer-events-none before:absolute before:inset-0 before:rounded-[inherit] before:border before:border-transparent before:[background:linear-gradient(to_bottom,theme(colors.gray.700/.15),theme(colors.gray.700/.5))_border-box] before:[mask-composite:exclude_!important] before:[mask:linear-gradient(white_0_0)_padding-box,_linear-gradient(white_0_0)] hover:bg-gray-800/60">
                                             <span className="bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-gray-950 dark:text-transparent">
-                                                Excellence
+                                                Kvalitet
                                             </span>
                                         </span>
                                     </div>
                                     <p className="text-gray-600 dark:text-indigo-200/65">
-                                        Striving for the highest standards of quality in every service we provide..
+                                        Vi strävar efter högsta kvalitet i allt vi levererar.
                                     </p>
                                 </div>
                             </div>
@@ -157,7 +156,7 @@ export default function Workflows() {
                                         </span>
                                     </div>
                                     <p className="text-gray-600 dark:text-indigo-200/65">
-                                        Continuously seeking new and improved ways to solve problems.
+                                        Vi söker ständigt nya och bättre sätt att lösa problem.
                                     </p>
                                 </div>
                             </div>

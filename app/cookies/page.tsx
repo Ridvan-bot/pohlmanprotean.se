@@ -161,14 +161,14 @@ export default function CookieManager() {
               <div className="text-center mb-12">
                 <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-600/60 dark:before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-600/60 dark:after:to-indigo-200/50">
                   <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
-                    Privacy
+                    Integritet
                   </span>
                 </div>
                 <h1 className="dark:animate-[gradient_6s_linear_infinite] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] dark:bg-[length:200%_auto] dark:bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-gray-950 dark:text-transparent md:text-4xl">
-                  Cookie Manager
+                  Cookie-hanterare
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-indigo-200/65">
-                  Manage your cookie preferences and control how we use cookies on our website.
+                  Hantera dina cookie‑inställningar och kontrollera hur vi använder cookies på vår webbplats.
                 </p>
               </div>
 
@@ -181,22 +181,22 @@ export default function CookieManager() {
               <div className="space-y-8 text-gray-700 dark:text-indigo-200/80">
                 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-4">What Are Cookies?</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-4">Vad är cookies?</h2>
                   <p className="mb-4">
-                    Cookies are small text files that are stored on your device when you visit our website. They help us provide you with a better experience by remembering your preferences and analyzing how you use our site.
+                    Cookies är små textfiler som lagras på din enhet när du besöker vår webbplats. De hjälper oss att ge dig en bättre upplevelse genom att komma ihåg dina inställningar och analysera hur du använder sidan.
                   </p>
                 </section>
 
                 <section>
-                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Cookie Categories</h2>
+                  <h2 className="text-2xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Kategorier av cookies</h2>
                   
                   <div className="space-y-6">
                     {/* Essential Cookies */}
                     <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Essential Cookies</h3>
-                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Always Active</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Nödvändiga cookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Alltid aktiva</p>
                         </div>
                         <div className="relative">
                           <input
@@ -211,7 +211,7 @@ export default function CookieManager() {
                         </div>
                       </div>
                       <p className="text-gray-700 dark:text-indigo-200/70">
-                        These cookies are necessary for the website to function and cannot be switched off. They are usually set in response to actions made by you which amount to a request for services, such as setting your privacy preferences or filling in forms.
+                        Dessa cookies är nödvändiga för att webbplatsen ska fungera och kan inte stängas av. De sätts oftast när du gör något som motsvarar en begäran om tjänst, t.ex. sparar integritetsinställningar eller fyller i formulär.
                       </p>
                     </div>
 
@@ -219,8 +219,8 @@ export default function CookieManager() {
                     <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Analytics Cookies</h3>
-                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Help us improve our website</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Analys-cookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Hjälper oss förbättra webbplatsen</p>
                         </div>
                         <div className="relative">
                           <input
@@ -240,7 +240,7 @@ export default function CookieManager() {
                         </div>
                       </div>
                       <p className="text-gray-700 dark:text-indigo-200/70">
-                        These cookies allow us to count visits and traffic sources so we can measure and improve the performance of our site. They help us know which pages are most and least popular and see how visitors move around the site.
+                        Dessa cookies låter oss räkna besök och trafikkällor så att vi kan mäta och förbättra sidans prestanda. De visar vilka sidor som är mest och minst populära och hur besökare rör sig på webbplatsen.
                       </p>
                     </div>
 
@@ -248,8 +248,8 @@ export default function CookieManager() {
                     <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Marketing Cookies</h3>
-                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Used for advertising and social media</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Marknadsföringscookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Används för annonsering och sociala medier</p>
                         </div>
                         <div className="relative">
                           <input
@@ -269,7 +269,7 @@ export default function CookieManager() {
                         </div>
                       </div>
                       <p className="text-gray-700 dark:text-indigo-200/70">
-                        These cookies may be set through our site by our advertising partners. They may be used to build a profile of your interests and show you relevant adverts on other sites.
+                        Dessa cookies kan sättas via vår webbplats av våra reklampartners. De kan användas för att skapa en profil över dina intressen och visa relevanta annonser på andra webbplatser.
                       </p>
                     </div>
 
@@ -277,8 +277,8 @@ export default function CookieManager() {
                     <div className="rounded-lg p-6 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Functional Cookies</h3>
-                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Enhanced functionality and personalization</p>
+                          <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200">Funktionella cookies</h3>
+                          <p className="text-sm text-gray-600 dark:text-indigo-200/60">Förbättrad funktionalitet och personalisering</p>
                         </div>
                         <div className="relative">
                           <input
@@ -298,7 +298,7 @@ export default function CookieManager() {
                         </div>
                       </div>
                       <p className="text-gray-700 dark:text-indigo-200/70">
-                        These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third party providers whose services we have added to our pages.
+                        Dessa cookies gör att webbplatsen kan erbjuda förbättrad funktionalitet och personalisering. De kan sättas av oss eller av tredje part vars tjänster vi har lagt till.
                       </p>
                     </div>
                   </div>
@@ -310,19 +310,19 @@ export default function CookieManager() {
                       onClick={acceptAll}
                       className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white px-8 py-3"
                     >
-                      Accept All Cookies
+                      Acceptera alla cookies
                     </button>
                     <button
                       onClick={rejectAll}
                       className="btn bg-gray-700 hover:bg-gray-600 text-white px-8 py-3"
                     >
-                      Reject All (Essential Only)
+                      Avvisa alla (endast nödvändiga)
                     </button>
                     <button
                       onClick={savePreferences}
                       className="btn bg-gradient-to-t from-green-600 to-green-500 text-white px-8 py-3"
                     >
-                      Save My Preferences
+                      Spara mina inställningar
                     </button>
                   </div>
                 </section>

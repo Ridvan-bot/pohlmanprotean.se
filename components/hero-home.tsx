@@ -75,7 +75,7 @@ export default function HeroHome() {
             transition={{ delay: 1.7, duration: 0.5, ease: "easeOut" }}
           >
             <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
-              Innovating for the future
+              Innovativt för framtiden
             </span>
           </motion.div>
           <motion.h2
@@ -84,7 +84,7 @@ export default function HeroHome() {
             animate={{ scale: 1, opacity: 1 }}
             transition={{ delay: 1.9, duration: 0.5, ease: "easeOut" }}
           >
-            IT Solutions • Programming • Automation
+            IT‑lösningar • Programmering • Automatisering
           </motion.h2>
           <div data-aos="fade-up" data-aos-delay={400}>
             <a
@@ -92,7 +92,7 @@ export default function HeroHome() {
               href="#contact"
             >
               <span className="relative inline-flex items-center">
-                Contact Us
+                Kontakta oss
                 <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                   -&gt;
                 </span>

@@ -14,7 +14,7 @@ global.fetch = jest.fn(() =>
 ) as jest.Mock;
 test('renders the contact form', () => {
   render(<Contact />);
-  expect(screen.getByPlaceholderText('First Name')).toBeInTheDocument();
+  expect(screen.getByPlaceholderText('Förnamn')).toBeInTheDocument();
 });
 test('mock fetch works', async () => {
   const response = await fetch('/api/sendMessage');
@@ -23,18 +23,18 @@ test('mock fetch works', async () => {
 test('fills out the form and submits it', async () => {
   render(<Contact />);
   // Fill out the form
-  fireEvent.change(screen.getByPlaceholderText('First Name'), { target: { value: 'John' } });
-  fireEvent.change(screen.getByPlaceholderText('Last Name'), { target: { value: 'Doe' } });
-  fireEvent.change(screen.getByPlaceholderText('Company'), { target: { value: 'Acme Corp' } });
-  fireEvent.change(screen.getByPlaceholderText('Job Title'), { target: { value: 'Developer' } });
-  fireEvent.change(screen.getByPlaceholderText('Email'), { target: { value: 'john.doe@example.com' } });
-  fireEvent.change(screen.getByPlaceholderText('Phone Number'), { target: { value: '1234567890' } });
-  fireEvent.change(screen.getByPlaceholderText('Message'), { target: { value: 'Hello, this is a test message.' } });
+  fireEvent.change(screen.getByPlaceholderText('Förnamn'), { target: { value: 'John' } });
+  fireEvent.change(screen.getByPlaceholderText('Efternamn'), { target: { value: 'Doe' } });
+  fireEvent.change(screen.getByPlaceholderText('Företag'), { target: { value: 'Acme Corp' } });
+  fireEvent.change(screen.getByPlaceholderText('Befattning'), { target: { value: 'Developer' } });
+  fireEvent.change(screen.getByPlaceholderText(/E.?post/i), { target: { value: 'john.doe@example.com' } });
+  fireEvent.change(screen.getByPlaceholderText('Telefonnummer'), { target: { value: '1234567890' } });
+  fireEvent.change(screen.getByPlaceholderText('Meddelande'), { target: { value: 'Hello, this is a test message.' } });
   // Submit the form
-  fireEvent.click(screen.getByText('Send Message'));
+  fireEvent.click(screen.getByText('Skicka meddelande'));
   // Wait for the success message to appear
   await waitFor(() => {
-    expect(screen.getByText('Thank you for reaching out! We will get back to you shortly.')).toBeInTheDocument();
+    expect(screen.getByText('Tack för ditt meddelande! Vi återkommer inom kort.')).toBeInTheDocument();
   });
   // Ensure fetch was called with the correct data
   expect(global.fetch).toHaveBeenCalledWith('/api/sendMessage', expect.objectContaining({

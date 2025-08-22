@@ -46,14 +46,14 @@ export default function Privacy() {
               <div className="text-center mb-12">
                 <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-200/50">
                   <span className="inline-flex bg-gradient-to-r from-blue-500 to-indigo-200 bg-clip-text text-transparent">
-                    Legal
+                    Juridiskt
                   </span>
                 </div>
                 <h1 className="animate-[gradient_6s_linear_infinite] bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] bg-[length:200%_auto] bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-transparent md:text-4xl">
-                  Privacy Policy
+                  Integritetspolicy
                 </h1>
                 <p className="text-lg text-indigo-200/65">
-                  Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  Senast uppdaterad: {new Date().toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </p>
               </div>
 
@@ -61,139 +61,139 @@ export default function Privacy() {
                 <div className="space-y-8 text-indigo-200/80">
                   
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">1. Introduction</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">1. Introduktion</h2>
                     <p className="mb-4">
-                      Pohlman Protean ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services. We comply with the General Data Protection Regulation (GDPR) and Swedish data protection laws.
+                      Pohlman Protean ("vi", "oss" eller "vår") värnar om din integritet. Denna integritetspolicy förklarar hur vi samlar in, använder, delar och skyddar dina uppgifter när du besöker vår webbplats eller använder våra tjänster. Vi följer GDPR och svensk dataskyddslagstiftning.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">2. Information We Collect</h2>
-                    <p className="mb-4">We may collect the following types of information:</p>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">2. Vilken information vi samlar in</h2>
+                    <p className="mb-4">Vi kan samla in följande typer av information:</p>
                     
-                    <h3 className="text-xl font-semibold text-gray-300 mb-3 mt-6">Personal Information</h3>
+                    <h3 className="text-xl font-semibold text-gray-300 mb-3 mt-6">Personuppgifter</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4 mb-4">
-                      <li>Name and contact information (email, phone number)</li>
-                      <li>Company information and job title</li>
-                      <li>Professional background and experience</li>
-                      <li>Portfolio or LinkedIn URLs</li>
-                      <li>Messages and communications with us</li>
+                      <li>Namn och kontaktuppgifter (e‑post, telefonnummer)</li>
+                      <li>Företagsuppgifter och befattning</li>
+                      <li>Yrkesbakgrund och erfarenhet</li>
+                      <li>Portfolio‑ eller LinkedIn‑länkar</li>
+                      <li>Meddelanden och kommunikation med oss</li>
                     </ul>
 
-                    <h3 className="text-xl font-semibold text-gray-300 mb-3 mt-6">Technical Information</h3>
+                    <h3 className="text-xl font-semibold text-gray-300 mb-3 mt-6">Teknisk information</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>IP address and location data</li>
-                      <li>Browser type and version</li>
-                      <li>Device information</li>
-                      <li>Website usage data and analytics</li>
-                      <li>Cookies and similar tracking technologies</li>
+                      <li>IP‑adress och platsdata</li>
+                      <li>Webbläsartyp och version</li>
+                      <li>Enhetsinformation</li>
+                      <li>Användningsdata och analys</li>
+                      <li>Cookies och liknande spårningsteknik</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">3. How We Collect Information</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">3. Hur vi samlar in information</h2>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li><strong>Direct Collection:</strong> When you fill out contact forms, submit job applications, or communicate with us</li>
-                      <li><strong>Automatic Collection:</strong> Through cookies, analytics tools, and website interactions</li>
-                      <li><strong>Third-Party Sources:</strong> From publicly available professional networks (with your consent)</li>
+                      <li><strong>Direkt insamling:</strong> När du fyller i formulär, skickar ansökningar eller kontaktar oss</li>
+                      <li><strong>Automatisk insamling:</strong> Via cookies, analysverktyg och interaktioner på webbplatsen</li>
+                      <li><strong>Tredje part:</strong> Från offentligt tillgängliga professionella nätverk (med ditt samtycke)</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">4. How We Use Your Information</h2>
-                    <p className="mb-4">We use your information for the following purposes:</p>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">4. Hur vi använder din information</h2>
+                    <p className="mb-4">Vi använder dina uppgifter för följande ändamål:</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>Responding to your inquiries and providing customer support</li>
-                      <li>Processing job applications and recruitment</li>
-                      <li>Delivering our IT consulting and development services</li>
-                      <li>Improving our website and services</li>
-                      <li>Complying with legal obligations</li>
-                      <li>Sending relevant business communications (with your consent)</li>
+                      <li>Besvara förfrågningar och ge support</li>
+                      <li>Hantera jobbansökningar och rekrytering</li>
+                      <li>Leverera IT‑konsult‑ och utvecklingstjänster</li>
+                      <li>Förbättra vår webbplats och våra tjänster</li>
+                      <li>Uppfylla rättsliga skyldigheter</li>
+                      <li>Skicka relevant information (med ditt samtycke)</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">5. Legal Basis for Processing (GDPR)</h2>
-                    <p className="mb-4">We process your personal data based on:</p>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">5. Rättslig grund för behandling (GDPR)</h2>
+                    <p className="mb-4">Vi behandlar dina personuppgifter baserat på:</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li><strong>Consent:</strong> When you voluntarily provide information through forms</li>
-                      <li><strong>Contract:</strong> To perform services you've requested</li>
-                      <li><strong>Legitimate Interest:</strong> For business operations and service improvement</li>
-                      <li><strong>Legal Obligation:</strong> To comply with applicable laws</li>
+                      <li><strong>Samtycke:</strong> När du frivilligt lämnar uppgifter via formulär</li>
+                      <li><strong>Avtal:</strong> För att utföra efterfrågade tjänster</li>
+                      <li><strong>Befogat intresse:</strong> För verksamhet och förbättring av tjänster</li>
+                      <li><strong>Rättslig förpliktelse:</strong> För att följa lagkrav</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">6. Information Sharing and Disclosure</h2>
-                    <p className="mb-4">We do not sell, trade, or otherwise transfer your personal information to third parties, except:</p>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">6. Delning av information</h2>
+                    <p className="mb-4">Vi säljer inte och överför inte dina personuppgifter till tredje part, förutom:</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>With your explicit consent</li>
-                      <li>To trusted service providers who assist in our operations (under strict confidentiality agreements)</li>
-                      <li>When required by law or to protect our rights</li>
-                      <li>In connection with a business merger or acquisition (with notice)</li>
+                      <li>Med ditt uttryckliga samtycke</li>
+                      <li>Till betrodda tjänsteleverantörer som hjälper vår verksamhet (med sekretessavtal)</li>
+                      <li>När lag kräver det eller för att skydda våra rättigheter</li>
+                      <li>I samband med företagsöverlåtelser (med information)</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">7. Data Security</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">7. Datasäkerhet</h2>
                     <p className="mb-4">
-                      We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. These include encryption, secure servers, and access controls.
+                      Vi vidtar lämpliga tekniska och organisatoriska säkerhetsåtgärder för att skydda dina uppgifter mot obehörig åtkomst, ändring, utlämning eller förstörelse. Exempel är kryptering, säkra servrar och åtkomstkontroller.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">8. Data Retention</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">8. Lagringstid</h2>
                     <p className="mb-4">
-                      We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, or resolve disputes. Contact form submissions are typically retained for 2 years, while job applications may be kept for up to 3 years.
+                      Vi sparar dina personuppgifter endast så länge som behövs för de ändamål som beskrivs här, för att uppfylla lagkrav eller lösa tvister. Kontaktformulär sparas normalt i 2 år och jobbansökningar upp till 3 år.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">9. Your Rights (GDPR)</h2>
-                    <p className="mb-4">Under GDPR, you have the right to:</p>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">9. Dina rättigheter (GDPR)</h2>
+                    <p className="mb-4">Enligt GDPR har du rätt att:</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li><strong>Access:</strong> Request a copy of your personal data</li>
-                      <li><strong>Rectification:</strong> Correct inaccurate or incomplete data</li>
-                      <li><strong>Erasure:</strong> Request deletion of your data ("right to be forgotten")</li>
-                      <li><strong>Portability:</strong> Receive your data in a structured format</li>
-                      <li><strong>Restriction:</strong> Limit how we process your data</li>
-                      <li><strong>Objection:</strong> Object to processing based on legitimate interests</li>
-                      <li><strong>Withdraw Consent:</strong> Revoke consent at any time</li>
+                      <li><strong>Tillgång:</strong> Begära en kopia av dina uppgifter</li>
+                      <li><strong>Rättelse:</strong> Korrigera felaktiga eller ofullständiga uppgifter</li>
+                      <li><strong>Radering:</strong> Begära att bli raderad ("rätten att bli bortglömd")</li>
+                      <li><strong>Dataportabilitet:</strong> Få ut dina uppgifter i ett strukturerat format</li>
+                      <li><strong>Begränsning:</strong> Begränsa hur vi behandlar dina uppgifter</li>
+                      <li><strong>Invändning:</strong> Invända mot behandling baserat på berättigat intresse</li>
+                      <li><strong>Återkalla samtycke:</strong> När som helst</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">10. Cookies and Tracking</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">10. Cookies och spårning</h2>
                     <p className="mb-4">
-                      Our website uses cookies to enhance user experience and analyze website traffic. You can control cookie preferences through your browser settings. Essential cookies are necessary for website functionality and cannot be disabled.
+                      Vår webbplats använder cookies för att förbättra användarupplevelsen och analysera trafik. Du kan styra cookies i din webbläsare. Nödvändiga cookies krävs för att sidan ska fungera och kan inte stängas av.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">11. International Transfers</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">11. Internationella överföringar</h2>
                     <p className="mb-4">
-                      Your data may be transferred to and processed in countries outside the EU/EEA. We ensure appropriate safeguards are in place, such as Standard Contractual Clauses or adequacy decisions by the European Commission.
+                      Dina uppgifter kan överföras till och behandlas i länder utanför EU/EES. Vi säkerställer lämpliga skyddsåtgärder, som standardavtalsklausuler eller adekvansbeslut.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">12. Children's Privacy</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">12. Barns integritet</h2>
                     <p className="mb-4">
-                      Our services are not directed to individuals under 18 years of age. We do not knowingly collect personal information from children under 18.
+                      Våra tjänster riktar sig inte till personer under 18 år. Vi samlar inte medvetet in personuppgifter från barn under 18.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">13. Changes to This Policy</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">13. Ändringar i denna policy</h2>
                     <p className="mb-4">
-                      We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new policy on our website with an updated "Last updated" date.
+                      Vi kan uppdatera denna integritetspolicy vid behov. Vi informerar om större ändringar genom att publicera den nya policyn med uppdaterat datum.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">14. Contact Information</h2>
+                    <h2 className="text-2xl font-semibold text-gray-200 mb-4">14. Kontaktuppgifter</h2>
                     <p className="mb-4">
-                      If you have questions about this Privacy Policy or wish to exercise your rights, please contact us through our contact form. For GDPR-related complaints, you also have the right to lodge a complaint with the Swedish Data Protection Authority (Datainspektionen).
+                      Om du har frågor om denna integritetspolicy eller vill utöva dina rättigheter, kontakta oss via kontaktformuläret. För GDPR‑relaterade klagomål kan du vända dig till Integritetsskyddsmyndigheten (IMY).
                     </p>
                   </section>
 

@@ -46,14 +46,14 @@ export default function Terms() {
               <div className="text-center mb-12">
                 <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-600/60 dark:before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-600/60 dark:after:to-indigo-200/50">
                   <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
-                    Legal
+                    Juridiskt
                   </span>
                 </div>
                 <h1 className="dark:animate-[gradient_6s_linear_infinite] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] dark:bg-[length:200%_auto] dark:bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-gray-950 dark:text-transparent md:text-4xl">
-                  Terms of Service
+                  Användarvillkor
                 </h1>
                 <p className="text-lg text-gray-600 dark:text-indigo-200/65">
-                  Last updated: {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+                  Senast uppdaterad: {new Date().toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </p>
               </div>
 
@@ -61,105 +61,105 @@ export default function Terms() {
                 <div className="space-y-8 text-gray-700 dark:text-indigo-200/80">
                   
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">1. Acceptance of Terms</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">1. Godkännande av villkor</h2>
                     <p className="mb-4">
-                      By accessing and using the services provided by Pohlman Protean ("we," "our," or "us"), you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.
+                      Genom att använda tjänster från Pohlman Protean ("vi", "vårt" eller "oss") godkänner du dessa villkor. Om du inte accepterar villkoren ska du inte använda tjänsten.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">2. Services Provided</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">2. Tjänster</h2>
                     <p className="mb-4">
-                      Pohlman Protean provides IT consulting, software development, cloud deployment, and automation services. Our services include but are not limited to:
+                      Pohlman Protean erbjuder IT‑konsulttjänster, mjukvaruutveckling, molnimplementation och automatisering. Exempel på tjänster:
                     </p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>Fullstack development and consulting</li>
-                      <li>Website development for businesses of all sizes</li>
-                      <li>Cloud deployment and infrastructure management</li>
-                      <li>IT automation solutions</li>
-                      <li>Project management services</li>
+                      <li>Fullstack‑utveckling och rådgivning</li>
+                      <li>Webbutveckling för företag i alla storlekar</li>
+                      <li>Molnimplementation och infrastrukturhantering</li>
+                      <li>Automatiseringslösningar</li>
+                      <li>Projektledning</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">3. Use License</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">3. Licens för användning</h2>
                     <p className="mb-4">
-                      Permission is granted to temporarily access the materials on Pohlman Protean's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                      Du får tillfällig åtkomst till material på Pohlman Proteans webbplats för personligt, icke‑kommersiellt bruk. Detta är en licens, inte en överlåtelse av äganderätt. Under licensen får du inte:
                     </p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>Modify or copy the materials</li>
-                      <li>Use the materials for any commercial purpose or for any public display</li>
-                      <li>Attempt to reverse engineer any software contained on the website</li>
-                      <li>Remove any copyright or other proprietary notations from the materials</li>
+                      <li>Ändra eller kopiera materialet</li>
+                      <li>Använda materialet kommersiellt eller offentligt</li>
+                      <li>Försöka reverse‑engineering av mjukvara på webbplatsen</li>
+                      <li>Ta bort upphovsrättsliga eller andra äganderättsliga notiser</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">4. Client Obligations</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">4. Kundens skyldigheter</h2>
                     <p className="mb-4">
-                      When engaging our services, clients agree to:
+                      När du anlitar våra tjänster godkänner du att:
                     </p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>Provide accurate and complete information</li>
-                      <li>Make timely payments as agreed upon in project contracts</li>
-                      <li>Respond to requests for information in a timely manner</li>
-                      <li>Respect intellectual property rights</li>
-                      <li>Comply with all applicable laws and regulations</li>
+                      <li>Lämna korrekt och fullständig information</li>
+                      <li>Betala enligt överenskomna villkor</li>
+                      <li>Svara skyndsamt på förfrågningar</li>
+                      <li>Respektera immateriella rättigheter</li>
+                      <li>Följa tillämpliga lagar och regler</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">5. Payment Terms</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">5. Betalningsvillkor</h2>
                     <p className="mb-4">
-                      Payment terms will be specified in individual project agreements. Unless otherwise specified:
+                      Betalningsvillkor specificeras i projektavtal. Om inget annat anges:
                     </p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
-                      <li>Invoices are due within 30 days of issuance</li>
-                      <li>Late payments may incur additional fees</li>
-                      <li>Work may be suspended for overdue accounts</li>
-                      <li>Refund policies will be outlined in project-specific agreements</li>
+                      <li>Fakturor förfaller 30 dagar efter utfärdande</li>
+                      <li>Försenad betalning kan medföra avgifter</li>
+                      <li>Arbete kan pausas vid förfallna skulder</li>
+                      <li>Återbetalningspolicy framgår av projektavtal</li>
                     </ul>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">6. Intellectual Property</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">6. Immateriella rättigheter</h2>
                     <p className="mb-4">
-                      Unless otherwise agreed upon in writing, all custom work developed by Pohlman Protean becomes the property of the client upon full payment. However, Pohlman Protean retains the right to use general knowledge, skills, experience, ideas, concepts, know-how, and techniques acquired or used in the course of providing services.
+                      Om inte annat avtalas skriftligen blir kundanpassat arbete kundens egendom efter full betalning. Pohlman Protean behåller rätten att använda generell kunskap och erfarenhet för framtida uppdrag.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">7. Confidentiality</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">7. Sekretess</h2>
                     <p className="mb-4">
-                      We respect the confidentiality of our clients' information and agree not to disclose any confidential information except as required by law or with explicit client consent.
+                      Vi respekterar våra kunders konfidentiella information och lämnar inte ut sådan information utan lagstöd eller uttryckligt samtycke.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">8. Privacy Policy</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">8. Integritetspolicy</h2>
                     <p className="mb-4">
-                      Your privacy is important to us. We collect and use personal information only as necessary to provide our services and as outlined in our Privacy Policy.
+                      Din integritet är viktig för oss. Vi samlar in och använder personuppgifter endast enligt vår integritetspolicy.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">9. Modifications to Terms</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">9. Ändringar av villkor</h2>
                     <p className="mb-4">
-                      Pohlman Protean may revise these terms of service at any time without notice. By using this website and our services, you are agreeing to be bound by the then current version of these terms of service.
+                      Pohlman Protean kan ändra dessa villkor när som helst. Genom att använda webbplatsen och våra tjänster accepterar du den senaste versionen.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">10. Governing Law</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">10. Tillämplig lag</h2>
                     <p className="mb-4">
-                      These terms and conditions are governed by and construed in accordance with the laws of Sweden, and you irrevocably submit to the exclusive jurisdiction of the courts in that state or location.
+                      Dessa villkor regleras av svensk lag och tvister hanteras av svensk domstol.
                     </p>
                   </section>
 
                   <section>
-                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">11. Contact Information</h2>
+                    <h2 className="text-2xl font-semibold text-gray-700 mb-4">11. Kontakt</h2>
                     <p className="mb-4">
-                      If you have any questions about these Terms of Service, please contact us through our contact form or via email.
+                      Om du har frågor om dessa villkor, kontakta oss via kontaktformuläret eller e‑post.
                     </p>
                   </section>
 

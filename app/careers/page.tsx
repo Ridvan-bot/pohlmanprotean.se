@@ -120,19 +120,19 @@ export default function Careers() {
             <div className="mx-auto max-w-3xl text-center">
               <div className="inline-flex items-center gap-3 pb-3 before:h-px before:w-8 before:bg-gradient-to-r before:from-transparent before:to-indigo-600/60 dark:before:to-indigo-200/50 after:h-px after:w-8 after:bg-gradient-to-l after:from-transparent after:to-indigo-600/60 dark:after:to-indigo-200/50">
                 <span className="inline-flex bg-gradient-to-r from-gray-950 to-gray-800 dark:from-blue-500 dark:to-indigo-200 bg-clip-text text-transparent">
-                  Careers
+                  Karriär
                 </span>
               </div>
               <h1 className="dark:animate-[gradient_6s_linear_infinite] dark:bg-[linear-gradient(to_right,theme(colors.gray.200),theme(colors.indigo.200),theme(colors.gray.50),theme(colors.indigo.300),theme(colors.gray.200))] dark:bg-[length:200%_auto] dark:bg-clip-text pb-8 font-nacelle text-3xl font-semibold text-gray-950 dark:text-transparent md:text-4xl">
-                Join Our Team
+                Bli en del av vårt team
               </h1>
               <p className="text-lg text-gray-600 dark:text-indigo-200/65 mb-10">
-                We're always looking for talented individuals to join our team. Apply for one of our available positions below.
+                Vi letar alltid efter talangfulla personer. Skicka gärna en spontanansökan.
               </p>
 
               {/* Available Positions */}
               <div className="mb-12">
-                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Available Positions</h3>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-6">Lediga tjänster</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                   {availablePositions.map((position, index) => (
                     <div key={index} className="rounded-lg p-4 bg-white border border-gray-200 dark:bg-gray-800/40 dark:border-gray-700/50">
@@ -157,7 +157,7 @@ export default function Careers() {
                         <input
                           type="text"
                           name="firstName"
-                          placeholder="First Name *"
+                          placeholder="Förnamn *"
                           value={formData.firstName}
                           onChange={handleChange}
                           required
@@ -166,7 +166,7 @@ export default function Careers() {
                         <input
                           type="text"
                           name="lastName"
-                          placeholder="Last Name *"
+                          placeholder="Efternamn *"
                           value={formData.lastName}
                           onChange={handleChange}
                           required
@@ -175,7 +175,7 @@ export default function Careers() {
                         <input
                           type="email"
                           name="email"
-                          placeholder="Email *"
+                          placeholder="E‑post *"
                           value={formData.email}
                           onChange={handleChange}
                           required
@@ -184,7 +184,7 @@ export default function Careers() {
                         <input
                           type="text"
                           name="phoneNumber"
-                          placeholder="Phone Number"
+                          placeholder="Telefonnummer"
                           value={formData.phoneNumber}
                           onChange={handleChange}
                           className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -196,7 +196,7 @@ export default function Careers() {
                           required
                           className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         >
-                          <option value="">Select Position *</option>
+                          <option value="">Välj tjänst *</option>
                           {availablePositions.map((position, index) => (
                             <option key={index} value={position} className="bg-white dark:bg-gray-800 text-gray-800 dark:text-indigo-200">
                               {position}
@@ -206,7 +206,7 @@ export default function Careers() {
                         <input
                           type="text"
                           name="experience"
-                          placeholder="Years of Experience"
+                          placeholder="År av erfarenhet"
                           value={formData.experience}
                           onChange={handleChange}
                           className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -214,14 +214,14 @@ export default function Careers() {
                         <input
                           type="url"
                           name="portfolio"
-                          placeholder="Portfolio/LinkedIn URL"
+                          placeholder="Portfolio/LinkedIn‑länk"
                           value={formData.portfolio}
                           onChange={handleChange}
                           className="btn-sm w-full mb-4 rounded-full bg-gray-100 dark:bg-gray-800/40 px-4 py-4 text-sm font-normal text-gray-800 dark:text-indigo-200 placeholder-gray-500 dark:placeholder-indigo-200/60 focus:outline-none focus:ring-2 focus:ring-blue-500"
                         />
                         <textarea
                           name="coverLetter"
-                          placeholder="Cover Letter / Why do you want to work with us? *"
+                          placeholder="Personligt brev / Varför vill du jobba hos oss? *"
                           value={formData.coverLetter}
                           onChange={handleChange}
                           required
@@ -229,7 +229,7 @@ export default function Careers() {
                           rows={6}
                         ></textarea>
                         <button type="submit" className="btn bg-gradient-to-t from-blue-600 to-blue-500 text-white">
-                          Submit Application
+                          Skicka ansökan
                           <span className="ml-1 tracking-normal text-white/50 transition-transform group-hover:translate-x-0.5">
                             &rarr;
                           </span>
