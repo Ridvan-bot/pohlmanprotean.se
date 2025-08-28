@@ -32,7 +32,7 @@ const testimonials = [
     name: "Bash",
     company: "",
     content:
-      "Bash (Bourne Again SHell) is a Unix-based command-line interpreter and scripting language commonly used in Linux and macOS environments. It allows users to interact with the operating system by executing commands, automating tasks, and running scripts.",
+      "Bash (Bourne Again SHell) är en Unix‑baserad kommandotolk och ett skriptspråk som vanligtvis används i Linux- och macOS‑miljöer. Det låter användare interagera med operativsystemet genom att köra kommandon, automatisera uppgifter och köra skript.",
     categories: [1, 2, 5],
   },
   {
@@ -40,7 +40,7 @@ const testimonials = [
     name: "JavaScript",
     company: "",
     content:
-      "JavaScript is a high-level, dynamic programming language primarily used to create interactive and dynamic content on websites. It runs in web browsers and enables developers to build features like animations, form validations, real-time updates, and user interface elements.",
+      "JavaScript är ett högnivå, dynamiskt programmeringsspråk som främst används för att skapa interaktivt och dynamiskt innehåll på webbplatser. Det körs i webbläsare och möjliggör funktioner som animationer, formulärvalidering, realtidsuppdateringar och UI‑komponenter.",
     categories: [1, 2,],
   },
   {
@@ -48,21 +48,21 @@ const testimonials = [
     name: "TypeScript",
     company: "",
     content:
-      "TypeScript is a superset of JavaScript that adds static typing, allowing developers to define types for variables, function parameters, and return values. ",
+      "TypeScript är ett superset av JavaScript som lägger till statisk typning och låter utvecklare definiera typer för variabler, funktionsparametrar och returvärden.",
     categories: [1, 2, 5],
   },
   {
     clientImg: docker,
     name: "Docker",
     company: "",
-    content: "Docker is a platform that enables developers to automate the deployment of applications inside lightweight, portable containers. Containers package the application code, dependencies, and runtime environment, ensuring the application runs consistently across different systems.",
+    content: "Docker är en plattform som gör det möjligt att automatisera distribution av applikationer i lätta, portabla containrar. Containrar paketerar applikationskod, beroenden och körmiljö så att applikationen körs konsekvent på olika system.",
     categories: [1, 3],
   },
   {
     clientImg: github,
     name: "GitHub",
     company: "",
-    content: "GitHub is a web-based platform for version control and collaboration, primarily used by developers to host and manage code. It leverages Git, a version control system, to track changes in projects, enabling multiple contributors to work on the same codebase simultaneously.",
+    content: "GitHub är en webbaserad plattform för versionshantering och samarbete. Den använder Git för att spåra ändringar i projekt och gör det möjligt för flera utvecklare att arbeta samtidigt i samma kodbas.",
     categories: [1, 3, 4],
   },
   {
@@ -70,7 +70,7 @@ const testimonials = [
     name: "Google Cloud Run",
     company: "",
     content:
-      "Google Cloud Run is a fully managed platform that allows developers to run containerized applications in the cloud without worrying about infrastructure management.",
+      "Google Cloud Run är en fullständigt hanterad plattform som låter dig köra containeriserade applikationer i molnet utan att behöva hantera infrastrukturen.",
     categories: [1, 3, 4],
   },
   {
@@ -78,7 +78,7 @@ const testimonials = [
     name: "Ansible",
     company: "",
     content:
-      "Ansible is an open-source automation tool used for configuration management, application deployment, and task automation. It allows developers and system administrators to automate repetitive tasks across multiple systems by writing simple, human-readable YAML files called playbooks.",
+      "Ansible är ett verktyg för automatisering med öppen källkod som används för konfigurationshantering, applikationsdistribution och uppgiftsautomatisering. Du skriver enkla, lättlästa YAML‑playbooks för att automatisera repetitiva uppgifter över flera system.",
     categories: [1, 3, 4],
   },
   {
@@ -86,7 +86,7 @@ const testimonials = [
     name: "Node.js",
     company: "",
     content:
-      "Node.js is an open-source, server-side runtime environment that allows developers to run JavaScript outside the browser. Built on the V8 JavaScript engine, it enables the development of scalable, high-performance applications, particularly for handling asynchronous, I/O-intensive tasks like web servers and APIs. ",
+      "Node.js är en servermiljö med öppen källkod som låter dig köra JavaScript utanför webbläsaren. Byggd på V8‑motorn och lämplig för skalbara, högpresterande applikationer samt I/O‑intensiva arbetslaster som webbservrar och API:er.",
     categories: [1, 3],
   },
   {
@@ -94,7 +94,7 @@ const testimonials = [
     name: "Prisma",
     company: "",
     content:
-      "Prisma is an open-source ORM (Object-Relational Mapping) tool that simplifies database access and management for developers. It provides a type-safe interface for interacting with databases, ensuring that queries are checked at compile time, which helps catch errors early.",
+      "Prisma är ett ORM‑verktyg med öppen källkod som förenklar databasåtkomst och hantering. Det ger ett typesäkert gränssnitt mot databaser så att frågor kontrolleras vid kompilering och fel fångas tidigt.",
     categories: [1, 3],
   },
   {
@@ -102,7 +102,7 @@ const testimonials = [
     name: "Terraform",
     company: "",
     content:
-      "Terrafrom is an open-source infrastructure as code (IaC) tool that enables developers to define and provision cloud resources using declarative configuration files. It supports multiple cloud providers, allowing users to manage infrastructure across different environments consistently.",
+      "Terraform är ett verktyg för infrastruktur som kod (IaC) med öppen källkod som låter dig definiera och skapa molnresurser med deklarativa konfigurationsfiler. Det stödjer flera molnleverantörer och ger konsekvent hantering av infrastruktur över olika miljöer.",
     categories: [1, 3],
   },
   {
@@ -110,7 +110,7 @@ const testimonials = [
     name: "React",
     company: "",
     content:
-      "React is a JavaScript library for building user interfaces. It allows developers to create reusable UI components and manage the state of their applications efficiently.",
+      "React är ett JavaScript‑bibliotek för att bygga användargränssnitt. Det gör det enkelt att skapa återanvändbara komponenter och hantera applikationstillstånd effektivt.",
     categories: [1, 6],
   },
   {
@@ -118,7 +118,7 @@ const testimonials = [
     name: "Next.js",
     company: "",
     content:
-      "Next.js is a React framework for building server-side rendered and static websites. It provides a seamless development experience for building web applications with features like automatic code splitting, server-side rendering, and API routes.",
+      "Next.js är ett React‑ramverk för att bygga serverrenderade och statiska webbplatser. Det erbjuder bland annat automatisk koddelning, server‑side rendering och API‑rutter för en smidig utvecklarupplevelse.",
     categories: [1, 6],
   },
   {
@@ -126,7 +126,7 @@ const testimonials = [
     name: "AI",
     company: "",
     content:
-      "LLMs are large language models that are trained on a large dataset of text. They are used to generate text, images, and other media. With MCP Client and MCP Server, we can use LLMs to interact with internal and external resources.",
+      "LLM:er (stora språkmodeller) tränas på omfattande textdata och kan generera text, bilder och annat innehåll. Med MCP Client och MCP Server kan vi använda LLM:er för att interagera med interna och externa resurser.",
     categories: [1, 2],
   },
   {
@@ -134,7 +134,7 @@ const testimonials = [
     name: "Azure",
     company: "",
     content:
-      "Azure is a cloud computing platform that provides a range of services for building, deploying, and managing applications. It includes services for storage, networking, and compute, as well as tools for development and management.",
+      "Azure är en molnplattform som erbjuder tjänster för att bygga, driftsätta och hantera applikationer. Den omfattar lagring, nätverk, beräkning samt verktyg för utveckling och administration.",
     categories: [1, 3, 4],
   },
 ];
